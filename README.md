@@ -25,7 +25,7 @@ glossary tooltip on the site became a link to them.
 ## Claude Code
 
 ```sh
-/plugin install kubernetes-okf --marketplace pflege-de/okf-kubernetes
+/plugin install kubernetes-okf --marketplace pflege-de-labs/okf-kubernetes
 ```
 
 The skill makes Claude use this bundle through the pflege.de OKF MCP server; details in [docs/claude-plugin.md](docs/claude-plugin.md).

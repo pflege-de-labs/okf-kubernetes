@@ -9,7 +9,7 @@ For every upstream Kubernetes question, use the OKF MCP tools before answering o
 
 ## Workflow
 
-1. Call `okf_search` with the key terms of the question. Results are concept ids such as `kubernetes/concepts/workloads/pods`.
+1. Call `okf_search` with the key terms of the question. Results are concept ids such as `kubernetes/concepts/workloads/pods`: the server's bundle name, then the path inside the bundle. If the results use a different bundle name than `kubernetes/`, use it in place of `kubernetes/` for every id below.
 2. For validation questions (names, lengths, character sets, sizes, ports, reserved values), go to the curated requirements first. They are short and cite exact source lines:
 
    | Topic | Concept id |
