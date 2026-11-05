@@ -10,5 +10,14 @@
     "kubernetes",
     "okf",
     "mcp"
-  ]
+  ],
+  "userConfig": {
+    "bundle_name": {
+      "type": "string",
+      "title": "OKF bundle name",
+      "description": "Name under which the OKF MCP server serves the Kubernetes bundle (--bundle <name>=...); concept ids start with <name>/",
+      "default": "kubernetes",
+      "required": true
+    }
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "okf-kubernetes",
+  "name": "pflege-de-labs-okf-kubernetes",
   "description": "Claude Code skill for the Kubernetes OKF bundle served by the pflege.de OKF MCP server",
   "owner": {
     "name": "pflege.de"
