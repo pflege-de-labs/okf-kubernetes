@@ -1,0 +1,6 @@
+# External APIs
+
+* [Kubernetes Custom Metrics (v1beta2)](custom-metrics.v1beta2.md) - Defaults to everything.</p> </td> </tr> <tr><td><code>metricLabelSelector</code><br/> <code>string</code> </td> <td> <p>A selector to restrict the list of returned metrics by their labels</p> </td> </tr> </tbody> </table>
+* [Kubernetes External Metrics (v1beta1)](external-metrics.v1beta1.md) - A single metric value is identified by metric name and a set of string labels.
+* [Kubernetes Metrics (v1)](metrics.v1.md) - More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</p> Refer to the Kubernetes API documentation for the fields of the <code>metadata</code> field.</td> </tr> <tr><td><code>timestamp</code> <B>[Required]</B><br/> <a href="https://kubernetes.io/...
+* [Kubernetes Metrics (v1beta1)](metrics.v1beta1.md) - More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</p> Refer to the Kubernetes API documentation for the fields of the <code>metadata</code> field.</td> </tr> <tr><td><code>timestamp</code> <B>[Required]</B><br/> <a href="https://kubernetes.io/...
