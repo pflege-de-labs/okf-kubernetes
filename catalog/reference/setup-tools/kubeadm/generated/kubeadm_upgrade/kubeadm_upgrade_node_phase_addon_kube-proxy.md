@@ -1,0 +1,94 @@
+---
+type: reference
+title: kubeadm_upgrade_node_phase_addon_kube-proxy
+description: Upgrade the kube-proxy addon
+resource: https://kubernetes.io/docs/reference/setup-tools/kubeadm/generated/kubeadm_upgrade/kubeadm_upgrade_node_phase_addon_kube-proxy/
+tags: [kubernetes, reference, setup-tools]
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+sources:
+  - id: k8s-docs-source
+    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/setup-tools/kubeadm/generated/kubeadm_upgrade/kubeadm_upgrade_node_phase_addon_kube-proxy.md
+    title: 'Kubernetes website source: reference/setup-tools/kubeadm/generated/kubeadm_upgrade/kubeadm_upgrade_node_phase_addon_kube-proxy.md'
+  - id: k8s-docs
+    resource: https://kubernetes.io/docs/reference/setup-tools/kubeadm/generated/kubeadm_upgrade/kubeadm_upgrade_node_phase_addon_kube-proxy/
+    title: kubeadm_upgrade_node_phase_addon_kube-proxy | Kubernetes documentation
+kubernetes_version: v1.37
+source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_path: content/en/docs/reference/setup-tools/kubeadm/generated/kubeadm_upgrade/kubeadm_upgrade_node_phase_addon_kube-proxy.md
+---
+
+# kubeadm_upgrade_node_phase_addon_kube-proxy
+
+### Synopsis
+
+Upgrade the kube-proxy addon
+
+```
+kubeadm upgrade node phase addon kube-proxy [flags]
+```
+
+### Options
+
+   <table style="width: 100%; table-layout: fixed;">
+<colgroup>
+<col span="1" style="width: 10px;" />
+<col span="1" />
+</colgroup>
+<tbody>
+
+<tr>
+<td colspan="2">--config string</td>
+</tr>
+<tr>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>Path to a kubeadm configuration file.</p></td>
+</tr>
+
+<tr>
+<td colspan="2">--dry-run</td>
+</tr>
+<tr>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>Do not change any state, just output the actions that would be performed.</p></td>
+</tr>
+
+<tr>
+<td colspan="2">-h, --help</td>
+</tr>
+<tr>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>help for kube-proxy</p></td>
+</tr>
+
+<tr>
+<td colspan="2">--kubeconfig string&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: "/etc/kubernetes/admin.conf"</td>
+</tr>
+<tr>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>The kubeconfig file to use when talking to the cluster. If the flag is not set, a set of standard locations can be searched for an existing kubeconfig file.</p></td>
+</tr>
+
+<tr>
+<td colspan="2">--patches string</td>
+</tr>
+<tr>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>Path to a directory that contains files named &quot;target[suffix][+patchtype].extension&quot;. For example, &quot;kube-apiserver0+merge.yaml&quot; or just &quot;etcd.json&quot;. &quot;target&quot; can be one of &quot;kube-apiserver&quot;, &quot;kube-controller-manager&quot;, &quot;kube-scheduler&quot;, &quot;etcd&quot;, &quot;kubeletconfiguration&quot;, &quot;corednsdeployment&quot;, &quot;kubeproxydaemonset&quot;. &quot;patchtype&quot; can be one of &quot;strategic&quot;, &quot;merge&quot; or &quot;json&quot; and they match the patch formats supported by kubectl. The default &quot;patchtype&quot; is &quot;strategic&quot;. &quot;extension&quot; must be either &quot;json&quot; or &quot;yaml&quot;. &quot;suffix&quot; is an optional string that can be used to determine which patches are applied first alpha-numerically.</p></td>
+</tr>
+
+</tbody>
+</table>
+
+### Options inherited from parent commands
+
+   <table style="width: 100%; table-layout: fixed;">
+<colgroup>
+<col span="1" style="width: 10px;" />
+<col span="1" />
+</colgroup>
+<tbody>
+
+<tr>
+<td colspan="2">--rootfs string</td>
+</tr>
+<tr>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>The path to the 'real' host root filesystem. This will cause kubeadm to chroot into the provided path.</p></td>
+</tr>
+
+</tbody>
+</table>
