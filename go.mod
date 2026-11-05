@@ -1,4 +1,4 @@
-module github.com/pflege-de/okf-kubernetes
+module github.com/pflege-de-labs/okf-kubernetes
 
 go 1.27.3
 

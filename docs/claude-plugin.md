@@ -6,12 +6,12 @@ The plugin lives here rather than in `pflege-de/mcp` because this bundle is ours
 
 ## 1. Add the MCP server
 
-The server must serve this bundle as `kubernetes` (concept ids `kubernetes/...`). See [docs/crossplane-v2-okf.md](https://github.com/pflege-de/mcp/blob/main/docs/crossplane-v2-okf.md) in `pflege-de/mcp` for `claude mcp add`; for a local server, see "Validate" in the [README](../README.md).
+The pflege.de server prefixes concept ids with the bundle name it was given (`--bundle kubernetes=...`, chart value `config.bundles.kubernetes`). The skill expects `kubernetes`, the same way the Crossplane skill in `mcp` expects `crossplane`; the bundle itself has no prefix (upstream okf-crossplane-v2 also uses bare ids such as `composition-developer-starter`). See [docs/crossplane-v2-okf.md](https://github.com/pflege-de/mcp/blob/main/docs/crossplane-v2-okf.md) in `pflege-de/mcp` for `claude mcp add`; for a local server, see "Validate" in the [README](../README.md).
 
 ## 2. Install the plugin
 
 ```sh
-claude plugin marketplace add pflege-de/okf-kubernetes   # or a local path to this checkout
+claude plugin marketplace add pflege-de-labs/okf-kubernetes   # or a local path to this checkout
 claude plugin install kubernetes-okf@okf-kubernetes
 ```
 
@@ -25,7 +25,7 @@ Team repository `.claude/settings.json`:
 {
   "extraKnownMarketplaces": {
     "okf-kubernetes": {
-      "source": { "source": "github", "repo": "pflege-de/okf-kubernetes" }
+      "source": { "source": "github", "repo": "pflege-de-labs/okf-kubernetes" }
     }
   },
   "enabledPlugins": {

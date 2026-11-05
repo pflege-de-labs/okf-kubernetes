@@ -4,8 +4,8 @@
   "author": {
     "name": "pflege.de"
   },
-  "homepage": "https://github.com/pflege-de/okf-kubernetes/blob/main/docs/claude-plugin.md",
-  "repository": "https://github.com/pflege-de/okf-kubernetes",
+  "homepage": "https://github.com/pflege-de-labs/okf-kubernetes/blob/main/docs/claude-plugin.md",
+  "repository": "https://github.com/pflege-de-labs/okf-kubernetes",
   "keywords": [
     "kubernetes",
     "okf",
