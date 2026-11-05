@@ -14,12 +14,21 @@ and [Reference](https://kubernetes.io/docs/reference/), pinned to one
 | `catalog/requirements/` | Curated constraints: name formats and lengths, label/annotation rules, namespaces, size limits, ports. Every claim is footnoted to a commit-pinned source line range | hand |
 | `catalog/concepts/`, `catalog/tasks/`, `catalog/reference/` | One concept per docs page, mirroring the site structure | `cmd/okfgen` |
 | `catalog/log.md` | Update history | hand |
+| `.claude-plugin/`, `plugins/kubernetes-okf/` | Claude Code marketplace and skill that tells Claude when to use this bundle: [docs/claude-plugin.md](docs/claude-plugin.md) | hand |
 
 Concept ids follow the page path, e.g. `kubernetes/concepts/overview/working-with-objects/names`.
 Start with `kubernetes/requirements/object-names` for naming rules.
 
 Glossary terms (`reference/glossary/*`) are the main relationship hubs: every
 glossary tooltip on the site became a link to them.
+
+## Claude Code
+
+```sh
+/plugin install kubernetes-okf --marketplace pflege-de/okf-kubernetes
+```
+
+The skill makes Claude use this bundle through the pflege.de OKF MCP server; details in [docs/claude-plugin.md](docs/claude-plugin.md).
 
 ## Regenerate
 
