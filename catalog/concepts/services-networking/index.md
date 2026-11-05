@@ -1,0 +1,14 @@
+# Services, Load Balancing, and Networking
+
+* [Service](service.md) - Expose an application running in your cluster behind a single outward-facing endpoint, even when the workload is split across multiple backends.
+* [Ingress](ingress.md) - Make your HTTP (or HTTPS) network service available using a protocol-aware configuration mechanism, that understands web concepts like URIs, hostnames, paths, and more. The Ingress concept lets you map traffic to different backends based on rules you define via the Kubernetes API.
+* [Ingress Controllers](ingress-controllers.md) - In order for an Ingress to work in your cluster, there must be an _ingress controller_ running. You need to select at least one ingress controller and make sure it is set up in your cluster. This page lists common ingress controllers that you can deploy.
+* [Gateway API](gateway.md) - Gateway API is a family of API kinds that provide dynamic infrastructure provisioning and advanced traffic routing.
+* [EndpointSlices](endpoint-slices.md) - The EndpointSlice API is the mechanism that Kubernetes uses to let your Service scale to handle large numbers of backends, and allows the cluster to update its list of healthy backends efficiently.
+* [Network Policies](network-policies.md) - If you want to control traffic flow at the IP address or port level (OSI layer 3 or 4), NetworkPolicies allow you to specify rules for traffic flow within your cluster, and also between Pods and the outside world. Your cluster must use a network plugin that supports NetworkPolicy enforcement.
+* [DNS for Services and Pods](dns-pod-service.md) - Your workload can discover Services within your cluster using DNS; this page explains how that works.
+* [IPv4/IPv6 dual-stack](dual-stack.md) - Kubernetes lets you configure single-stack IPv4 networking, single-stack IPv6 networking, or dual stack networking with both network families active. This page explains how.
+* [Topology Aware Routing](topology-aware-routing.md) - _Topology Aware Routing_ provides a mechanism to help keep network traffic within the zone where it originated. Preferring same-zone traffic between Pods in your cluster can help with reliability, performance (network latency and throughput), or cost.
+* [Networking on Windows](windows-networking.md) - Kubernetes supports running nodes on either Linux or Windows.
+* [Service ClusterIP allocation](cluster-ip-allocation.md) - In Kubernetes, Services are an abstract way to expose an application running on a set of Pods.
+* [Service Internal Traffic Policy](service-traffic-policy.md) - If two Pods in your cluster want to communicate, and both Pods are actually running on the same node, use _Service Internal Traffic Policy_ to keep network traffic within that node. Avoiding a round trip via the cluster network can help with reliability, performance (network latency and throughput), or cost.

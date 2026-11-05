@@ -1,0 +1,13 @@
+The content under catalog/ is derived from the Kubernetes documentation
+(https://github.com/kubernetes/website, content/en/docs and content/en/examples),
+Copyright The Kubernetes Authors, licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Changes: pages were converted from Hugo Markdown to Open Knowledge Format
+documents (shortcodes rendered to Markdown, site links rewritten to bundle
+links, OKF frontmatter added). Files under catalog/requirements/ are new
+summaries of the documentation that cite their source lines.
+
+Each document records its exact source file and commit in its frontmatter
+(source_path, source_commit, sources).
