@@ -1,0 +1,279 @@
+---
+type: task
+title: Configure Default CPU Requests and Limits for a Namespace
+description: Define a default CPU resource limits for a namespace, so that every new Pod in that namespace has a CPU resource limit configured.
+resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/
+tags: [kubernetes, tasks, administer-cluster]
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+sources:
+  - id: k8s-docs-source
+    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace.md
+    title: 'Kubernetes website source: tasks/administer-cluster/manage-resources/cpu-default-namespace.md'
+  - id: k8s-docs
+    resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/
+    title: Configure Default CPU Requests and Limits for a Namespace | Kubernetes documentation
+kubernetes_version: v1.37
+source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_path: content/en/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace.md
+---
+
+# Configure Default CPU Requests and Limits for a Namespace
+
+This page shows how to configure default CPU requests and limits for a
+[namespace](/reference/glossary/namespace.md).
+
+A Kubernetes cluster can be divided into namespaces. If you create a Pod within a
+namespace that has a default CPU
+[limit](/concepts/configuration/manage-resources-containers.md#requests-and-limits), and any container in that Pod does not specify
+its own CPU limit, then the
+[control plane](/reference/glossary/control-plane.md) assigns the default
+CPU limit to that container.
+
+Kubernetes assigns a default CPU
+[request](/concepts/configuration/manage-resources-containers.md#requests-and-limits),
+but only under certain conditions that are explained later in this page.
+
+## Before you begin
+
+You need to have a Kubernetes cluster, and the kubectl command-line tool must
+be configured to communicate with your cluster. It is recommended to run this tutorial on a cluster with at least two nodes that are not acting as control plane hosts. If you do not already have a
+cluster, you can create one by using
+[minikube](https://minikube.sigs.k8s.io/docs/tutorials/multi_node/)
+or you can use one of these Kubernetes playgrounds:
+
+* [iximiuz Labs](https://labs.iximiuz.com/playgrounds?category=kubernetes&filter=all)
+* [Killercoda](https://killercoda.com/playgrounds/scenario/kubernetes)
+* [KodeKloud](https://kodekloud.com/public-playgrounds)
+
+You must have access to create namespaces in your cluster.
+
+If you're not already familiar with what Kubernetes means by 1.0 CPU,
+read [meaning of CPU](/concepts/configuration/manage-resources-containers.md#meaning-of-cpu).
+
+## Create a namespace
+
+Create a namespace so that the resources you create in this exercise are
+isolated from the rest of your cluster.
+
+```shell
+kubectl create namespace default-cpu-example
+```
+
+## Create a LimitRange and a Pod
+
+Here's a manifest for an example [LimitRange](/reference/glossary/limitrange.md).
+The manifest specifies a default CPU request and a default CPU limit.
+
+[`admin/resource/cpu-defaults.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-defaults.yaml)
+
+```yaml
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: cpu-limit-range
+spec:
+  limits:
+  - default:
+      cpu: 1
+    defaultRequest:
+      cpu: 0.5
+    type: Container
+```
+
+Create the LimitRange in the default-cpu-example namespace:
+
+```shell
+kubectl apply -f https://k8s.io/examples/admin/resource/cpu-defaults.yaml --namespace=default-cpu-example
+```
+
+Now if you create a Pod in the default-cpu-example namespace, and any container
+in that Pod does not specify its own values for CPU request and CPU limit,
+then the control plane applies default values: a CPU request of 0.5 and a default
+CPU limit of 1.
+
+Here's a manifest for a Pod that has one container. The container
+does not specify a CPU request and limit.
+
+[`admin/resource/cpu-defaults-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-defaults-pod.yaml)
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: default-cpu-demo
+spec:
+  containers:
+  - name: default-cpu-demo-ctr
+    image: nginx
+```
+
+Create the Pod.
+
+```shell
+kubectl apply -f https://k8s.io/examples/admin/resource/cpu-defaults-pod.yaml --namespace=default-cpu-example
+```
+
+View the Pod's specification:
+
+```shell
+kubectl get pod default-cpu-demo --output=yaml --namespace=default-cpu-example
+```
+
+The output shows that the Pod's only container has a CPU request of 500m `cpu`
+(which you can read as “500 millicpu”), and a CPU limit of 1 `cpu`.
+These are the default values specified by the LimitRange.
+
+```shell
+containers:
+- image: nginx
+  imagePullPolicy: Always
+  name: default-cpu-demo-ctr
+  resources:
+    limits:
+      cpu: "1"
+    requests:
+      cpu: 500m
+```
+
+## What if you specify a container's limit, but not its request?
+
+Here's a manifest for a Pod that has one container. The container
+specifies a CPU limit, but not a request:
+
+[`admin/resource/cpu-defaults-pod-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-defaults-pod-2.yaml)
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: default-cpu-demo-2
+spec:
+  containers:
+  - name: default-cpu-demo-2-ctr
+    image: nginx
+    resources:
+      limits:
+        cpu: "1"
+```
+
+Create the Pod:
+
+```shell
+kubectl apply -f https://k8s.io/examples/admin/resource/cpu-defaults-pod-2.yaml --namespace=default-cpu-example
+```
+
+View the [specification](/concepts/overview/working-with-objects.md#object-spec-and-status)
+of the Pod that you created:
+
+```
+kubectl get pod default-cpu-demo-2 --output=yaml --namespace=default-cpu-example
+```
+
+The output shows that the container's CPU request is set to match its CPU limit.
+Notice that the container was not assigned the default CPU request value of 0.5 `cpu`:
+
+```
+resources:
+  limits:
+    cpu: "1"
+  requests:
+    cpu: "1"
+```
+
+## What if you specify a container's request, but not its limit?
+
+Here's an example manifest for a Pod that has one container. The container
+specifies a CPU request, but not a limit:
+
+[`admin/resource/cpu-defaults-pod-3.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-defaults-pod-3.yaml)
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: default-cpu-demo-3
+spec:
+  containers:
+  - name: default-cpu-demo-3-ctr
+    image: nginx
+    resources:
+      requests:
+        cpu: "0.75"
+```
+
+Create the Pod:
+
+```shell
+kubectl apply -f https://k8s.io/examples/admin/resource/cpu-defaults-pod-3.yaml --namespace=default-cpu-example
+```
+
+View the specification of the Pod that you created:
+
+```
+kubectl get pod default-cpu-demo-3 --output=yaml --namespace=default-cpu-example
+```
+
+The output shows that the container's CPU request is set to the value you specified at
+the time you created the Pod (in other words: it matches the manifest).
+However, the same container's CPU limit is set to 1 `cpu`, which is the default CPU limit
+for that namespace.
+
+```
+resources:
+  limits:
+    cpu: "1"
+  requests:
+    cpu: 750m
+```
+
+## Motivation for default CPU limits and requests
+
+If your namespace has a CPU [resource quota](/reference/glossary/resource-quota.md)
+configured,
+it is helpful to have a default value in place for CPU limit.
+Here are two of the restrictions that a CPU resource quota imposes on a namespace:
+
+* For every Pod that runs in the namespace, each of its containers must have a CPU limit.
+* CPU limits apply a resource reservation on the node where the Pod in question is scheduled.
+  The total amount of CPU that is reserved for use by all Pods in the namespace must not
+  exceed a specified limit.
+
+When you add a LimitRange:
+
+If any Pod in that namespace that includes a container does not specify its own CPU limit,
+the control plane applies the default CPU limit to that container, and the Pod can be
+allowed to run in a namespace that is restricted by a CPU ResourceQuota.
+
+## Clean up
+
+Delete your namespace:
+
+```shell
+kubectl delete namespace default-cpu-example
+```
+
+## What's next
+
+### For cluster administrators
+
+* [Configure Default Memory Requests and Limits for a Namespace](/tasks/administer-cluster/manage-resources/memory-default-namespace.md)
+
+* [Configure Minimum and Maximum Memory Constraints for a Namespace](/tasks/administer-cluster/manage-resources/memory-constraint-namespace.md)
+
+* [Configure Minimum and Maximum CPU Constraints for a Namespace](/tasks/administer-cluster/manage-resources/cpu-constraint-namespace.md)
+
+* [Configure Memory and CPU Quotas for a Namespace](/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace.md)
+
+* [Configure a Pod Quota for a Namespace](/tasks/administer-cluster/manage-resources/quota-pod-namespace.md)
+
+* [Configure Quotas for API Objects](/tasks/administer-cluster/quota-api-object.md)
+
+### For app developers
+
+* [Assign Memory Resources to Containers and Pods](/tasks/configure-pod-container/assign-memory-resource.md)
+
+* [Assign CPU Resources to Containers and Pods](/tasks/configure-pod-container/assign-cpu-resource.md)
+
+* [Assign Pod-level CPU and memory resources](/tasks/configure-pod-container/assign-pod-level-resources.md)
+
+* [Configure Quality of Service for Pods](/tasks/configure-pod-container/quality-service-pod.md)
