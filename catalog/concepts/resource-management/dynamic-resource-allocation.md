@@ -1,0 +1,113 @@
+---
+type: concept
+title: Dynamic Resource Allocation
+description: This section introduces _dynamic resource allocation (DRA)_ in Kubernetes.
+resource: https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/
+tags: [kubernetes, concepts, resource-management]
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+sources:
+  - id: k8s-docs-source
+    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/resource-management/dynamic-resource-allocation/_index.md
+    title: 'Kubernetes website source: concepts/resource-management/dynamic-resource-allocation/_index.md'
+  - id: k8s-docs
+    resource: https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/
+    title: Dynamic Resource Allocation | Kubernetes documentation
+kubernetes_version: v1.37
+source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_path: content/en/docs/concepts/resource-management/dynamic-resource-allocation/_index.md
+---
+
+# Dynamic Resource Allocation
+
+**Feature state:** Kubernetes v1.35 [stable] (feature gate `DynamicResourceAllocation`, enabled by default)
+
+This section introduces _dynamic resource allocation (DRA)_ in Kubernetes.
+
+DRA is a Kubernetes feature that lets you request and share resources among Pods.
+These resources are often attached
+[devices](/reference/glossary/device.md) like hardware
+accelerators.
+
+With DRA, device drivers and cluster admins define device _classes_ that are
+available to _claim_ in workloads. Kubernetes allocates matching devices to
+specific claims and places the corresponding Pods on nodes that can access the
+allocated devices.
+
+Allocating resources with DRA offers a similar experience to
+[dynamic volume provisioning](/concepts/storage/dynamic-provisioning.md),
+in which you use PersistentVolumeClaims to _claim_ storage capacity from storage classes,
+and request the claimed capacity for use in your Pods.
+
+### Benefits of DRA {#dra-benefits}
+
+DRA provides a flexible way to categorize, request, and use devices in your cluster.
+Using DRA provides benefits like the following:
+
+* **Flexible device filtering**: use common expression language (CEL) to perform
+  fine-grained filtering for specific device attributes.
+* **Device sharing**: share the same resource with multiple containers or Pods
+  by referencing the corresponding resource claim.
+* **Device configuration**: attach vendor-specific device configurations to your resource claim, enabling per-workload device configuration, rather than today's per-node device configuration
+* **Centralized device categorization**: device drivers and cluster admins can
+  use device classes to provide app operators with hardware categories that are
+  optimized for various use cases. For example, you can create a cost-optimized
+  device class for general-purpose workloads, and a high-performance device
+  class for critical jobs.
+* **Simplified Pod requests**: with DRA, app operators don't need to specify
+  device quantities in Pod resource requests. Instead, the Pod references a
+  resource claim, and the device configuration in that claim applies to the Pod.
+
+These benefits provide significant improvements in the device allocation
+workflow when compared to
+[device plugins](/concepts/extend-kubernetes/compute-storage-net/device-plugins.md),
+which require per-container device requests, don't support device sharing, and
+don't support expression-based device filtering.
+
+### Types of DRA users {#dra-user-types}
+
+The workflow of using DRA to allocate devices involves the following types of users:
+
+* **Device owner**: responsible for devices. Device owners might be commercial
+  vendors, the cluster operator, or another entity. To use DRA, devices must
+  have DRA-compatible drivers that do the following:
+
+  * Create ResourceSlices that provide Kubernetes with information about
+    nodes and resources.
+  * Update ResourceSlices when resource capacity in the cluster changes.
+  * Configure devices according to the claim, and attach them to containers via Container Device Interface (CDI).
+  * Optionally, create DeviceClasses that workload operators can use to
+    claim devices.
+
+* **Cluster admin**: responsible for configuring clusters and nodes,
+  attaching devices, installing drivers, and similar tasks. To use DRA,
+  cluster admins do the following:
+
+  * Attach devices to nodes.
+  * Install device drivers that support DRA.
+  * Optionally, create DeviceClasses that workload operators can use to claim devices.
+
+* **Workload operator**: responsible for deploying and managing workloads in the
+  cluster. To use DRA to allocate devices to Pods, workload operators do the following:
+
+  * Create ResourceClaims or ResourceClaimTemplates to request specific
+    configurations within DeviceClasses.
+  * Deploy workloads that use specific ResourceClaims or ResourceClaimTemplates.
+
+## Limitations
+
+* The Kubernetes scheduler doesn't support
+  [preemption](/concepts/scheduling-eviction/pod-priority-preemption.md) for
+  DRA resources. This means that an existing Pod that's running on a node and is
+  using DRA resources can't be preempted by a higher-priority Pod that also needs
+  DRA resources. The high-priority Pod will remain in a pending state until the device
+  becomes available, which happens when the conflicting Pod terminates or is
+  manually deleted.
+
+## What's next
+
+- [Set Up DRA in a Cluster](/tasks/configure-pod-container/assign-resources/set-up-dra-cluster.md)
+- [Allocate devices to workloads using DRA](/tasks/configure-pod-container/assign-resources/allocate-devices-dra.md)
+- [Access DRA device metadata](/tasks/configure-pod-container/assign-resources/access-dra-device-metadata.md)
+- For more information on the design, see the
+  [Dynamic Resource Allocation with Structured Parameters](https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/4381-dra-structured-parameters)
+  KEP.
