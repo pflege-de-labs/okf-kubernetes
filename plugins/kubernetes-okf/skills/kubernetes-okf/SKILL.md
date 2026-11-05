@@ -9,32 +9,32 @@ For every upstream Kubernetes question, use the OKF MCP tools before answering o
 
 ## Workflow
 
-1. Call `okf_search` with the key terms of the question. Results are concept ids such as `kubernetes/concepts/workloads/pods`: the server's bundle name, then the path inside the bundle. If the results use a different bundle name than `kubernetes/`, use it in place of `kubernetes/` for every id below.
+1. Call `okf_search` with the key terms of the question. Results are concept ids such as `${user_config.bundle_name}/concepts/workloads/pods`: the server's bundle name (plugin setting `bundle_name`), then the path inside the bundle. If the results use a different bundle name, use it in place of `${user_config.bundle_name}/` for every id below.
 2. For validation questions (names, lengths, character sets, sizes, ports, reserved values), go to the curated requirements first. They are short and cite exact source lines:
 
    | Topic | Concept id |
    |-------|-----------|
-   | Name formats and per-kind length limits (e.g. CronJob 52, Service 63) | `kubernetes/requirements/object-names` |
-   | Label and annotation keys, values, 256 KiB annotation total | `kubernetes/requirements/labels-and-annotations` |
-   | Namespace names, initial and reserved namespaces | `kubernetes/requirements/namespaces` |
-   | ConfigMap/Secret 1 MiB and other size limits | `kubernetes/requirements/size-limits` |
-   | Port numbers and names, NodePort range | `kubernetes/requirements/ports-and-ranges` |
+   | Name formats and per-kind length limits (e.g. CronJob 52, Service 63) | `${user_config.bundle_name}/requirements/object-names` |
+   | Label and annotation keys, values, 256 KiB annotation total | `${user_config.bundle_name}/requirements/labels-and-annotations` |
+   | Namespace names, initial and reserved namespaces | `${user_config.bundle_name}/requirements/namespaces` |
+   | ConfigMap/Secret 1 MiB and other size limits | `${user_config.bundle_name}/requirements/size-limits` |
+   | Port numbers and names, NodePort range | `${user_config.bundle_name}/requirements/ports-and-ranges` |
 
-3. Resolve links in a concept body to ids: `kubernetes/` plus the link target resolved against the current concept's directory, without `.md` and without `#anchor`. Links starting with `/` are relative to the bundle root. `okf_relations` lists them for you (`links_to`) together with concepts that link back (`linked_by`). Links to `https://kubernetes.io/...` point to pages outside the bundle. Links ending in `index.md` are section listings, not concepts: use the section concept `<dir>` (e.g. `kubernetes/concepts/workloads`) or `okf_search` instead.
+3. Resolve links in a concept body to ids: `${user_config.bundle_name}/` plus the link target resolved against the current concept's directory, without `.md` and without `#anchor`. Links starting with `/` are relative to the bundle root. `okf_relations` lists them for you (`links_to`) together with concepts that link back (`linked_by`). Links to `https://kubernetes.io/...` point to pages outside the bundle. Links ending in `index.md` are section listings, not concepts: use the section concept `<dir>` (e.g. `${user_config.bundle_name}/concepts/workloads`) or `okf_search` instead.
 4. Use `okf_get` for the full text. Cite the concept's `sources` (`k8s-docs` is the published page, `k8s-docs-source` the pinned source file).
 
 Other useful starting points:
 
 | Topic | Concept id |
 |-------|-----------|
-| API resource fields (one page per kind) | `kubernetes/reference/kubernetes-api/<group>/<kind>-<version>`, e.g. `.../core/pod-v1` |
-| Feature gates (default, stage, since, until) | `kubernetes/reference/command-line-tools-reference/feature-gates` |
-| Removed feature gates | `kubernetes/reference/command-line-tools-reference/feature-gates-removed` |
-| Well-known labels, annotations, taints | `kubernetes/reference/labels-annotations-taints` |
-| Component flags | `kubernetes/reference/command-line-tools-reference/<component>`, e.g. `kubelet`, `kube-apiserver` |
-| kubectl commands | `kubernetes/reference/kubectl/generated/kubectl_<command>` |
-| Glossary terms | `kubernetes/reference/glossary/<term>`, e.g. `pod` |
-| Deprecation policy | `kubernetes/reference/deprecation-policy` |
+| API resource fields (one page per kind) | `${user_config.bundle_name}/reference/kubernetes-api/<group>/<kind>-<version>`, e.g. `.../core/pod-v1` |
+| Feature gates (default, stage, since, until) | `${user_config.bundle_name}/reference/command-line-tools-reference/feature-gates` |
+| Removed feature gates | `${user_config.bundle_name}/reference/command-line-tools-reference/feature-gates-removed` |
+| Well-known labels, annotations, taints | `${user_config.bundle_name}/reference/labels-annotations-taints` |
+| Component flags | `${user_config.bundle_name}/reference/command-line-tools-reference/<component>`, e.g. `kubelet`, `kube-apiserver` |
+| kubectl commands | `${user_config.bundle_name}/reference/kubectl/generated/kubectl_<command>` |
+| Glossary terms | `${user_config.bundle_name}/reference/glossary/<term>`, e.g. `pod` |
+| Deprecation policy | `${user_config.bundle_name}/reference/deprecation-policy` |
 
 ## Versions and feature states
 
