@@ -1,6 +1,6 @@
 # Kubernetes knowledge with Claude
 
-This repository is a Claude Code plugin marketplace named `pflege-de-labs-okf-kubernetes` with one plugin, `kubernetes-okf`. Its skill tells Claude to answer upstream Kubernetes questions (name limits, label rules, size limits, ports, API fields, feature gates, kubectl, concepts, tasks) from this bundle via the pflege.de OKF MCP server instead of general knowledge, starting with the curated `kubernetes/requirements/*` concepts for validation questions.
+This repository is a Claude Code plugin marketplace named `pflege-de-labs-okf-kubernetes` with one plugin, `kubernetes-okf`. Its skill tells Claude to answer upstream Kubernetes questions (name limits, label rules, size limits, ports, API fields, feature gates, kubectl, concepts, tasks) from this bundle via the pflege.de OKF MCP server instead of general knowledge, starting with the curated `requirements/*` concepts for validation questions.
 
 The plugin lives here rather than in `pflege-de/mcp` because this bundle is ours; the Crossplane plugin is in `mcp` because its bundle is external.
 

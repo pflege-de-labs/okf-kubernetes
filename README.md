@@ -16,8 +16,9 @@ and [Reference](https://kubernetes.io/docs/reference/), pinned to one
 | `catalog/log.md` | Update history | hand |
 | `.claude-plugin/`, `plugins/kubernetes-okf/` | Claude Code marketplace and skill that tells Claude when to use this bundle: [docs/claude-plugin.md](docs/claude-plugin.md) | hand |
 
-Concept ids follow the page path, e.g. `kubernetes/concepts/overview/working-with-objects/names`.
-Start with `kubernetes/requirements/object-names` for naming rules.
+Concept ids are the page path below `catalog/`, e.g. `concepts/overview/working-with-objects/names`;
+the MCP server prefixes them with the bundle name it is given (usually `kubernetes/`).
+Start with `requirements/object-names` for naming rules.
 
 Glossary terms (`reference/glossary/*`) are the main relationship hubs: every
 glossary tooltip on the site became a link to them.
