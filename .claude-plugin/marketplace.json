@@ -1,0 +1,16 @@
+{
+  "name": "okf-kubernetes",
+  "description": "Claude Code skill for the Kubernetes OKF bundle served by the pflege.de OKF MCP server",
+  "owner": {
+    "name": "pflege.de"
+  },
+  "plugins": [
+    {
+      "name": "kubernetes-okf",
+      "source": "./plugins/kubernetes-okf",
+      "description": "Use the Kubernetes OKF knowledge bundle of the pflege.de MCP server for object names, limits, API fields, concepts, tasks, and reference facts",
+      "category": "development",
+      "tags": ["kubernetes", "okf", "mcp"]
+    }
+  ]
+}
