@@ -1,0 +1,16 @@
+# Concepts
+
+* [Overview](overview.md) - Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services that facilitate both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available. ([contents](overview/index.md))
+* [Cluster Architecture](architecture.md) - The architectural concepts behind Kubernetes. ([contents](architecture/index.md))
+* [Containers](containers.md) - Technology for packaging an application along with its runtime dependencies. ([contents](containers/index.md))
+* [Workloads](workloads.md) - Understand Pods, the smallest deployable compute object in Kubernetes, and the higher-level abstractions that help you to run them. ([contents](workloads/index.md))
+* [Services, Load Balancing, and Networking](services-networking.md) - Concepts and resources behind networking in Kubernetes. ([contents](services-networking/index.md))
+* [Storage](storage.md) - Ways to provide both long-term and temporary storage to Pods in your cluster. ([contents](storage/index.md))
+* [Configuration](configuration.md) - Configuration mechanisms within Kubernetes. ([contents](configuration/index.md))
+* [Security](security.md) - Concepts for keeping your cloud-native workload secure. ([contents](security/index.md))
+* [Policies](policy.md) - Manage security and best-practices with policies. ([contents](policy/index.md))
+* [Scheduling, Preemption and Eviction](scheduling-eviction.md) - In Kubernetes, scheduling refers to making sure that Pods are matched to Nodes so that the kubelet can run them. ([contents](scheduling-eviction/index.md))
+* [Resource Management](resource-management.md) - How Kubernetes represents, requests, allocates, and constrains the resources that workloads consume. ([contents](resource-management/index.md))
+* [Cluster Administration](cluster-administration.md) - Lower-level detail relevant to creating or administering a Kubernetes cluster. ([contents](cluster-administration/index.md))
+* [Windows in Kubernetes](windows.md) - Kubernetes supports nodes that run Microsoft Windows. ([contents](windows/index.md))
+* [Extending Kubernetes](extend-kubernetes.md) - Different ways to change the behavior of your Kubernetes cluster. ([contents](extend-kubernetes/index.md))

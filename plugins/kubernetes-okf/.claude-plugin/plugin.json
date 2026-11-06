@@ -1,0 +1,23 @@
+{
+  "name": "kubernetes-okf",
+  "description": "Skill for answering and reviewing Kubernetes questions with the Kubernetes OKF bundle of the pflege.de OKF MCP server",
+  "author": {
+    "name": "pflege.de"
+  },
+  "homepage": "https://github.com/pflege-de-labs/okf-kubernetes/blob/main/docs/claude-plugin.md",
+  "repository": "https://github.com/pflege-de-labs/okf-kubernetes",
+  "keywords": [
+    "kubernetes",
+    "okf",
+    "mcp"
+  ],
+  "userConfig": {
+    "bundle_name": {
+      "type": "string",
+      "title": "OKF bundle name",
+      "description": "Name under which the OKF MCP server serves the Kubernetes bundle (--bundle <name>=...); concept ids start with <name>/",
+      "default": "kubernetes",
+      "required": true
+    }
+  }
+}
