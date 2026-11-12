@@ -4,16 +4,16 @@ title: Migrate from PodSecurityPolicy to the Built-In PodSecurity Admission Cont
 description: This page describes the process of migrating from PodSecurityPolicies to the built-in PodSecurity admission controller.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/migrate-from-psp/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/migrate-from-psp.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/migrate-from-psp.md
     title: 'Kubernetes website source: tasks/configure-pod-container/migrate-from-psp.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/migrate-from-psp/
     title: Migrate from PodSecurityPolicy to the Built-In PodSecurity Admission Controller | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/migrate-from-psp.md
 min_kubernetes_server_version: v1.22
 ---
@@ -286,7 +286,7 @@ kubectl label --overwrite ns $NAMESPACE pod-security.kubernetes.io/enforce=$LEVE
 ### 3.d. Bypass PodSecurityPolicy {#bypass-psp}
 
 Finally, you can effectively bypass PodSecurityPolicy at the namespace level by binding the fully
-[privileged PSP](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/policy/privileged-psp.yaml) to all service
+[privileged PSP](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/policy/privileged-psp.yaml) to all service
 accounts in the namespace.
 
 ```sh

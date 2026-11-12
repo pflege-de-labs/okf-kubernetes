@@ -4,16 +4,16 @@ title: Jobs
 description: Jobs represent one-off tasks that run to completion and then stop.
 resource: https://kubernetes.io/docs/concepts/workloads/controllers/job/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/job.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/job.md
     title: 'Kubernetes website source: concepts/workloads/controllers/job.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/controllers/job/
     title: Jobs | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/controllers/job.md
 ---
 
@@ -39,7 +39,7 @@ see [CronJob](/concepts/workloads/controllers/cron-jobs.md).
 Here is an example Job config. It computes π to 2000 places and prints it out.
 It takes around 10s to complete.
 
-[`controllers/job.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/controllers/job.yaml)
+[`controllers/job.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/controllers/job.yaml)
 
 ```yaml
 apiVersion: batch/v1
@@ -577,7 +577,7 @@ controller, by setting the Failed condition in the Job status.
 
 Here is an example manifest for a Job that defines a `backoffLimitPerIndex`:
 
-[`/controllers/job-backoff-limit-per-index-example.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples//controllers/job-backoff-limit-per-index-example.yaml)
+[`/controllers/job-backoff-limit-per-index-example.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples//controllers/job-backoff-limit-per-index-example.yaml)
 
 ```yaml
 apiVersion: batch/v1
@@ -673,7 +673,7 @@ container exit codes and the Pod conditions.
 
 Here is a manifest for a Job that defines a `podFailurePolicy`:
 
-[`/controllers/job-pod-failure-policy-example.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples//controllers/job-pod-failure-policy-example.yaml)
+[`/controllers/job-pod-failure-policy-example.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples//controllers/job-pod-failure-policy-example.yaml)
 
 ```yaml
 apiVersion: batch/v1
@@ -804,7 +804,7 @@ the job controller evaluates the rules in order. Once the Job meets a rule, the 
 
 Here is a manifest for a Job with `successPolicy`:
 
-[`/controllers/job-success-policy.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples//controllers/job-success-policy.yaml)
+[`/controllers/job-success-policy.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples//controllers/job-success-policy.yaml)
 
 ```yaml
 apiVersion: batch/v1

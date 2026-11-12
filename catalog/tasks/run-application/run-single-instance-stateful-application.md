@@ -4,16 +4,16 @@ title: Run a Single-Instance Stateful Application
 description: This page shows you how to run a single-instance stateful application in Kubernetes using a PersistentVolume and a Deployment.
 resource: https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/
 tags: [kubernetes, tasks, run-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/run-application/run-single-instance-stateful-application.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/run-application/run-single-instance-stateful-application.md
     title: 'Kubernetes website source: tasks/run-application/run-single-instance-stateful-application.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/
     title: Run a Single-Instance Stateful Application | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/run-application/run-single-instance-stateful-application.md
 ---
 
@@ -62,7 +62,7 @@ Note: The password is defined in the config yaml, and this is insecure. See
 [Kubernetes Secrets](/concepts/configuration/secret.md)
 for a secure solution.
 
-[`application/mysql/mysql-deployment.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/mysql/mysql-deployment.yaml)
+[`application/mysql/mysql-deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/mysql/mysql-deployment.yaml)
 
 ```yaml
 apiVersion: v1
@@ -109,7 +109,7 @@ spec:
         persistentVolumeClaim:
           claimName: mysql-pv-claim
 ```
-[`application/mysql/mysql-pv.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/mysql/mysql-pv.yaml)
+[`application/mysql/mysql-pv.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/mysql/mysql-pv.yaml)
 
 ```yaml
 apiVersion: v1

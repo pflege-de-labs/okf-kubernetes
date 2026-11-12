@@ -4,16 +4,16 @@ title: Fine Parallel Processing Using a Work Queue
 description: In this example, you will run a Kubernetes Job that runs multiple parallel tasks as worker processes, each running as a separate Pod.
 resource: https://kubernetes.io/docs/tasks/job/fine-parallel-processing-work-queue/
 tags: [kubernetes, tasks, job]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/job/fine-parallel-processing-work-queue.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/job/fine-parallel-processing-work-queue.md
     title: 'Kubernetes website source: tasks/job/fine-parallel-processing-work-queue.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/job/fine-parallel-processing-work-queue/
     title: Fine Parallel Processing Using a Work Queue | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/job/fine-parallel-processing-work-queue.md
 ---
 
@@ -151,7 +151,7 @@ called `rediswq.py` ([Download](https://kubernetes.io/examples/application/job/r
 The "worker" program in each Pod of the Job uses the work queue
 client library to get work.  Here it is:
 
-[`application/job/redis/worker.py`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/job/redis/worker.py)
+[`application/job/redis/worker.py`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/redis/worker.py)
 
 ```python
 #!/usr/bin/env python
@@ -206,7 +206,7 @@ your private repository](/concepts/containers/images.md).
 
 Here is a manifest for the Job you will create:
 
-[`application/job/redis/job.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/job/redis/job.yaml)
+[`application/job/redis/job.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/redis/job.yaml)
 
 ```yaml
 apiVersion: batch/v1

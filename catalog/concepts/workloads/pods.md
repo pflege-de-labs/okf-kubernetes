@@ -4,16 +4,16 @@ title: Pods
 description: _Pods_ are the smallest deployable units of computing that you can create and manage in Kubernetes.
 resource: https://kubernetes.io/docs/concepts/workloads/pods/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/pods/_index.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/_index.md
     title: 'Kubernetes website source: concepts/workloads/pods/_index.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/
     title: Pods | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/pods/_index.md
 ---
 
@@ -70,7 +70,7 @@ Pods in a Kubernetes cluster are used in two main ways:
 
 The following is an example of a Pod which consists of a container running the image `nginx:1.14.2`.
 
-[`pods/simple-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/simple-pod.yaml)
+[`pods/simple-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/simple-pod.yaml)
 
 ```yaml
 apiVersion: v1

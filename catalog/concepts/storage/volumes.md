@@ -4,16 +4,16 @@ title: Volumes
 description: Kubernetes _volumes_ provide a way for containers in a Pod to access and share data via the filesystem.
 resource: https://kubernetes.io/docs/concepts/storage/volumes/
 tags: [kubernetes, concepts, storage]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/volumes.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/volumes.md
     title: 'Kubernetes website source: concepts/storage/volumes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/storage/volumes/
     title: Volumes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/storage/volumes.md
 ---
 
@@ -514,7 +514,7 @@ artifact) which is available on the kubelet's host machine.
 
 An example of using the `image` volume source is:
 
-[`pods/image-volumes.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/image-volumes.yaml)
+[`pods/image-volumes.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/image-volumes.yaml)
 
 ```yaml
 apiVersion: v1
@@ -1240,7 +1240,7 @@ The allowed values are:
   if the feature is not supported by the kernel or the runtime class.
 
 Example:
-[`storage/rro.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/rro.yaml)
+[`storage/rro.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/rro.yaml)
 
 ```yaml
 apiVersion: v1

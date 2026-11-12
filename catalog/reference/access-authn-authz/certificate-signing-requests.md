@@ -4,16 +4,16 @@ title: Certificates and Certificate Signing Requests
 description: Kubernetes certificate and trust bundle APIs enable automation of X.509 credential provisioning by providing a programmatic interface for clients of the Kubernetes API to request and obtain X.509 certificates from a Certificate Authority (CA).
 resource: https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/
 tags: [kubernetes, reference, access-authn-authz]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/access-authn-authz/certificate-signing-requests.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/access-authn-authz/certificate-signing-requests.md
     title: 'Kubernetes website source: reference/access-authn-authz/certificate-signing-requests.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/
     title: Certificates and Certificate Signing Requests | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/access-authn-authz/certificate-signing-requests.md
 ---
 
@@ -83,7 +83,7 @@ To allow creating a CertificateSigningRequest and retrieving any CertificateSign
 
 For example:
 
-[`access/certificate-signing-request/clusterrole-create.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/certificate-signing-request/clusterrole-create.yaml)
+[`access/certificate-signing-request/clusterrole-create.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/certificate-signing-request/clusterrole-create.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -110,7 +110,7 @@ To allow approving a CertificateSigningRequest:
 
 For example:
 
-[`access/certificate-signing-request/clusterrole-approve.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/certificate-signing-request/clusterrole-approve.yaml)
+[`access/certificate-signing-request/clusterrole-approve.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/certificate-signing-request/clusterrole-approve.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -148,7 +148,7 @@ To allow signing a CertificateSigningRequest:
 * Verbs: `update`, group: `certificates.k8s.io`, resource: `certificatesigningrequests/status`
 * Verbs: `sign`, group: `certificates.k8s.io`, resource: `signers`, resourceName: `<signerNameDomain>/<signerNamePath>` or `<signerNameDomain>/*`
 
-[`access/certificate-signing-request/clusterrole-sign.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/certificate-signing-request/clusterrole-sign.yaml)
+[`access/certificate-signing-request/clusterrole-sign.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/certificate-signing-request/clusterrole-sign.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1

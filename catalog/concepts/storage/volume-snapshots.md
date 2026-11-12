@@ -4,16 +4,16 @@ title: Volume Snapshots
 description: In Kubernetes, a _VolumeSnapshot_ represents a snapshot of a volume on a storage system.
 resource: https://kubernetes.io/docs/concepts/storage/volume-snapshots/
 tags: [kubernetes, concepts, storage]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/volume-snapshots.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/volume-snapshots.md
     title: 'Kubernetes website source: concepts/storage/volume-snapshots.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/storage/volume-snapshots/
     title: Volume Snapshots | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/storage/volume-snapshots.md
 ---
 

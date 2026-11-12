@@ -4,16 +4,16 @@ title: Configure Default CPU Requests and Limits for a Namespace
 description: Define a default CPU resource limits for a namespace, so that every new Pod in that namespace has a CPU resource limit configured.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace.md
     title: 'Kubernetes website source: tasks/administer-cluster/manage-resources/cpu-default-namespace.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/
     title: Configure Default CPU Requests and Limits for a Namespace | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace.md
 ---
 
@@ -64,7 +64,7 @@ kubectl create namespace default-cpu-example
 Here's a manifest for an example [LimitRange](/reference/glossary/limitrange.md).
 The manifest specifies a default CPU request and a default CPU limit.
 
-[`admin/resource/cpu-defaults.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-defaults.yaml)
+[`admin/resource/cpu-defaults.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/cpu-defaults.yaml)
 
 ```yaml
 apiVersion: v1
@@ -94,7 +94,7 @@ CPU limit of 1.
 Here's a manifest for a Pod that has one container. The container
 does not specify a CPU request and limit.
 
-[`admin/resource/cpu-defaults-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-defaults-pod.yaml)
+[`admin/resource/cpu-defaults-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/cpu-defaults-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -140,7 +140,7 @@ containers:
 Here's a manifest for a Pod that has one container. The container
 specifies a CPU limit, but not a request:
 
-[`admin/resource/cpu-defaults-pod-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-defaults-pod-2.yaml)
+[`admin/resource/cpu-defaults-pod-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/cpu-defaults-pod-2.yaml)
 
 ```yaml
 apiVersion: v1
@@ -185,7 +185,7 @@ resources:
 Here's an example manifest for a Pod that has one container. The container
 specifies a CPU request, but not a limit:
 
-[`admin/resource/cpu-defaults-pod-3.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-defaults-pod-3.yaml)
+[`admin/resource/cpu-defaults-pod-3.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/cpu-defaults-pod-3.yaml)
 
 ```yaml
 apiVersion: v1

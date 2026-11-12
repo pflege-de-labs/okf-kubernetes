@@ -4,16 +4,16 @@ title: Network Policies
 description: If you want to control traffic flow at the IP address or port level (OSI layer 3 or 4), NetworkPolicies allow you to specify rules for traffic flow within your cluster, and also between Pods and the outside world. Your cluster must use a network plugin that supports NetworkPolicy enforcement.
 resource: https://kubernetes.io/docs/concepts/services-networking/network-policies/
 tags: [kubernetes, concepts, services-networking]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/services-networking/network-policies.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/network-policies.md
     title: 'Kubernetes website source: concepts/services-networking/network-policies.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/services-networking/network-policies/
     title: Network Policies | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/services-networking/network-policies.md
 ---
 
@@ -87,7 +87,7 @@ reference for a full definition of the resource.
 
 An example NetworkPolicy might look like this:
 
-[`service/networking/networkpolicy.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/networkpolicy.yaml)
+[`service/networking/networkpolicy.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/networkpolicy.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -252,7 +252,7 @@ in that namespace.
 You can create a "default" ingress isolation policy for a namespace by creating a NetworkPolicy
 that selects all pods but does not allow any ingress traffic to those pods.
 
-[`service/networking/network-policy-default-deny-ingress.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/network-policy-default-deny-ingress.yaml)
+[`service/networking/network-policy-default-deny-ingress.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/network-policy-default-deny-ingress.yaml)
 
 ```yaml
 ---
@@ -274,7 +274,7 @@ for ingress. This policy does not affect isolation for egress from any pod.
 If you want to allow all incoming connections to all pods in a namespace, you can create a policy
 that explicitly allows that.
 
-[`service/networking/network-policy-allow-all-ingress.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/network-policy-allow-all-ingress.yaml)
+[`service/networking/network-policy-allow-all-ingress.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/network-policy-allow-all-ingress.yaml)
 
 ```yaml
 ---
@@ -298,7 +298,7 @@ those pods to be denied. This policy has no effect on isolation for egress from 
 You can create a "default" egress isolation policy for a namespace by creating a NetworkPolicy
 that selects all pods but does not allow any egress traffic from those pods.
 
-[`service/networking/network-policy-default-deny-egress.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/network-policy-default-deny-egress.yaml)
+[`service/networking/network-policy-default-deny-egress.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/network-policy-default-deny-egress.yaml)
 
 ```yaml
 ---
@@ -325,7 +325,7 @@ cluster's DNS service.
 If you want to allow all connections from all pods in a namespace, you can create a policy that
 explicitly allows all outgoing connections from pods in that namespace.
 
-[`service/networking/network-policy-allow-all-egress.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/network-policy-allow-all-egress.yaml)
+[`service/networking/network-policy-allow-all-egress.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/network-policy-allow-all-egress.yaml)
 
 ```yaml
 ---
@@ -349,7 +349,7 @@ those pods to be denied. This policy has no effect on isolation for ingress to a
 You can create a "default" policy for a namespace which prevents all ingress AND egress traffic by
 creating the following NetworkPolicy in that namespace.
 
-[`service/networking/network-policy-default-deny-all.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/network-policy-default-deny-all.yaml)
+[`service/networking/network-policy-default-deny-all.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/network-policy-default-deny-all.yaml)
 
 ```yaml
 ---
@@ -391,7 +391,7 @@ When writing a NetworkPolicy, you can target a range of ports instead of a singl
 
 This is achievable with the usage of the `endPort` field, as the following example:
 
-[`service/networking/networkpolicy-multiport-egress.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/networkpolicy-multiport-egress.yaml)
+[`service/networking/networkpolicy-multiport-egress.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/networkpolicy-multiport-egress.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1

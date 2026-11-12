@@ -4,16 +4,16 @@ title: Indexed Job for Parallel Processing with Static Work Assignment
 description: In this example, you will run a Kubernetes Job that uses multiple parallel worker processes.
 resource: https://kubernetes.io/docs/tasks/job/indexed-parallel-processing-static/
 tags: [kubernetes, tasks, job]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/job/indexed-parallel-processing-static.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/job/indexed-parallel-processing-static.md
     title: 'Kubernetes website source: tasks/job/indexed-parallel-processing-static.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/job/indexed-parallel-processing-static/
     title: Indexed Job for Parallel Processing with Static Work Assignment | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/job/indexed-parallel-processing-static.md
 min_kubernetes_server_version: v1.21
 ---
@@ -95,7 +95,7 @@ the start of the clip.
 
 Here is a sample Job manifest that uses `Indexed` completion mode:
 
-[`application/job/indexed-job.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/job/indexed-job.yaml)
+[`application/job/indexed-job.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/indexed-job.yaml)
 
 ```yaml
 apiVersion: batch/v1
@@ -148,7 +148,7 @@ Alternatively, you can directly [use the downward API to pass the annotation
 value as a volume file](/tasks/inject-data-application/downward-api-volume-expose-pod-information.md#store-pod-fields),
 like shown in the following example:
 
-[`application/job/indexed-job-vol.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/job/indexed-job-vol.yaml)
+[`application/job/indexed-job-vol.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/indexed-job-vol.yaml)
 
 ```yaml
 apiVersion: batch/v1

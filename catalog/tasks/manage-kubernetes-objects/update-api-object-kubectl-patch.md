@@ -4,16 +4,16 @@ title: Update API Objects in Place Using kubectl patch
 description: Use kubectl patch to update Kubernetes API objects in place. Do a strategic merge patch or a JSON merge patch.
 resource: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/
 tags: [kubernetes, tasks, manage-kubernetes-objects]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch.md
     title: 'Kubernetes website source: tasks/manage-kubernetes-objects/update-api-object-kubectl-patch.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/
     title: Update API Objects in Place Using kubectl patch | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch.md
 ---
 
@@ -39,7 +39,7 @@ or you can use one of these Kubernetes playgrounds:
 Here's the configuration file for a Deployment that has two replicas. Each replica
 is a Pod that has one container:
 
-[`application/deployment-patch.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/deployment-patch.yaml)
+[`application/deployment-patch.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/deployment-patch.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -322,7 +322,7 @@ patch-demo-1307768864-c86dc   1/1       Running   0          1m
 
 Here's the configuration file for a Deployment that uses the `RollingUpdate` strategy:
 
-[`application/deployment-retainkeys.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/deployment-retainkeys.yaml)
+[`application/deployment-retainkeys.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/deployment-retainkeys.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -493,7 +493,7 @@ use `kubectl` to get or modify just the `status` subresource of a Deployment.
 
 Here's a manifest for a Deployment that has two replicas:
 
-[`application/deployment.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/deployment.yaml)
+[`application/deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1

@@ -4,16 +4,16 @@ title: Taints and Tolerations
 description: is a property of Pods that *attracts* them to a set of nodes (either as a preference or a hard requirement).
 resource: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
 tags: [kubernetes, concepts, scheduling-eviction]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/scheduling-eviction/taint-and-toleration.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/scheduling-eviction/taint-and-toleration.md
     title: 'Kubernetes website source: concepts/scheduling-eviction/taint-and-toleration.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
     title: Taints and Tolerations | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/scheduling-eviction/taint-and-toleration.md
 ---
 
@@ -80,7 +80,7 @@ eject the Pod unless there is an appropriate tolerance set.
 
 Here's an example of a pod that has some tolerations defined:
 
-[`pods/pod-with-toleration.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-with-toleration.yaml)
+[`pods/pod-with-toleration.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-with-toleration.yaml)
 
 ```yaml
 apiVersion: v1
@@ -227,7 +227,7 @@ kubectl taint nodes node1 servicelevel.organization.example/agreed-service-level
 
 A pod can tolerate nodes with SLA greater than 900:
 
-[`pods/pod-with-numeric-toleration.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-with-numeric-toleration.yaml)
+[`pods/pod-with-numeric-toleration.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-with-numeric-toleration.yaml)
 
 ```yaml
 apiVersion: v1

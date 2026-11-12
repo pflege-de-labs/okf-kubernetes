@@ -4,16 +4,16 @@ title: Multi-tenancy
 description: This page provides an overview of available configuration options and best practices for cluster multi-tenancy.
 resource: https://kubernetes.io/docs/concepts/security/multi-tenancy/
 tags: [kubernetes, concepts, security]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/security/multi-tenancy.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/security/multi-tenancy.md
     title: 'Kubernetes website source: concepts/security/multi-tenancy.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/security/multi-tenancy/
     title: Multi-tenancy | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/security/multi-tenancy.md
 ---
 

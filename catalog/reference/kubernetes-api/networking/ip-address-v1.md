@@ -4,16 +4,16 @@ title: IPAddress
 description: 'IPAddress represents a single IP of a single IP Family. The object is designed to be used by APIs that operate on IP addresses. The object is used by the Service core API for allocation of IP addresses. An IP address can be represented in different formats, to guarantee the uniqueness of the IP, the name of the object is the IP address in canonical format, four decimal digits separated by dots suppressing leading zeros for IPv4 and the representation defined by RFC 5952 for IPv6. Valid: 192.168.1.5 or 2001:db8::1 or 2001:db8:aaaa:bbbb:cccc:dddd:eeee:1 Invalid: 10.01.2.3 or 2001:db8:0:0:0::1'
 resource: https://kubernetes.io/docs/reference/kubernetes-api/networking/ip-address-v1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/networking/ip-address-v1.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/networking/ip-address-v1.md
     title: 'Kubernetes website source: reference/kubernetes-api/networking/ip-address-v1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/networking/ip-address-v1/
     title: IPAddress | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/kubernetes-api/networking/ip-address-v1.md
 api_metadata:
   apiVersion: networking.k8s.io/v1

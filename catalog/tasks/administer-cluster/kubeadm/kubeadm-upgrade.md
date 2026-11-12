@@ -4,16 +4,16 @@ title: Upgrading kubeadm clusters
 description: This page explains how to upgrade a Kubernetes cluster created with kubeadm from version 1.36.x to version 1.37.x, and from version 1.37.x to 1.37.y (where `y > x`).
 resource: https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade.md
     title: 'Kubernetes website source: tasks/administer-cluster/kubeadm/kubeadm-upgrade.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
     title: Upgrading kubeadm clusters | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade.md
 ---
 

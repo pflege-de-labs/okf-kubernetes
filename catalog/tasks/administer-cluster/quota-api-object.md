@@ -4,16 +4,16 @@ title: Configure Quotas for API Objects
 description: This page shows how to configure quotas for API objects, including PersistentVolumeClaims and Services.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/quota-api-object/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/quota-api-object.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/quota-api-object.md
     title: 'Kubernetes website source: tasks/administer-cluster/quota-api-object.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/quota-api-object/
     title: Configure Quotas for API Objects | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/quota-api-object.md
 ---
 
@@ -51,7 +51,7 @@ kubectl create namespace quota-object-example
 
 Here is the configuration file for a ResourceQuota object:
 
-[`admin/resource/quota-objects.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/quota-objects.yaml)
+[`admin/resource/quota-objects.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/quota-objects.yaml)
 
 ```yaml
 apiVersion: v1
@@ -97,7 +97,7 @@ status:
 
 Here is the configuration file for a PersistentVolumeClaim object:
 
-[`admin/resource/quota-objects-pvc.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/quota-objects-pvc.yaml)
+[`admin/resource/quota-objects-pvc.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/quota-objects-pvc.yaml)
 
 ```yaml
 apiVersion: v1
@@ -136,7 +136,7 @@ pvc-quota-demo   Pending
 
 Here is the configuration file for a second PersistentVolumeClaim:
 
-[`admin/resource/quota-objects-pvc-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/quota-objects-pvc-2.yaml)
+[`admin/resource/quota-objects-pvc-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/quota-objects-pvc-2.yaml)
 
 ```yaml
 apiVersion: v1

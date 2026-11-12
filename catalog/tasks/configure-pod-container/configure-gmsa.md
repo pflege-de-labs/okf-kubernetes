@@ -4,16 +4,16 @@ title: Configure GMSA for Windows Pods and containers
 description: This page shows how to configure Group Managed Service Accounts (GMSA) for Pods and containers that will run on Windows nodes.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-gmsa/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/configure-gmsa.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/configure-gmsa.md
     title: 'Kubernetes website source: tasks/configure-pod-container/configure-gmsa.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-gmsa/
     title: Configure GMSA for Windows Pods and containers | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/configure-gmsa.md
 ---
 

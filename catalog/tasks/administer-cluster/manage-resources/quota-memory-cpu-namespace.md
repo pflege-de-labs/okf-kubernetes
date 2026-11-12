@@ -4,16 +4,16 @@ title: Configure Memory and CPU Quotas for a Namespace
 description: Define overall memory and CPU resource limits for a namespace.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace.md
     title: 'Kubernetes website source: tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/
     title: Configure Memory and CPU Quotas for a Namespace | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace.md
 ---
 
@@ -54,7 +54,7 @@ kubectl create namespace quota-mem-cpu-example
 
 Here is a manifest for an example ResourceQuota:
 
-[`admin/resource/quota-mem-cpu.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/quota-mem-cpu.yaml)
+[`admin/resource/quota-mem-cpu.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/quota-mem-cpu.yaml)
 
 ```yaml
 apiVersion: v1
@@ -96,7 +96,7 @@ to learn what Kubernetes means by “1 CPU”.
 
 Here is a manifest for an example Pod:
 
-[`admin/resource/quota-mem-cpu-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/quota-mem-cpu-pod.yaml)
+[`admin/resource/quota-mem-cpu-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/quota-mem-cpu-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -163,7 +163,7 @@ kubectl get resourcequota mem-cpu-demo --namespace=quota-mem-cpu-example -o json
 
 Here is a manifest for a second Pod:
 
-[`admin/resource/quota-mem-cpu-pod-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/quota-mem-cpu-pod-2.yaml)
+[`admin/resource/quota-mem-cpu-pod-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/quota-mem-cpu-pod-2.yaml)
 
 ```yaml
 apiVersion: v1

@@ -4,16 +4,16 @@ title: LabelSelectorAttributes
 description: 'LabelSelectorAttributes indicates a label limited access. Webhook authors are encouraged to * ensure rawSelector and requirements are not both set * consider the requirements field if set * not try to parse or consider the rawSelector field if set. This is to avoid another CVE-2022-2880 (i.e. getting different systems to agree on how exactly to parse a query is not something we want), see https://www.oxeye.io/resources/golang-parameter-smuggling-attack for more details. For the *SubjectAccessReview endpoints of the kube-apiserver: * If rawSelector is empty and requirements are empty, the request is not limited. * If rawSelector is present and requirements are empty, the rawSelector will be parsed and limited if the parsing succeeds. * If rawSelector is empty and requirements are present, the requirements should be honored * If rawSelector is present and requirements are present, the request is invalid.'
 resource: https://kubernetes.io/docs/reference/kubernetes-api/definitions/label-selector-attributes-v1-authorization/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/definitions/label-selector-attributes-v1-authorization.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/definitions/label-selector-attributes-v1-authorization.md
     title: 'Kubernetes website source: reference/kubernetes-api/definitions/label-selector-attributes-v1-authorization.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/definitions/label-selector-attributes-v1-authorization/
     title: LabelSelectorAttributes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/kubernetes-api/definitions/label-selector-attributes-v1-authorization.md
 api_metadata:
   apiVersion: authorization.k8s.io/v1

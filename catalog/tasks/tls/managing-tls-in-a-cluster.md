@@ -4,16 +4,16 @@ title: Manage TLS Certificates in a Cluster
 description: Kubernetes provides a `certificates.k8s.io` API, which lets you provision TLS certificates signed by a Certificate Authority (CA) that you control.
 resource: https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 tags: [kubernetes, tasks, tls]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/tls/managing-tls-in-a-cluster.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/tls/managing-tls-in-a-cluster.md
     title: 'Kubernetes website source: tasks/tls/managing-tls-in-a-cluster.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
     title: Manage TLS Certificates in a Cluster | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/tls/managing-tls-in-a-cluster.md
 ---
 
@@ -246,7 +246,7 @@ This produces a certificate authority key file (`ca-key.pem`) and certificate (`
 
 ### Issue a certificate
 
-[`tls/server-signing-config.json`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/tls/server-signing-config.json)
+[`tls/server-signing-config.json`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/tls/server-signing-config.json)
 
 ```json
 {

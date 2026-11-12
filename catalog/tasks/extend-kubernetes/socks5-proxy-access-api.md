@@ -4,16 +4,16 @@ title: Use a SOCKS5 Proxy to Access the Kubernetes API
 description: This page shows how to use a SOCKS5 proxy to access the API of a remote Kubernetes cluster.
 resource: https://kubernetes.io/docs/tasks/extend-kubernetes/socks5-proxy-access-api/
 tags: [kubernetes, tasks, extend-kubernetes]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/extend-kubernetes/socks5-proxy-access-api.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/extend-kubernetes/socks5-proxy-access-api.md
     title: 'Kubernetes website source: tasks/extend-kubernetes/socks5-proxy-access-api.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/extend-kubernetes/socks5-proxy-access-api/
     title: Use a SOCKS5 Proxy to Access the Kubernetes API | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/extend-kubernetes/socks5-proxy-access-api.md
 min_kubernetes_server_version: v1.24
 ---

@@ -4,16 +4,16 @@ title: RuntimeClass
 description: RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are manually defined by a user or cluster provisioner, and referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeClassName reference before running the pod. For more details, see https://kubernetes.io/docs/concepts/containers/runtime-class/
 resource: https://kubernetes.io/docs/reference/kubernetes-api/node/runtime-class-v1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/node/runtime-class-v1.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/node/runtime-class-v1.md
     title: 'Kubernetes website source: reference/kubernetes-api/node/runtime-class-v1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/node/runtime-class-v1/
     title: RuntimeClass | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/kubernetes-api/node/runtime-class-v1.md
 api_metadata:
   apiVersion: node.k8s.io/v1

@@ -4,16 +4,16 @@ title: Assigning Pods to Nodes
 description: You can constrain a Pod so that it is _restricted_ to run on particular node(s), or to _prefer_ to run on particular nodes.
 resource: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
 tags: [kubernetes, concepts, scheduling-eviction]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/scheduling-eviction/assign-pod-node.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/scheduling-eviction/assign-pod-node.md
     title: 'Kubernetes website source: concepts/scheduling-eviction/assign-pod-node.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
     title: Assigning Pods to Nodes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/scheduling-eviction/assign-pod-node.md
 ---
 
@@ -128,7 +128,7 @@ your Pod spec.
 
 For example, consider the following Pod spec:
 
-[`pods/pod-with-node-affinity.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-with-node-affinity.yaml)
+[`pods/pod-with-node-affinity.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-with-node-affinity.yaml)
 
 ```yaml
 apiVersion: v1
@@ -206,7 +206,7 @@ scheduling decision for the Pod.
 
 For example, consider the following Pod spec:
 
-[`pods/pod-with-affinity-preferred-weight.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-with-affinity-preferred-weight.yaml)
+[`pods/pod-with-affinity-preferred-weight.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-with-affinity-preferred-weight.yaml)
 
 ```yaml
 apiVersion: v1
@@ -380,7 +380,7 @@ specified.
 
 Consider the following Pod spec:
 
-[`pods/pod-with-pod-affinity.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-with-pod-affinity.yaml)
+[`pods/pod-with-pod-affinity.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-with-pod-affinity.yaml)
 
 ```yaml
 apiVersion: v1

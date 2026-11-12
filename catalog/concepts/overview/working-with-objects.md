@@ -4,16 +4,16 @@ title: Objects In Kubernetes
 description: Kubernetes objects are persistent entities in the Kubernetes system. Kubernetes uses these entities to represent the state of your cluster. Learn about the Kubernetes object model and how to work with these objects.
 resource: https://kubernetes.io/docs/concepts/overview/working-with-objects/
 tags: [kubernetes, concepts, overview]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/_index.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/_index.md
     title: 'Kubernetes website source: concepts/overview/working-with-objects/_index.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/overview/working-with-objects/
     title: Objects In Kubernetes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/overview/working-with-objects/_index.md
 ---
 
@@ -83,7 +83,7 @@ serialization format when making the API request over HTTP.
 Here's an example manifest that shows the required fields and object spec for a Kubernetes
 Deployment:
 
-[`application/deployment.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/deployment.yaml)
+[`application/deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1

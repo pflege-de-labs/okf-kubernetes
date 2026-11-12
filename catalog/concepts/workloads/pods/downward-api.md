@@ -4,16 +4,16 @@ title: Downward API
 description: 'There are two ways to expose Pod and container fields to a running container: environment variables, and as files that are populated by a special volume type. Together, these two ways of exposing Pod and container fields are called the downward API.'
 resource: https://kubernetes.io/docs/concepts/workloads/pods/downward-api/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/pods/downward-api.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/downward-api.md
     title: 'Kubernetes website source: concepts/workloads/pods/downward-api.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/downward-api/
     title: Downward API | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/pods/downward-api.md
 ---
 

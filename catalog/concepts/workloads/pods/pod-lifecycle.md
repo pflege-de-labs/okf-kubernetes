@@ -4,16 +4,16 @@ title: Pod Lifecycle
 description: This page describes the lifecycle of a Pod.
 resource: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/pods/pod-lifecycle.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/pod-lifecycle.md
     title: 'Kubernetes website source: concepts/workloads/pods/pod-lifecycle.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/
     title: Pod Lifecycle | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/pods/pod-lifecycle.md
 ---
 
@@ -543,7 +543,7 @@ Consider a workload where a watcher sidecar is responsible for restarting the ma
 from a known-good state if it encounters an error. The watcher can exit with a specific code
 to trigger a full, in-place restart of the worker Pod.
 
-[`pods/restart-policy/restart-all-containers.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/restart-policy/restart-all-containers.yaml)
+[`pods/restart-policy/restart-all-containers.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/restart-policy/restart-all-containers.yaml)
 
 ```yaml
 apiVersion: v1

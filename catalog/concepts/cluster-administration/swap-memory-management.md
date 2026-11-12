@@ -4,16 +4,16 @@ title: Swap memory management
 description: Kubernetes can be configured to use swap memory on a node, allowing the kernel to free up physical memory by swapping out pages to backing storage.
 resource: https://kubernetes.io/docs/concepts/cluster-administration/swap-memory-management/
 tags: [kubernetes, concepts, cluster-administration]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/cluster-administration/swap-memory-management.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/cluster-administration/swap-memory-management.md
     title: 'Kubernetes website source: concepts/cluster-administration/swap-memory-management.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/cluster-administration/swap-memory-management/
     title: Swap memory management | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/cluster-administration/swap-memory-management.md
 ---
 

@@ -4,16 +4,16 @@ title: Share Process Namespace between Containers in a Pod
 description: This page shows how to configure process namespace sharing for a pod.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/share-process-namespace.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/share-process-namespace.md
     title: 'Kubernetes website source: tasks/configure-pod-container/share-process-namespace.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/
     title: Share Process Namespace between Containers in a Pod | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/share-process-namespace.md
 ---
 
@@ -44,7 +44,7 @@ or you can use one of these Kubernetes playgrounds:
 Process namespace sharing is enabled using the `shareProcessNamespace` field of
 `.spec` for a Pod. For example:
 
-[`pods/share-process-namespace.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/share-process-namespace.yaml)
+[`pods/share-process-namespace.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/share-process-namespace.yaml)
 
 ```yaml
 apiVersion: v1

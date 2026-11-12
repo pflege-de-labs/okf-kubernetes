@@ -4,16 +4,16 @@ title: Managing Workloads
 description: You've deployed your application and exposed it via a Service.
 resource: https://kubernetes.io/docs/concepts/workloads/management/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/management.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/management.md
     title: 'Kubernetes website source: concepts/workloads/management.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/management/
     title: Managing Workloads | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/management.md
 ---
 
@@ -28,7 +28,7 @@ Many applications require multiple resources to be created, such as a Deployment
 Management of multiple resources can be simplified by grouping them together in the same file
 (separated by `---` in YAML). For example:
 
-[`application/nginx-app.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/nginx-app.yaml)
+[`application/nginx-app.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/nginx-app.yaml)
 
 ```yaml
 apiVersion: v1

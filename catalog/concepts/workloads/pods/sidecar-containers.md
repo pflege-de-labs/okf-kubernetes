@@ -4,16 +4,16 @@ title: Sidecar Containers
 description: Sidecar containers are the secondary containers that run along with the main application container within the same Pod.
 resource: https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/pods/sidecar-containers.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/sidecar-containers.md
     title: 'Kubernetes website source: concepts/workloads/pods/sidecar-containers.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/
     title: Sidecar Containers | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/pods/sidecar-containers.md
 ---
 
@@ -62,7 +62,7 @@ In this example, the sidecar container is intentionally defined under `initConta
 with `restartPolicy: Always`. Kubernetes treats such containers as sidecars that continue
 running for the lifetime of the Pod.
 
-[`application/deployment-sidecar.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/deployment-sidecar.yaml)
+[`application/deployment-sidecar.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/deployment-sidecar.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -137,7 +137,7 @@ main container has finished.
 
 Here's an example of a Job with two containers, one of which is a sidecar:
 
-[`application/job/job-sidecar.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/job/job-sidecar.yaml)
+[`application/job/job-sidecar.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/job-sidecar.yaml)
 
 ```yaml
 apiVersion: batch/v1

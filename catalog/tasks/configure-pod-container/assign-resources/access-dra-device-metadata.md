@@ -4,16 +4,16 @@ title: Access DRA Device Metadata
 description: This page shows you how to access device metadata from containers that use _dynamic resource allocation (DRA)_.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-resources/access-dra-device-metadata/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/assign-resources/access-dra-device-metadata.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/assign-resources/access-dra-device-metadata.md
     title: 'Kubernetes website source: tasks/configure-pod-container/assign-resources/access-dra-device-metadata.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-resources/access-dra-device-metadata/
     title: Access DRA Device Metadata | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/assign-resources/access-dra-device-metadata.md
 min_kubernetes_server_version: v1.37
 ---
@@ -68,7 +68,7 @@ device metadata files appear inside the container at:
 
 1. Review the following example manifest:
 
-   [`dra/dra-device-metadata-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/dra/dra-device-metadata-pod.yaml)
+   [`dra/dra-device-metadata-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/dra/dra-device-metadata-pod.yaml)
 
 ```yaml
 apiVersion: resource.k8s.io/v1
@@ -168,7 +168,7 @@ The `<podClaimName>` corresponds to the `name` field in the Pod's
 
 1. Review the following example manifest:
 
-   [`dra/dra-device-metadata-template-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/dra/dra-device-metadata-template-pod.yaml)
+   [`dra/dra-device-metadata-template-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/dra/dra-device-metadata-template-pod.yaml)
 
 ```yaml
 apiVersion: resource.k8s.io/v1

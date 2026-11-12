@@ -4,16 +4,16 @@ title: IPv4/IPv6 dual-stack
 description: Kubernetes lets you configure single-stack IPv4 networking, single-stack IPv6 networking, or dual stack networking with both network families active. This page explains how.
 resource: https://kubernetes.io/docs/concepts/services-networking/dual-stack/
 tags: [kubernetes, concepts, services-networking]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/services-networking/dual-stack.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/dual-stack.md
     title: 'Kubernetes website source: concepts/services-networking/dual-stack.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/services-networking/dual-stack/
     title: IPv4/IPv6 dual-stack | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/services-networking/dual-stack.md
 ---
 
@@ -123,7 +123,7 @@ These examples demonstrate the behavior of various dual-stack Service configurat
    [headless Services](/concepts/services-networking/service.md#headless-services) with selectors
    will behave in this same way.)
 
-   [`service/networking/dual-stack-default-svc.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/dual-stack-default-svc.yaml)
+   [`service/networking/dual-stack-default-svc.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/dual-stack-default-svc.yaml)
 
 ```yaml
 apiVersion: v1
@@ -154,7 +154,7 @@ spec:
    * On a cluster with dual-stack enabled, specifying `RequireDualStack` in `.spec.ipFamilyPolicy`
      behaves the same as `PreferDualStack`.
 
-   [`service/networking/dual-stack-preferred-svc.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/dual-stack-preferred-svc.yaml)
+   [`service/networking/dual-stack-preferred-svc.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/dual-stack-preferred-svc.yaml)
 
 ```yaml
 apiVersion: v1
@@ -177,7 +177,7 @@ spec:
    IPv4 address in `.spec.clusterIPs`, `.spec.clusterIP` is set to the IPv6 address because that is
    the first element in the `.spec.clusterIPs` array, overriding the default.
 
-   [`service/networking/dual-stack-preferred-ipfamilies-svc.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/dual-stack-preferred-ipfamilies-svc.yaml)
+   [`service/networking/dual-stack-preferred-ipfamilies-svc.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/dual-stack-preferred-ipfamilies-svc.yaml)
 
 ```yaml
 apiVersion: v1
@@ -209,7 +209,7 @@ dual-stack.)
    `.spec.ipFamilies` to the address family of the existing Service. The existing Service cluster IP
    will be stored in `.spec.clusterIPs`.
 
-   [`service/networking/dual-stack-default-svc.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/dual-stack-default-svc.yaml)
+   [`service/networking/dual-stack-default-svc.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/dual-stack-default-svc.yaml)
 
 ```yaml
 apiVersion: v1
@@ -264,7 +264,7 @@ spec:
    `--service-cluster-ip-range` flag to the kube-apiserver) even though `.spec.clusterIP` is set to
    `None`.
 
-   [`service/networking/dual-stack-default-svc.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/dual-stack-default-svc.yaml)
+   [`service/networking/dual-stack-default-svc.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/dual-stack-default-svc.yaml)
 
 ```yaml
 apiVersion: v1

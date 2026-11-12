@@ -4,16 +4,16 @@ title: Kubernetes API health endpoints
 description: The Kubernetes API server provides API endpoints to indicate the current status of the API server.
 resource: https://kubernetes.io/docs/reference/using-api/health-checks/
 tags: [kubernetes, reference, using-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/using-api/health-checks.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/using-api/health-checks.md
     title: 'Kubernetes website source: reference/using-api/health-checks.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/using-api/health-checks/
     title: Kubernetes API health endpoints | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/using-api/health-checks.md
 ---
 

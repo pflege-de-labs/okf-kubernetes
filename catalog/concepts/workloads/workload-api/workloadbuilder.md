@@ -4,16 +4,16 @@ title: Scheduling Building Block APIs and the workloadbuilder Library
 description: Reusable scheduling API primitives that in-tree and out-of-tree workload controllers embed in their own APIs, and the shared workloadbuilder library that compiles them into Workload, PodGroup, and CompositePodGroup objects.
 resource: https://kubernetes.io/docs/concepts/workloads/workload-api/workloadbuilder/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/workload-api/workloadbuilder.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/workload-api/workloadbuilder.md
     title: 'Kubernetes website source: concepts/workloads/workload-api/workloadbuilder.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/workload-api/workloadbuilder/
     title: Scheduling Building Block APIs and the workloadbuilder Library | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/workload-api/workloadbuilder.md
 ---
 
@@ -27,7 +27,7 @@ Controller authors embed these primitives into their own APIs so that users expr
 scheduling intent (gang scheduling, topology, disruption behavior) with a consistent
 schema across the ecosystem, and the shared `workloadbuilder` library compiles that
 intent into the scheduler-facing [Workload](/concepts/workloads/workload-api.md),
-[PodGroup](/concepts/workloads/podgroup-api.md), and [CompositePodGroup](https://kubernetes.io/docs/concepts/workloads/workload-api/compositepodgroup-api/) objects.
+[PodGroup](/concepts/workloads/podgroup-api.md), and [CompositePodGroup](/concepts/workloads/compositepodgroup-api.md) objects.
 
 The built-in consumer of these building blocks today is the
 [Job](/concepts/workloads/controllers/job.md) controller, gated by the

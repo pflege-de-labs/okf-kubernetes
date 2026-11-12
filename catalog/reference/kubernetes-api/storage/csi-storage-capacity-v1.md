@@ -4,16 +4,16 @@ title: CSIStorageCapacity
 description: 'CSIStorageCapacity stores the result of one CSI GetCapacity call. For a given StorageClass, this describes the available capacity in a particular topology segment. This can be used when considering where to instantiate new PersistentVolumes. For example this can express things like: - StorageClass &#34;standard&#34; has &#34;1234 GiB&#34; available in &#34;topology.kubernetes.io/zone=us-east1&#34; - StorageClass &#34;localssd&#34; has &#34;10 GiB&#34; available in &#34;kubernetes.io/hostname=knode-abc123&#34; The following three cases all imply that no capacity is available for a certain combination: - no object exists with suitable topology and storage class name - such an object exists, but the capacity is unset - such an object exists, but the capacity is zero The producer of these objects can decide which approach is more suitable. They are consumed by the kube-scheduler when a CSI driver opts into capacity-aware scheduling with CSIDriverSpec.StorageCapacity. The scheduler compares the MaximumVolumeSize against the requested size of pending volumes to filter out unsuitable nodes. If MaximumVolumeSize is unset, it falls back to a comparison against the less precise Capacity. If that is also unset, the scheduler assumes that capacity is insufficient and tries some other node.'
 resource: https://kubernetes.io/docs/reference/kubernetes-api/storage/csi-storage-capacity-v1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/storage/csi-storage-capacity-v1.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/storage/csi-storage-capacity-v1.md
     title: 'Kubernetes website source: reference/kubernetes-api/storage/csi-storage-capacity-v1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/storage/csi-storage-capacity-v1/
     title: CSIStorageCapacity | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/kubernetes-api/storage/csi-storage-capacity-v1.md
 api_metadata:
   apiVersion: storage.k8s.io/v1

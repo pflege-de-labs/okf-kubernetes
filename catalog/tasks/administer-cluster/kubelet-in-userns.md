@@ -4,16 +4,16 @@ title: Running Kubernetes Node Components as a Non-root User
 description: This document describes how to run Kubernetes Node components such as kubelet, CRI, OCI, and CNI without root privileges, by using a user namespace.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/kubelet-in-userns/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/kubelet-in-userns.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/kubelet-in-userns.md
     title: 'Kubernetes website source: tasks/administer-cluster/kubelet-in-userns.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/kubelet-in-userns/
     title: Running Kubernetes Node Components as a Non-root User | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/kubelet-in-userns.md
 min_kubernetes_server_version: "1.22"
 ---

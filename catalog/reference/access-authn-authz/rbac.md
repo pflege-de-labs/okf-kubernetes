@@ -4,16 +4,16 @@ title: Using RBAC Authorization
 description: Role-based access control (RBAC) is a method of regulating access to computer or network resources based on the roles of individual users within your organization.
 resource: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 tags: [kubernetes, reference, access-authn-authz]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/access-authn-authz/rbac.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/access-authn-authz/rbac.md
     title: 'Kubernetes website source: reference/access-authn-authz/rbac.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
     title: Using RBAC Authorization | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/access-authn-authz/rbac.md
 ---
 
@@ -84,7 +84,7 @@ a role cluster-wide, use a ClusterRole.
 Here's an example Role in the "default" namespace that can be used to grant read access to
 [pods](/reference/glossary/pod.md):
 
-[`access/simple-role.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/simple-role.yaml)
+[`access/simple-role.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/simple-role.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -114,7 +114,7 @@ Here is an example of a ClusterRole that can be used to grant read access to
 [secrets](/reference/glossary/secret.md) in any particular namespace,
 or across all namespaces (depending on how it is [bound](#rolebinding-and-clusterrolebinding)):
 
-[`access/simple-clusterrole.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/simple-clusterrole.yaml)
+[`access/simple-clusterrole.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/simple-clusterrole.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -156,7 +156,7 @@ Here is an example of a RoleBinding that grants the "pod-reader" Role to the use
 within the "default" namespace.
 This allows "jane" to read pods in the "default" namespace.
 
-[`access/simple-rolebinding-with-role.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/simple-rolebinding-with-role.yaml)
+[`access/simple-rolebinding-with-role.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/simple-rolebinding-with-role.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -187,7 +187,7 @@ For instance, even though the following RoleBinding refers to a ClusterRole,
 "dave" (the subject, case sensitive) will only be able to read Secrets in the "development"
 namespace, because the RoleBinding's namespace (in its metadata) is "development".
 
-[`access/simple-rolebinding-with-clusterrole.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/simple-rolebinding-with-clusterrole.yaml)
+[`access/simple-rolebinding-with-clusterrole.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/simple-rolebinding-with-clusterrole.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -216,7 +216,7 @@ To grant permissions across a whole cluster, you can use a ClusterRoleBinding.
 The following ClusterRoleBinding allows any user in the group "manager" to read
 secrets in any namespace.
 
-[`access/simple-clusterrolebinding.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/simple-clusterrolebinding.yaml)
+[`access/simple-clusterrolebinding.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/simple-clusterrolebinding.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -1257,7 +1257,7 @@ guidance for restricting this access in existing clusters.
 If you want new clusters to retain this level of access in the aggregated roles,
 you can create the following ClusterRole:
 
-[`access/endpoints-aggregated.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/endpoints-aggregated.yaml)
+[`access/endpoints-aggregated.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/endpoints-aggregated.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1

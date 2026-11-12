@@ -4,19 +4,19 @@ title: Release Lifecycle
 description: Release, maintenance-mode and end-of-life dates of every Kubernetes minor release, and how to derive whether a release is supported, in maintenance mode (security fixes only), or end of life.
 resource: https://kubernetes.io/releases/
 tags: [kubernetes, releases]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/data/releases/schedule.yaml
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/data/releases/schedule.yaml
     title: 'Kubernetes website source: data/releases/schedule.yaml'
   - id: k8s-docs
     resource: https://kubernetes.io/releases/
     title: Release Lifecycle | Kubernetes documentation
   - id: k8s-eol-data
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/data/releases/eol.yaml
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/data/releases/eol.yaml
     title: 'Kubernetes website source: data/releases/eol.yaml'
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: data/releases/schedule.yaml
 ---
 
@@ -27,7 +27,7 @@ A new minor release ships roughly every four months. Each minor release gets abo
 patch support: 12 months of standard support, then 2 months of maintenance mode, then end of life
 ([support period](/releases/patch-releases.md#support-period)).
 
-The tables are a snapshot of kubernetes/website@2fb3b0d636e8 as of 2026-11-05. They do not state a status.
+The tables are a snapshot of kubernetes/website@2674d5095a50 as of 2026-11-12. They do not state a status.
 Derive the status of a release from today's date:
 
 | Status | Condition | Fixes shipped |

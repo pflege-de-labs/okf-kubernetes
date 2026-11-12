@@ -4,16 +4,16 @@ title: Storage Classes
 description: This document describes the concept of a StorageClass in Kubernetes.
 resource: https://kubernetes.io/docs/concepts/storage/storage-classes/
 tags: [kubernetes, concepts, storage]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/storage-classes.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/storage-classes.md
     title: 'Kubernetes website source: concepts/storage/storage-classes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/storage/storage-classes/
     title: Storage Classes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/storage/storage-classes.md
 ---
 
@@ -48,7 +48,7 @@ don't request a specific class. For more details, see the
 
 Here's an example of a StorageClass:
 
-[`storage/storageclass-low-latency.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass-low-latency.yaml)
+[`storage/storageclass-low-latency.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass-low-latency.yaml)
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -220,7 +220,7 @@ If `nodeName` is used in this case, the scheduler will be bypassed and PVC will 
 
 Instead, you can use node selector for `kubernetes.io/hostname`:
 
-[`storage/storageclass/pod-volume-binding.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass/pod-volume-binding.yaml)
+[`storage/storageclass/pod-volume-binding.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass/pod-volume-binding.yaml)
 
 ```yaml
 apiVersion: v1
@@ -255,7 +255,7 @@ This example demonstrates how to restrict the topology of provisioned volumes to
 zones and should be used as a replacement for the `zone` and `zones` parameters for the
 supported plugins.
 
-[`storage/storageclass/storageclass-topology.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass/storageclass-topology.yaml)
+[`storage/storageclass/storageclass-topology.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass/storageclass-topology.yaml)
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -296,7 +296,7 @@ out-of-tree storage driver instead.
 
 Here is an example StorageClass for the AWS EBS CSI driver:
 
-[`storage/storageclass/storageclass-aws-ebs.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass/storageclass-aws-ebs.yaml)
+[`storage/storageclass/storageclass-aws-ebs.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass/storageclass-aws-ebs.yaml)
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -325,7 +325,7 @@ allowedTopologies:
 
 To configure AWS EFS storage, you can use the out-of-tree [AWS_EFS_CSI_DRIVER](https://github.com/kubernetes-sigs/aws-efs-csi-driver).
 
-[`storage/storageclass/storageclass-aws-efs.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass/storageclass-aws-efs.yaml)
+[`storage/storageclass/storageclass-aws-efs.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass/storageclass-aws-efs.yaml)
 
 ```yaml
 kind: StorageClass
@@ -351,7 +351,7 @@ To configure NFS storage, you can use the in-tree driver or the
 [NFS CSI driver for Kubernetes](https://github.com/kubernetes-csi/csi-driver-nfs#readme)
 (recommended).
 
-[`storage/storageclass/storageclass-nfs.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass/storageclass-nfs.yaml)
+[`storage/storageclass/storageclass-nfs.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass/storageclass-nfs.yaml)
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -468,7 +468,7 @@ The following examples use the VMware Cloud Provider (vCP) StorageClass provisio
 This internal provisioner of Ceph RBD is deprecated. Please use
 [CephFS RBD CSI driver](https://github.com/ceph/ceph-csi).
 
-[`storage/storageclass/storageclass-ceph-rbd.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass/storageclass-ceph-rbd.yaml)
+[`storage/storageclass/storageclass-ceph-rbd.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass/storageclass-ceph-rbd.yaml)
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -529,7 +529,7 @@ storage driver instead.
 
 ### Azure File (deprecated) {#azure-file}
 
-[`storage/storageclass/storageclass-azure-file.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass/storageclass-azure-file.yaml)
+[`storage/storageclass/storageclass-azure-file.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass/storageclass-azure-file.yaml)
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -571,7 +571,7 @@ be read by other users.
 
 ### Portworx volume (deprecated) {#portworx-volume}
 
-[`storage/storageclass/storageclass-portworx-volume.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass/storageclass-portworx-volume.yaml)
+[`storage/storageclass/storageclass-portworx-volume.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass/storageclass-portworx-volume.yaml)
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -607,7 +607,7 @@ parameters:
 
 ### Local
 
-[`storage/storageclass/storageclass-local.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/storage/storageclass/storageclass-local.yaml)
+[`storage/storageclass/storageclass-local.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/storage/storageclass/storageclass-local.yaml)
 
 ```yaml
 apiVersion: storage.k8s.io/v1

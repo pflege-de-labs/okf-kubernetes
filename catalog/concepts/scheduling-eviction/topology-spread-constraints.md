@@ -4,16 +4,16 @@ title: Pod Topology Spread Constraints
 description: You can use _topology spread constraints_ to control how Pods are spread across your cluster among failure-domains such as regions, zones, nodes, and other user-defined topology domains.
 resource: https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/
 tags: [kubernetes, concepts, scheduling-eviction]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/scheduling-eviction/topology-spread-constraints.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/scheduling-eviction/topology-spread-constraints.md
     title: 'Kubernetes website source: concepts/scheduling-eviction/topology-spread-constraints.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/
     title: Pod Topology Spread Constraints | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/scheduling-eviction/topology-spread-constraints.md
 ---
 
@@ -313,7 +313,7 @@ graph BT
 If you want an incoming Pod to be evenly spread with existing Pods across zones, you
 can use a manifest similar to:
 
-[`pods/topology-spread-constraints/one-constraint.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/topology-spread-constraints/one-constraint.yaml)
+[`pods/topology-spread-constraints/one-constraint.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/topology-spread-constraints/one-constraint.yaml)
 
 ```yaml
 kind: Pod
@@ -426,7 +426,7 @@ graph BT
 You can combine two topology spread constraints to control the spread of Pods both
 by node and by zone:
 
-[`pods/topology-spread-constraints/two-constraints.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/topology-spread-constraints/two-constraints.yaml)
+[`pods/topology-spread-constraints/two-constraints.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/topology-spread-constraints/two-constraints.yaml)
 
 ```yaml
 kind: Pod
@@ -541,7 +541,7 @@ and you know that zone `C` must be excluded. In this case, you can compose a man
 as below, so that Pod `mypod` will be placed into zone `B` instead of zone `C`.
 Similarly, Kubernetes also respects `spec.nodeSelector`.
 
-[`pods/topology-spread-constraints/one-constraint-with-nodeaffinity.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/topology-spread-constraints/one-constraint-with-nodeaffinity.yaml)
+[`pods/topology-spread-constraints/one-constraint-with-nodeaffinity.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/topology-spread-constraints/one-constraint-with-nodeaffinity.yaml)
 
 ```yaml
 kind: Pod

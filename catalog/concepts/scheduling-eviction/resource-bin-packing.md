@@ -4,16 +4,16 @@ title: Resource Bin Packing
 description: This article applies to resource bin packing in context of scheduling of a single pod.
 resource: https://kubernetes.io/docs/concepts/scheduling-eviction/resource-bin-packing/
 tags: [kubernetes, concepts, scheduling-eviction]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/scheduling-eviction/resource-bin-packing.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/scheduling-eviction/resource-bin-packing.md
     title: 'Kubernetes website source: concepts/scheduling-eviction/resource-bin-packing.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/scheduling-eviction/resource-bin-packing/
     title: Resource Bin Packing | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/scheduling-eviction/resource-bin-packing.md
 ---
 

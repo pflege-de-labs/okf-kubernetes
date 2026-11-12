@@ -4,16 +4,16 @@ title: Projected Volumes
 description: This document describes _projected volumes_ in Kubernetes.
 resource: https://kubernetes.io/docs/concepts/storage/projected-volumes/
 tags: [kubernetes, concepts, storage]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/projected-volumes.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/projected-volumes.md
     title: 'Kubernetes website source: concepts/storage/projected-volumes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/storage/projected-volumes/
     title: Projected Volumes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/storage/projected-volumes.md
 ---
 
@@ -39,7 +39,7 @@ see the [all-in-one volume](https://git.k8s.io/design-proposals-archive/node/all
 
 ### Example configuration with a secret, a downwardAPI, and a configMap {#example-configuration-secret-downwardapi-configmap}
 
-[`pods/storage/projected-secret-downwardapi-configmap.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/storage/projected-secret-downwardapi-configmap.yaml)
+[`pods/storage/projected-secret-downwardapi-configmap.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/storage/projected-secret-downwardapi-configmap.yaml)
 
 ```yaml
 apiVersion: v1
@@ -82,7 +82,7 @@ spec:
 
 ### Example configuration: secrets with a non-default permission mode set {#example-configuration-secrets-nondefault-permission-mode}
 
-[`pods/storage/projected-secrets-nondefault-permission-mode.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/storage/projected-secrets-nondefault-permission-mode.yaml)
+[`pods/storage/projected-secrets-nondefault-permission-mode.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/storage/projected-secrets-nondefault-permission-mode.yaml)
 
 ```yaml
 apiVersion: v1
@@ -128,7 +128,7 @@ parameters are nearly the same with two exceptions:
 You can inject the token for the current [service account](/reference/access-authn-authz/authentication.md#service-account-tokens)
 into a Pod at a specified path. For example:
 
-[`pods/storage/projected-service-account-token.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/storage/projected-service-account-token.yaml)
+[`pods/storage/projected-service-account-token.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/storage/projected-service-account-token.yaml)
 
 ```yaml
 apiVersion: v1
@@ -201,7 +201,7 @@ or if `signerName` / `labelSelector` do not match any ClusterTrustBundles.
 If this behavior is not what you want, then set the `optional` field to `true`,
 and the pod will start up with an empty file at `path`.
 
-[`pods/storage/projected-clustertrustbundle.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/storage/projected-clustertrustbundle.yaml)
+[`pods/storage/projected-clustertrustbundle.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/storage/projected-clustertrustbundle.yaml)
 
 ```yaml
 apiVersion: v1
@@ -290,7 +290,7 @@ However, if you read the key and certificate chain from separate files, Kubelet
 may rotate the credentials after your first read and before your second read,
 resulting in your application loading a mismatched key and certificate.
 
-[`pods/storage/projected-podcertificate.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/storage/projected-podcertificate.yaml)
+[`pods/storage/projected-podcertificate.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/storage/projected-podcertificate.yaml)
 
 ```yaml
 # Sample Pod spec that uses a podCertificate projection to request an ED25519

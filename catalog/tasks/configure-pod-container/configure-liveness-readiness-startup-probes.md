@@ -4,16 +4,16 @@ title: Configure Liveness, Readiness and Startup Probes
 description: This page shows how to configure liveness, readiness and startup probes for containers.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.md
     title: 'Kubernetes website source: tasks/configure-pod-container/configure-liveness-readiness-startup-probes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
     title: Configure Liveness, Readiness and Startup Probes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.md
 ---
 
@@ -46,7 +46,7 @@ liveness probes to detect and remedy such situations.
 In this exercise, you create a Pod that runs a container based on the
 `registry.k8s.io/busybox:1.27.2` image. Here is the configuration file for the Pod:
 
-[`pods/probe/exec-liveness.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/probe/exec-liveness.yaml)
+[`pods/probe/exec-liveness.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/probe/exec-liveness.yaml)
 
 ```yaml
 apiVersion: v1
@@ -155,7 +155,7 @@ liveness-exec   1/1       Running   1          1m
 Another kind of liveness probe uses an HTTP GET request. Here is the configuration
 file for a Pod that runs a container based on the `registry.k8s.io/e2e-test-images/agnhost` image.
 
-[`pods/probe/http-liveness.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/probe/http-liveness.yaml)
+[`pods/probe/http-liveness.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/probe/http-liveness.yaml)
 
 ```yaml
 apiVersion: v1
@@ -244,7 +244,7 @@ specify a value of `HTTP2`. This requires the `H2CContainerProbe`
 [feature gate](/reference/command-line-tools-reference/feature-gates.md) to be
 enabled on both the `kube-apiserver` and the `kubelet`.
 
-[`pods/probe/h2c-liveness.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/probe/h2c-liveness.yaml)
+[`pods/probe/h2c-liveness.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/probe/h2c-liveness.yaml)
 
 ```yaml
 apiVersion: v1
@@ -284,7 +284,7 @@ kubelet will attempt to open a socket to your container on the specified port.
 If it can establish a connection, the container is considered healthy, if it
 can't it is considered a failure.
 
-[`pods/probe/tcp-liveness-readiness.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/probe/tcp-liveness-readiness.yaml)
+[`pods/probe/tcp-liveness-readiness.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/probe/tcp-liveness-readiness.yaml)
 
 ```yaml
 apiVersion: v1
@@ -349,7 +349,7 @@ Similarly you can configure readiness and startup probes.
 
 Here is an example manifest:
 
-[`pods/probe/grpc-liveness.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/probe/grpc-liveness.yaml)
+[`pods/probe/grpc-liveness.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/probe/grpc-liveness.yaml)
 
 ```yaml
 apiVersion: v1
@@ -403,7 +403,7 @@ requires the `GRPCContainerProbeTLS`
 [feature gate](/reference/command-line-tools-reference/feature-gates.md) to
 be enabled on both the `kube-apiserver` and the `kubelet`.
 
-[`pods/probe/grpc-tls-liveness.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/probe/grpc-tls-liveness.yaml)
+[`pods/probe/grpc-tls-liveness.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/probe/grpc-tls-liveness.yaml)
 
 ```yaml
 apiVersion: v1

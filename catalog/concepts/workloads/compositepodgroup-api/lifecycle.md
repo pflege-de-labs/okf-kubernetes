@@ -4,16 +4,16 @@ title: CompositePodGroup Lifecycle
 description: A CompositePodGroup represents a non-leaf node in a multi-level `PodGroup` hierarchy.
 resource: https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/lifecycle/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/compositepodgroup-api/lifecycle.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/compositepodgroup-api/lifecycle.md
     title: 'Kubernetes website source: concepts/workloads/compositepodgroup-api/lifecycle.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/lifecycle/
     title: CompositePodGroup Lifecycle | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/compositepodgroup-api/lifecycle.md
 ---
 

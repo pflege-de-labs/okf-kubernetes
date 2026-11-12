@@ -4,16 +4,16 @@ title: Running Pods on Only Some Nodes
 description: This page demonstrates how can you run Pods on only some Nodes as part of a DaemonSet
 resource: https://kubernetes.io/docs/tasks/manage-daemon/pods-some-nodes/
 tags: [kubernetes, tasks, manage-daemon]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/manage-daemon/pods-some-nodes.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/manage-daemon/pods-some-nodes.md
     title: 'Kubernetes website source: tasks/manage-daemon/pods-some-nodes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/manage-daemon/pods-some-nodes/
     title: Running Pods on Only Some Nodes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/manage-daemon/pods-some-nodes.md
 ---
 
@@ -54,7 +54,7 @@ Let's create a [DaemonSet](/reference/glossary/daemonset.md) which will provisio
 Next, use a `nodeSelector` to ensure that the DaemonSet only runs Pods on nodes
 with the `ssd` label set to `"true"`.
 
-[`controllers/daemonset-label-selector.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/controllers/daemonset-label-selector.yaml)
+[`controllers/daemonset-label-selector.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/controllers/daemonset-label-selector.yaml)
 
 ```yaml
 apiVersion: apps/v1

@@ -4,16 +4,16 @@ title: Configure Multiple Schedulers
 description: Kubernetes ships with a default scheduler that is described here.
 resource: https://kubernetes.io/docs/tasks/extend-kubernetes/configure-multiple-schedulers/
 tags: [kubernetes, tasks, extend-kubernetes]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/extend-kubernetes/configure-multiple-schedulers.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/extend-kubernetes/configure-multiple-schedulers.md
     title: 'Kubernetes website source: tasks/extend-kubernetes/configure-multiple-schedulers.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/extend-kubernetes/configure-multiple-schedulers/
     title: Configure Multiple Schedulers | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/extend-kubernetes/configure-multiple-schedulers.md
 ---
 
@@ -87,7 +87,7 @@ for this example. A [Deployment](/concepts/workloads/controllers/deployment.md) 
 thereby making the scheduler resilient to failures. Here is the deployment
 config. Save it as `my-scheduler.yaml`:
 
-[`admin/sched/my-scheduler.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/sched/my-scheduler.yaml)
+[`admin/sched/my-scheduler.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/sched/my-scheduler.yaml)
 
 ```yaml
 apiVersion: v1
@@ -274,7 +274,7 @@ Add your scheduler name to the resourceNames of the rule applied for `endpoints`
 kubectl edit clusterrole system:kube-scheduler
 ```
 
-[`admin/sched/clusterrole.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/sched/clusterrole.yaml)
+[`admin/sched/clusterrole.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/sched/clusterrole.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -325,7 +325,7 @@ scheduler in that pod spec. Let's look at three examples.
 
 - Pod spec without any scheduler name
 
-  [`admin/sched/pod1.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/sched/pod1.yaml)
+  [`admin/sched/pod1.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/sched/pod1.yaml)
 
 ```yaml
 apiVersion: v1
@@ -351,7 +351,7 @@ spec:
 
 - Pod spec with `default-scheduler`
 
-  [`admin/sched/pod2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/sched/pod2.yaml)
+  [`admin/sched/pod2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/sched/pod2.yaml)
 
 ```yaml
 apiVersion: v1
@@ -378,7 +378,7 @@ spec:
 
 - Pod spec with `my-scheduler`
 
-  [`admin/sched/pod3.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/sched/pod3.yaml)
+  [`admin/sched/pod3.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/sched/pod3.yaml)
 
 ```yaml
 apiVersion: v1

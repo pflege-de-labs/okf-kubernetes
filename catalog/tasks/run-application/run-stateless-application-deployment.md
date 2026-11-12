@@ -4,16 +4,16 @@ title: Run a Stateless Application Using a Deployment
 description: This page shows how to run an application using a Kubernetes Deployment object.
 resource: https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/
 tags: [kubernetes, tasks, run-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/run-application/run-stateless-application-deployment.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/run-application/run-stateless-application-deployment.md
     title: 'Kubernetes website source: tasks/run-application/run-stateless-application-deployment.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/
     title: Run a Stateless Application Using a Deployment | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/run-application/run-stateless-application-deployment.md
 min_kubernetes_server_version: v1.9
 ---
@@ -46,7 +46,7 @@ You can run an application by creating a Kubernetes Deployment object, and you
 can describe a Deployment in a YAML file. For example, this YAML file describes
 a Deployment that runs the nginx:1.14.2 Docker image:
 
-[`application/deployment.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/deployment.yaml)
+[`application/deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -141,7 +141,7 @@ spec:
 You can update the deployment by applying a new YAML file. This YAML file
 specifies that the deployment should be updated to use nginx 1.16.1.
 
-[`application/deployment-update.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/deployment-update.yaml)
+[`application/deployment-update.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/deployment-update.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -183,7 +183,7 @@ You can increase the number of Pods in your Deployment by applying a new YAML
 file. This YAML file sets `replicas` to 4, which specifies that the Deployment
 should have four Pods:
 
-[`application/deployment-scale.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/deployment-scale.yaml)
+[`application/deployment-scale.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/deployment-scale.yaml)
 
 ```yaml
 apiVersion: apps/v1

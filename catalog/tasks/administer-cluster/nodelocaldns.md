@@ -4,16 +4,16 @@ title: Using NodeLocal DNSCache in Kubernetes Clusters
 description: This page provides an overview of NodeLocal DNSCache feature in Kubernetes.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/nodelocaldns.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/nodelocaldns.md
     title: 'Kubernetes website source: tasks/administer-cluster/nodelocaldns.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/
     title: Using NodeLocal DNSCache in Kubernetes Clusters | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/nodelocaldns.md
 ---
 

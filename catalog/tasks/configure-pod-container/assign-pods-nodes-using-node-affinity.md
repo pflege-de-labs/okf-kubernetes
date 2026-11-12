@@ -4,16 +4,16 @@ title: Assign Pods to Nodes using Node Affinity
 description: This page shows how to assign a Kubernetes Pod to a particular node using Node Affinity in a Kubernetes cluster.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity.md
     title: 'Kubernetes website source: tasks/configure-pod-container/assign-pods-nodes-using-node-affinity.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/
     title: Assign Pods to Nodes using Node Affinity | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity.md
 min_kubernetes_server_version: v1.10
 ---
@@ -80,7 +80,7 @@ or you can use one of these Kubernetes playgrounds:
 This manifest describes a Pod that has a `requiredDuringSchedulingIgnoredDuringExecution` node affinity,`disktype: ssd`. 
 This means that the pod will get scheduled only on a node that has a `disktype=ssd` label. 
 
-[`pods/pod-nginx-required-affinity.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-nginx-required-affinity.yaml)
+[`pods/pod-nginx-required-affinity.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-nginx-required-affinity.yaml)
 
 ```yaml
 apiVersion: v1
@@ -128,7 +128,7 @@ spec:
 This manifest describes a Pod that has a `preferredDuringSchedulingIgnoredDuringExecution` node affinity,`disktype: ssd`. 
 This means that the pod will prefer a node that has a `disktype=ssd` label. 
 
-[`pods/pod-nginx-preferred-affinity.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-nginx-preferred-affinity.yaml)
+[`pods/pod-nginx-preferred-affinity.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-nginx-preferred-affinity.yaml)
 
 ```yaml
 apiVersion: v1

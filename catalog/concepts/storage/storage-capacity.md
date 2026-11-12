@@ -4,16 +4,16 @@ title: Storage Capacity
 description: 'Storage capacity is limited and may vary depending on the node on which a pod runs: network-attached storage might not be accessible by all nodes, or storage is local to a node to begin with.'
 resource: https://kubernetes.io/docs/concepts/storage/storage-capacity/
 tags: [kubernetes, concepts, storage]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/storage-capacity.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/storage-capacity.md
     title: 'Kubernetes website source: concepts/storage/storage-capacity.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/storage/storage-capacity/
     title: Storage Capacity | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/storage/storage-capacity.md
 ---
 

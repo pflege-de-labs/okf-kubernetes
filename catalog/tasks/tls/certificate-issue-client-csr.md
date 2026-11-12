@@ -4,16 +4,16 @@ title: Issue a Certificate for a Kubernetes API Client Using a CertificateSignin
 description: Kubernetes lets you use a public key infrastructure (PKI) to authenticate to your cluster as a client.
 resource: https://kubernetes.io/docs/tasks/tls/certificate-issue-client-csr/
 tags: [kubernetes, tasks, tls]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/tls/certificate-issue-client-csr.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/tls/certificate-issue-client-csr.md
     title: 'Kubernetes website source: tasks/tls/certificate-issue-client-csr.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/tls/certificate-issue-client-csr/
     title: Issue a Certificate for a Kubernetes API Client Using a CertificateSigningRequest | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/tls/certificate-issue-client-csr.md
 ---
 
@@ -102,7 +102,7 @@ EOF
 
 You can alternatively, create a YAML manifest file and apply it with `kubectl`:
 
-[`tls/myuser.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/tls/myuser.yaml)
+[`tls/myuser.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/tls/myuser.yaml)
 
 ```yaml
 apiVersion: certificates.k8s.io/v1
@@ -203,7 +203,7 @@ kubectl create role developer --verb=create --verb=get --verb=list --verb=update
 ```
 
 Equivalent YAML:
-[`tls/role.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/tls/role.yaml)
+[`tls/role.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/tls/role.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -224,7 +224,7 @@ kubectl create rolebinding developer-binding-myuser --role=developer --user=myus
 
 Equivalent YAML:
 
-[`tls/rolebinding.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/tls/rolebinding.yaml)
+[`tls/rolebinding.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/tls/rolebinding.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1

@@ -4,16 +4,16 @@ title: Debug Running Pods
 description: This page explains how to debug Pods running (or crashing) on a Node.
 resource: https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/
 tags: [kubernetes, tasks, debug]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/debug/debug-application/debug-running-pod.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/debug/debug-application/debug-running-pod.md
     title: 'Kubernetes website source: tasks/debug/debug-application/debug-running-pod.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/
     title: Debug Running Pods | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/debug/debug-application/debug-running-pod.md
 ---
 
@@ -34,7 +34,7 @@ This page explains how to debug Pods running (or crashing) on a Node.
 
 For this example we'll use a Deployment to create two pods, similar to the earlier example.
 
-[`application/nginx-with-request.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/nginx-with-request.yaml)
+[`application/nginx-with-request.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/nginx-with-request.yaml)
 
 ```yaml
 apiVersion: apps/v1

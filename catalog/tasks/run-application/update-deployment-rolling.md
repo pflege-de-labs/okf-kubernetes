@@ -4,16 +4,16 @@ title: Update a Deployment Without Downtime
 description: This page shows how to update a running Deployment to a new version using a rolling update.
 resource: https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/
 tags: [kubernetes, tasks, run-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/run-application/update-deployment-rolling.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/run-application/update-deployment-rolling.md
     title: 'Kubernetes website source: tasks/run-application/update-deployment-rolling.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/
     title: Update a Deployment Without Downtime | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/run-application/update-deployment-rolling.md
 ---
 

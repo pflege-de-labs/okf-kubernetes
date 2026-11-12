@@ -4,16 +4,16 @@ title: Get a Shell to a Running Container
 description: This page shows how to use `kubectl exec` to get a shell to a running container.
 resource: https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/
 tags: [kubernetes, tasks, debug]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/debug/debug-application/get-shell-running-container.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/debug/debug-application/get-shell-running-container.md
     title: 'Kubernetes website source: tasks/debug/debug-application/get-shell-running-container.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/
     title: Get a Shell to a Running Container | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/debug/debug-application/get-shell-running-container.md
 ---
 
@@ -39,7 +39,7 @@ or you can use one of these Kubernetes playgrounds:
 In this exercise, you create a Pod that has one container. The container
 runs the nginx image. Here is the configuration file for the Pod:
 
-[`application/shell-demo.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/shell-demo.yaml)
+[`application/shell-demo.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/shell-demo.yaml)
 
 ```yaml
 apiVersion: v1

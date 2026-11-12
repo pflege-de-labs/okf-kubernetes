@@ -4,16 +4,16 @@ title: Assign Pod-level CPU and memory resources
 description: This page shows how to specify CPU and memory resources for a Pod at pod-level in addition to container-level resource specifications.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pod-level-resources/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/assign-pod-level-resources.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/assign-pod-level-resources.md
     title: 'Kubernetes website source: tasks/configure-pod-container/assign-pod-level-resources.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pod-level-resources/
     title: Assign Pod-level CPU and memory resources | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/assign-pod-level-resources.md
 min_kubernetes_server_version: "1.34"
 ---
@@ -98,7 +98,7 @@ In this exercise, you create a Pod that has one Container. The Pod has a
 memory request of 100 MiB and a memory limit of 200 MiB. Here's the configuration
 file for the Pod:
 
-[`pods/resource/pod-level-memory-request-limit.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/pod-level-memory-request-limit.yaml)
+[`pods/resource/pod-level-memory-request-limit.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/pod-level-memory-request-limit.yaml)
 
 ```yaml
 apiVersion: v1
@@ -178,7 +178,7 @@ in the Pod spec manifest. To specify a CPU limit, include `resources.limits.cpu`
 In this exercise, you create a Pod that has one container. The Pod has a request
 of 0.5 CPU and a limit of 1 CPU. Here is the configuration file for the Pod:
 
-[`pods/resource/pod-level-cpu-request-limit.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/pod-level-cpu-request-limit.yaml)
+[`pods/resource/pod-level-cpu-request-limit.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/pod-level-cpu-request-limit.yaml)
 
 ```yaml
 apiVersion: v1
@@ -268,7 +268,7 @@ defined CPU requests and limits, while only one of the containers will have its 
 explicit resource requests and limits. The other container will inherit the resource
 constraints from the pod-level settings. Here's the configuration file for the Pod:
 
-[`pods/resource/pod-level-resources.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/pod-level-resources.yaml)
+[`pods/resource/pod-level-resources.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/pod-level-resources.yaml)
 
 ```yaml
 apiVersion: v1

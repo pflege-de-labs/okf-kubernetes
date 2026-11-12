@@ -4,16 +4,16 @@ title: Configure a Pod to Use a ConfigMap
 description: Many applications rely on configuration which is used during either application initialization or runtime.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/configure-pod-configmap.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/configure-pod-configmap.md
     title: 'Kubernetes website source: tasks/configure-pod-container/configure-pod-configmap.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
     title: Configure a Pod to Use a ConfigMap | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/configure-pod-configmap.md
 ---
 
@@ -563,7 +563,7 @@ section, and learn how to use these objects with Pods.
 2. Assign the `special.how` value defined in the ConfigMap to the `SPECIAL_LEVEL_KEY`
    environment variable in the Pod specification.
 
-   [`pods/pod-single-configmap-env-variable.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-single-configmap-env-variable.yaml)
+   [`pods/pod-single-configmap-env-variable.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-single-configmap-env-variable.yaml)
 
 ```yaml
 apiVersion: v1
@@ -600,7 +600,7 @@ spec:
 As with the previous example, create the ConfigMaps first.
 Here is the manifest you will use:
 
-[`configmap/configmaps.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/configmap/configmaps.yaml)
+[`configmap/configmaps.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/configmap/configmaps.yaml)
 
 ```yaml
 apiVersion: v1
@@ -628,7 +628,7 @@ data:
 
 * Define the environment variables in the Pod specification.
 
-  [`pods/pod-multiple-configmap-env-variable.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-multiple-configmap-env-variable.yaml)
+  [`pods/pod-multiple-configmap-env-variable.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-multiple-configmap-env-variable.yaml)
 
 ```yaml
 apiVersion: v1
@@ -673,7 +673,7 @@ spec:
 
 * Create a ConfigMap containing multiple key-value pairs.
 
-  [`configmap/configmap-multikeys.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/configmap/configmap-multikeys.yaml)
+  [`configmap/configmap-multikeys.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/configmap/configmap-multikeys.yaml)
 
 ```yaml
 apiVersion: v1
@@ -695,7 +695,7 @@ data:
 * Use `envFrom` to define all of the ConfigMap's data as container environment variables. The
   key from the ConfigMap becomes the environment variable name in the Pod.
 
-  [`pods/pod-configmap-envFrom.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-configmap-envFrom.yaml)
+  [`pods/pod-configmap-envFrom.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-configmap-envFrom.yaml)
 
 ```yaml
 apiVersion: v1
@@ -733,7 +733,7 @@ using the `$(VAR_NAME)` Kubernetes substitution syntax.
 
 For example, the following Pod manifest:
 
-[`pods/pod-configmap-env-var-valueFrom.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-configmap-env-var-valueFrom.yaml)
+[`pods/pod-configmap-env-var-valueFrom.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-configmap-env-var-valueFrom.yaml)
 
 ```yaml
 apiVersion: v1
@@ -787,7 +787,7 @@ the ConfigMap. The file contents become the key's value.
 
 The examples in this section refer to a ConfigMap named `special-config`:
 
-[`configmap/configmap-multikeys.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/configmap/configmap-multikeys.yaml)
+[`configmap/configmap-multikeys.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/configmap/configmap-multikeys.yaml)
 
 ```yaml
 apiVersion: v1
@@ -813,7 +813,7 @@ This adds the ConfigMap data to the directory specified as `volumeMounts.mountPa
 case, `/etc/config`). The `command` section lists directory files with names that match the
 keys in ConfigMap.
 
-[`pods/pod-configmap-volume.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-configmap-volume.yaml)
+[`pods/pod-configmap-volume.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-configmap-volume.yaml)
 
 ```yaml
 apiVersion: v1
@@ -868,7 +868,7 @@ kubectl delete pod dapi-test-pod --now
 Use the `path` field to specify the desired file path for specific ConfigMap items.
 In this case, the `SPECIAL_LEVEL` item will be mounted in the `config-volume` volume at `/etc/config/keys`.
 
-[`pods/pod-configmap-volume-specific-key.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-configmap-volume-specific-key.yaml)
+[`pods/pod-configmap-volume-specific-key.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-configmap-volume-specific-key.yaml)
 
 ```yaml
 apiVersion: v1

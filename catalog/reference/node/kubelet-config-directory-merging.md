@@ -4,16 +4,16 @@ title: Kubelet Configuration Directory Merging
 description: When using the kubelet's `--config-dir` flag to specify a drop-in directory for configuration, there is some specific behavior on how different types are merged.
 resource: https://kubernetes.io/docs/reference/node/kubelet-config-directory-merging/
 tags: [kubernetes, reference, node]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/node/kubelet-config-directory-merging.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/node/kubelet-config-directory-merging.md
     title: 'Kubernetes website source: reference/node/kubelet-config-directory-merging.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/node/kubelet-config-directory-merging/
     title: Kubelet Configuration Directory Merging | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/node/kubelet-config-directory-merging.md
 ---
 

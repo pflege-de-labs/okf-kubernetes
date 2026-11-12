@@ -4,16 +4,16 @@ title: Audit Annotations
 description: This page serves as a reference for the audit annotations of the kubernetes.io namespace.
 resource: https://kubernetes.io/docs/reference/labels-annotations-taints/audit-annotations/
 tags: [kubernetes, reference, labels-annotations-taints]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/labels-annotations-taints/audit-annotations.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/labels-annotations-taints/audit-annotations.md
     title: 'Kubernetes website source: reference/labels-annotations-taints/audit-annotations.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/labels-annotations-taints/audit-annotations/
     title: Audit Annotations | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/labels-annotations-taints/audit-annotations.md
 ---
 

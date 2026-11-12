@@ -4,16 +4,16 @@ title: ReplicaSet
 description: A ReplicaSet's purpose is to maintain a stable set of replica Pods running at any given time. Usually, you define a Deployment and let that Deployment manage ReplicaSets automatically.
 resource: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/replicaset.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/replicaset.md
     title: 'Kubernetes website source: concepts/workloads/controllers/replicaset.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
     title: ReplicaSet | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/controllers/replicaset.md
 ---
 
@@ -52,7 +52,7 @@ use a Deployment instead, and define your application in the spec section.
 
 ## Example
 
-[`controllers/frontend.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/controllers/frontend.yaml)
+[`controllers/frontend.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/controllers/frontend.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -185,7 +185,7 @@ to owning Pods specified by its template-- it can acquire other Pods in the mann
 
 Take the previous frontend ReplicaSet example, and the Pods specified in the following manifest:
 
-[`pods/pod-rs.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-rs.yaml)
+[`pods/pod-rs.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-rs.yaml)
 
 ```yaml
 apiVersion: v1
@@ -437,7 +437,7 @@ A ReplicaSet can also be a target for
 a ReplicaSet can be auto-scaled by an HPA. Here is an example HPA targeting
 the ReplicaSet we created in the previous example.
 
-[`controllers/hpa-rs.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/controllers/hpa-rs.yaml)
+[`controllers/hpa-rs.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/controllers/hpa-rs.yaml)
 
 ```yaml
 apiVersion: autoscaling/v1

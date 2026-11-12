@@ -4,16 +4,16 @@ title: Feature Gates (removed)
 description: This page contains list of feature gates that have been removed.
 resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates-removed/
 tags: [kubernetes, reference, command-line-tools-reference]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/command-line-tools-reference/feature-gates-removed/index.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/command-line-tools-reference/feature-gates-removed/index.md
     title: 'Kubernetes website source: reference/command-line-tools-reference/feature-gates-removed/index.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates-removed/
     title: Feature Gates (removed) | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/command-line-tools-reference/feature-gates-removed/index.md
 ---
 

@@ -4,16 +4,16 @@ title: Expose Pod Information to Containers Through Files
 description: This page shows how a Pod can use a `downwardAPI` volume, to expose information about itself to containers running in the Pod.
 resource: https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/
 tags: [kubernetes, tasks, inject-data-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information.md
     title: 'Kubernetes website source: tasks/inject-data-application/downward-api-volume-expose-pod-information.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/
     title: Expose Pod Information to Containers Through Files | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information.md
 ---
 
@@ -50,7 +50,7 @@ In this part of exercise, you create a Pod that has one container, and you
 project Pod-level fields into the running container as files.
 Here is the manifest for the Pod:
 
-[`pods/inject/dapi-volume.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/inject/dapi-volume.yaml)
+[`pods/inject/dapi-volume.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/dapi-volume.yaml)
 
 ```yaml
 apiVersion: v1
@@ -211,7 +211,7 @@ definition, but taken from the specific
 rather than from the Pod overall. Here is a manifest for a Pod that again has
 just one container:
 
-[`pods/inject/dapi-volume-resources.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/inject/dapi-volume-resources.yaml)
+[`pods/inject/dapi-volume-resources.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/dapi-volume-resources.yaml)
 
 ```yaml
 apiVersion: v1

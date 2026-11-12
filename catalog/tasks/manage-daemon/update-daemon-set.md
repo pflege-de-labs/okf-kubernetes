@@ -4,16 +4,16 @@ title: Perform a Rolling Update on a DaemonSet
 description: This page shows how to perform a rolling update on a DaemonSet.
 resource: https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
 tags: [kubernetes, tasks, manage-daemon]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/manage-daemon/update-daemon-set.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/manage-daemon/update-daemon-set.md
     title: 'Kubernetes website source: tasks/manage-daemon/update-daemon-set.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/
     title: Perform a Rolling Update on a DaemonSet | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/manage-daemon/update-daemon-set.md
 ---
 
@@ -64,7 +64,7 @@ You may want to set
 
 This YAML file specifies a DaemonSet with an update strategy as 'RollingUpdate'
 
-[`controllers/fluentd-daemonset.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/controllers/fluentd-daemonset.yaml)
+[`controllers/fluentd-daemonset.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/controllers/fluentd-daemonset.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -158,7 +158,7 @@ manifest accordingly.
 Any updates to a `RollingUpdate` DaemonSet `.spec.template` will trigger a rolling
 update. Let's update the DaemonSet by applying a new YAML file. This can be done with several different `kubectl` commands.
 
-[`controllers/fluentd-daemonset-update.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/controllers/fluentd-daemonset-update.yaml)
+[`controllers/fluentd-daemonset-update.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/controllers/fluentd-daemonset-update.yaml)
 
 ```yaml
 apiVersion: apps/v1

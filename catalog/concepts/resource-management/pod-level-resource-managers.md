@@ -4,16 +4,16 @@ title: Pod-level resource managers
 description: Pod-level resource support for the existing resource managers (Topology, CPU, and Memory) extends them to handle pod-level resource specifications.
 resource: https://kubernetes.io/docs/concepts/resource-management/pod-level-resource-managers/
 tags: [kubernetes, concepts, resource-management]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/resource-management/pod-level-resource-managers.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/resource-management/pod-level-resource-managers.md
     title: 'Kubernetes website source: concepts/resource-management/pod-level-resource-managers.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/resource-management/pod-level-resource-managers/
     title: Pod-level resource managers | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/resource-management/pod-level-resource-managers.md
 min_kubernetes_server_version: v1.36
 ---
@@ -129,7 +129,7 @@ scope is `pod` and the Pod has a total budget of 4 CPUs. `main-app` requests
 an exclusive 2 CPU slice, while the sidecars share the remaining 2 CPUs in
 the Pod's shared pool:
 
-[`pods/resource/pod-level-resource-managers-pod-scope-mixed.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/pod-level-resource-managers-pod-scope-mixed.yaml)
+[`pods/resource/pod-level-resource-managers-pod-scope-mixed.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/pod-level-resource-managers-pod-scope-mixed.yaml)
 
 ```yaml
 apiVersion: v1
@@ -195,7 +195,7 @@ are some important considerations:
     for `logging-sidecar`, the `kubelet` rejects this Pod (the same
     validation applies for memory):
 
-    [`pods/resource/pod-level-resource-managers-empty-shared-pool.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/pod-level-resource-managers-empty-shared-pool.yaml)
+    [`pods/resource/pod-level-resource-managers-empty-shared-pool.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/pod-level-resource-managers-empty-shared-pool.yaml)
 
 ```yaml
 apiVersion: v1
@@ -290,7 +290,7 @@ infrastructure sidecar and two application workers, with a total budget of
 slice. The two application workers (`worker-1` and `worker-2`) run in the
 general, node-wide shared pool:
 
-[`pods/resource/pod-level-resource-managers-container-scope-mixed.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/pod-level-resource-managers-container-scope-mixed.yaml)
+[`pods/resource/pod-level-resource-managers-container-scope-mixed.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/pod-level-resource-managers-container-scope-mixed.yaml)
 
 ```yaml
 apiVersion: v1

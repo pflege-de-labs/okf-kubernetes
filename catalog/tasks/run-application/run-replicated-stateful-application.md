@@ -4,16 +4,16 @@ title: Run a Replicated Stateful Application
 description: This page shows how to run a replicated stateful application using a StatefulSet.
 resource: https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
 tags: [kubernetes, tasks, run-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/run-application/run-replicated-stateful-application.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/run-application/run-replicated-stateful-application.md
     title: 'Kubernetes website source: tasks/run-application/run-replicated-stateful-application.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
     title: Run a Replicated Stateful Application | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/run-application/run-replicated-stateful-application.md
 ---
 
@@ -72,7 +72,7 @@ and a StatefulSet.
 
 Create the ConfigMap from the following YAML configuration file:
 
-[`application/mysql/mysql-configmap.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/mysql/mysql-configmap.yaml)
+[`application/mysql/mysql-configmap.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/mysql/mysql-configmap.yaml)
 
 ```yaml
 apiVersion: v1
@@ -111,7 +111,7 @@ based on information provided by the StatefulSet controller.
 
 Create the Services from the following YAML configuration file:
 
-[`application/mysql/mysql-services.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/mysql/mysql-services.yaml)
+[`application/mysql/mysql-services.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/mysql/mysql-services.yaml)
 
 ```yaml
 # Headless service for stable DNS entries of StatefulSet members.
@@ -173,7 +173,7 @@ writes.
 
 Finally, create the StatefulSet from the following YAML configuration file:
 
-[`application/mysql/mysql-statefulset.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/mysql/mysql-statefulset.yaml)
+[`application/mysql/mysql-statefulset.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/mysql/mysql-statefulset.yaml)
 
 ```yaml
 apiVersion: apps/v1

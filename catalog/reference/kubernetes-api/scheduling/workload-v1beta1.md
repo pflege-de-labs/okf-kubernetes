@@ -4,16 +4,16 @@ title: Workload
 description: Workload allows for expressing scheduling constraints that should be used when managing the lifecycle of workloads from the scheduling perspective, including scheduling, preemption, eviction and other phases. Workload API enablement is toggled by the GenericWorkload feature gate.
 resource: https://kubernetes.io/docs/reference/kubernetes-api/scheduling/workload-v1beta1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/scheduling/workload-v1beta1.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/scheduling/workload-v1beta1.md
     title: 'Kubernetes website source: reference/kubernetes-api/scheduling/workload-v1beta1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/scheduling/workload-v1beta1/
     title: Workload | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/kubernetes-api/scheduling/workload-v1beta1.md
 api_metadata:
   apiVersion: scheduling.k8s.io/v1beta1

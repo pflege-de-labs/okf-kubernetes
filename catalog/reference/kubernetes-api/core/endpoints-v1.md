@@ -4,16 +4,16 @@ title: Endpoints
 description: 'Endpoints is a collection of endpoints that implement the actual service. Example: Name: &#34;mysvc&#34;, Subsets: [ { Addresses: [{&#34;ip&#34;: &#34;10.10.1.1&#34;}, {&#34;ip&#34;: &#34;10.10.2.2&#34;}], Ports: [{&#34;name&#34;: &#34;a&#34;, &#34;port&#34;: 8675}, {&#34;name&#34;: &#34;b&#34;, &#34;port&#34;: 309}] }, { Addresses: [{&#34;ip&#34;: &#34;10.10.3.3&#34;}], Ports: [{&#34;name&#34;: &#34;a&#34;, &#34;port&#34;: 93}, {&#34;name&#34;: &#34;b&#34;, &#34;port&#34;: 76}] }, ] Endpoints is a legacy API and does not contain information about all Service features. Use discoveryv1.EndpointSlice for complete information about Service endpoints. Deprecated: This API is deprecated in v1.33+. Use discoveryv1.EndpointSlice.'
 resource: https://kubernetes.io/docs/reference/kubernetes-api/core/endpoints-v1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/core/endpoints-v1.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/core/endpoints-v1.md
     title: 'Kubernetes website source: reference/kubernetes-api/core/endpoints-v1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/core/endpoints-v1/
     title: Endpoints | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/kubernetes-api/core/endpoints-v1.md
 api_metadata:
   apiVersion: v1

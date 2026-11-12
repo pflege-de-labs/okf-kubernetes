@@ -4,16 +4,16 @@ title: Ingress
 description: Make your HTTP (or HTTPS) network service available using a protocol-aware configuration mechanism, that understands web concepts like URIs, hostnames, paths, and more. The Ingress concept lets you map traffic to different backends based on rules you define via the Kubernetes API.
 resource: https://kubernetes.io/docs/concepts/services-networking/ingress/
 tags: [kubernetes, concepts, services-networking]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/services-networking/ingress.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/ingress.md
     title: 'Kubernetes website source: concepts/services-networking/ingress.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/services-networking/ingress/
     title: Ingress | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/services-networking/ingress.md
 ---
 
@@ -93,7 +93,7 @@ Make sure you review your Ingress controller's documentation to understand the c
 
 A minimal Ingress resource example:
 
-[`service/networking/minimal-ingress.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/minimal-ingress.yaml)
+[`service/networking/minimal-ingress.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/minimal-ingress.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -179,7 +179,7 @@ setting with Service, and will fail validation if both are specified. A common
 usage for a `Resource` backend is to ingress data to an object storage backend
 with static assets.
 
-[`service/networking/ingress-resource-backend.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/ingress-resource-backend.yaml)
+[`service/networking/ingress-resource-backend.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/ingress-resource-backend.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -291,7 +291,7 @@ equal to the suffix of the wildcard rule.
 | `*.foo.com` | `baz.bar.foo.com` | No match, wildcard only covers a single DNS label |
 | `*.foo.com` | `foo.com`         | No match, wildcard only covers a single DNS label |
 
-[`service/networking/ingress-wildcard-host.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/ingress-wildcard-host.yaml)
+[`service/networking/ingress-wildcard-host.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/ingress-wildcard-host.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -329,7 +329,7 @@ configuration. Each Ingress should specify a class, a reference to an
 IngressClass resource that contains additional configuration including the name
 of the controller that should implement the class.
 
-[`service/networking/external-lb.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/external-lb.yaml)
+[`service/networking/external-lb.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/external-lb.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -467,7 +467,7 @@ Start by defining a
 default IngressClass. It is recommended though, to specify the default
 IngressClass:
 
-[`service/networking/default-ingressclass.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/default-ingressclass.yaml)
+[`service/networking/default-ingressclass.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/default-ingressclass.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -490,7 +490,7 @@ There are existing Kubernetes concepts that allow you to expose a single Service
 (see [alternatives](#alternatives)). You can also do this with an Ingress by specifying a
 *default backend* with no rules.
 
-[`service/networking/test-ingress.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/test-ingress.yaml)
+[`service/networking/test-ingress.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/test-ingress.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -536,7 +536,7 @@ down to a minimum. For example, a setup like:
 
 It would require an Ingress such as:
 
-[`service/networking/simple-fanout-example.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/simple-fanout-example.yaml)
+[`service/networking/simple-fanout-example.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/simple-fanout-example.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -608,7 +608,7 @@ Name-based virtual hosts support routing HTTP traffic to multiple host names at 
 The following Ingress tells the backing load balancer to route requests based on
 the [Host header](https://tools.ietf.org/html/rfc7230#section-5.4).
 
-[`service/networking/name-virtual-host-ingress.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/name-virtual-host-ingress.yaml)
+[`service/networking/name-virtual-host-ingress.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/name-virtual-host-ingress.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -648,7 +648,7 @@ requested for `first.bar.com` to `service1`, `second.bar.com` to `service2`,
 and any traffic whose request host header doesn't match `first.bar.com`
 and `second.bar.com` to `service3`.
 
-[`service/networking/name-virtual-host-ingress-no-third-host.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/name-virtual-host-ingress-no-third-host.yaml)
+[`service/networking/name-virtual-host-ingress-no-third-host.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/name-virtual-host-ingress-no-third-host.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -723,7 +723,7 @@ certificates would have to be issued for all the possible sub-domains. Therefore
 `hosts` in the `tls` section need to explicitly match the `host` in the `rules`
 section.
 
-[`service/networking/tls-example-ingress.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/tls-example-ingress.yaml)
+[`service/networking/tls-example-ingress.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/tls-example-ingress.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1

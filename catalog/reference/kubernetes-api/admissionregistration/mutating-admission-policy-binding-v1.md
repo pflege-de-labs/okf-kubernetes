@@ -4,16 +4,16 @@ title: MutatingAdmissionPolicyBinding
 description: MutatingAdmissionPolicyBinding binds the MutatingAdmissionPolicy with parametrized resources. MutatingAdmissionPolicyBinding and the optional parameter resource together define how cluster administrators configure policies for clusters. For a given admission request, each binding will cause its policy to be evaluated N times, where N is 1 for policies/bindings that don&#39;t use params, otherwise N is the number of parameters selected by the binding. Each evaluation is constrained by a runtime cost budget. Adding/removing policies, bindings, or params can not affect whether a given (policy, binding, param) combination is within its own CEL budget.
 resource: https://kubernetes.io/docs/reference/kubernetes-api/admissionregistration/mutating-admission-policy-binding-v1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/admissionregistration/mutating-admission-policy-binding-v1.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/admissionregistration/mutating-admission-policy-binding-v1.md
     title: 'Kubernetes website source: reference/kubernetes-api/admissionregistration/mutating-admission-policy-binding-v1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/admissionregistration/mutating-admission-policy-binding-v1/
     title: MutatingAdmissionPolicyBinding | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/kubernetes-api/admissionregistration/mutating-admission-policy-binding-v1.md
 api_metadata:
   apiVersion: admissionregistration.k8s.io/v1

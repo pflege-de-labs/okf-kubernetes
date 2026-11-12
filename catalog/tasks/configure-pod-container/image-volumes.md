@@ -4,16 +4,16 @@ title: Use an Image Volume With a Pod
 description: This page shows how to configure a pod using image volumes.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/image-volumes/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/image-volumes.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/image-volumes.md
     title: 'Kubernetes website source: tasks/configure-pod-container/image-volumes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/image-volumes/
     title: Use an Image Volume With a Pod | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/image-volumes.md
 min_kubernetes_server_version: v1.31
 ---
@@ -46,7 +46,7 @@ or you can use one of these Kubernetes playgrounds:
 An image volume for a pod is enabled by setting the `volumes[*].image` field of `.spec`
 to a valid reference and consuming it in the `volumeMounts` of the container. For example:
 
-[`pods/image-volumes.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/image-volumes.yaml)
+[`pods/image-volumes.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/image-volumes.yaml)
 
 ```yaml
 apiVersion: v1
@@ -111,7 +111,7 @@ It is possible to utilize
 [`subPathExpr`](/concepts/storage/volumes.md#using-subpath-expanded-environment)
 from Kubernetes v1.33 when using the image volume feature.
 
-[`pods/image-volumes-subpath.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/image-volumes-subpath.yaml)
+[`pods/image-volumes-subpath.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/image-volumes-subpath.yaml)
 
 ```yaml
 apiVersion: v1

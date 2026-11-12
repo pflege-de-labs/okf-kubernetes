@@ -4,16 +4,16 @@ title: Local Files And Paths Used By The Kubelet
 description: The kubelet is mostly a stateless process running on a Kubernetes node.
 resource: https://kubernetes.io/docs/reference/node/kubelet-files/
 tags: [kubernetes, reference, node]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/node/kubelet-files.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/node/kubelet-files.md
     title: 'Kubernetes website source: reference/node/kubelet-files.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/node/kubelet-files/
     title: Local Files And Paths Used By The Kubelet | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/node/kubelet-files.md
 ---
 

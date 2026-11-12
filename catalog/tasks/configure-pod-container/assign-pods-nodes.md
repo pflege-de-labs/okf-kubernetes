@@ -4,16 +4,16 @@ title: Assign Pods to Nodes
 description: This page shows how to assign a Kubernetes Pod to a particular node in a Kubernetes cluster.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/assign-pods-nodes.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/assign-pods-nodes.md
     title: 'Kubernetes website source: tasks/configure-pod-container/assign-pods-nodes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
     title: Assign Pods to Nodes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/assign-pods-nodes.md
 ---
 
@@ -82,7 +82,7 @@ This pod configuration file describes a pod that has a node selector,
 `disktype: ssd`. This means that the pod will get scheduled on a node that has
 a `disktype=ssd` label.
 
-[`pods/pod-nginx.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-nginx.yaml)
+[`pods/pod-nginx.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-nginx.yaml)
 
 ```yaml
 apiVersion: v1
@@ -123,7 +123,7 @@ spec:
 
 You can also schedule a pod to one specific node via setting `nodeName`.
 
-[`pods/pod-nginx-specific-node.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-nginx-specific-node.yaml)
+[`pods/pod-nginx-specific-node.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-nginx-specific-node.yaml)
 
 ```yaml
 apiVersion: v1
