@@ -4,16 +4,16 @@ title: Determine the Reason for Pod Failure
 description: This page shows how to write and read a Container termination message.
 resource: https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/
 tags: [kubernetes, tasks, debug]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/debug/debug-application/determine-reason-pod-failure.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/debug/debug-application/determine-reason-pod-failure.md
     title: 'Kubernetes website source: tasks/debug/debug-application/determine-reason-pod-failure.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/
     title: Determine the Reason for Pod Failure | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/debug/debug-application/determine-reason-pod-failure.md
 ---
 
@@ -46,7 +46,7 @@ or you can use one of these Kubernetes playgrounds:
 In this exercise, you create a Pod that runs one container.
 The manifest for that Pod specifies a command that runs when the container starts:
 
-[`debug/termination.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/debug/termination.yaml)
+[`debug/termination.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/debug/termination.yaml)
 
 ```yaml
 apiVersion: v1

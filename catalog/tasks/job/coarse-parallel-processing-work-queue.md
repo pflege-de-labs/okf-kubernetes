@@ -4,16 +4,16 @@ title: Coarse Parallel Processing Using a Work Queue
 description: In this example, you will run a Kubernetes Job with multiple parallel worker processes.
 resource: https://kubernetes.io/docs/tasks/job/coarse-parallel-processing-work-queue/
 tags: [kubernetes, tasks, job]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/job/coarse-parallel-processing-work-queue.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/job/coarse-parallel-processing-work-queue.md
     title: 'Kubernetes website source: tasks/job/coarse-parallel-processing-work-queue.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/job/coarse-parallel-processing-work-queue/
     title: Coarse Parallel Processing Using a Work Queue | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/job/coarse-parallel-processing-work-queue.md
 ---
 
@@ -215,7 +215,7 @@ The job will use the `amqp-consume` utility to read the message
 from the queue and run the actual work.  Here is a very simple
 example program:
 
-[`application/job/rabbitmq/worker.py`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/job/rabbitmq/worker.py)
+[`application/job/rabbitmq/worker.py`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/rabbitmq/worker.py)
 
 ```python
 #!/usr/bin/env python
@@ -260,7 +260,7 @@ Here is a manifest for a Job.  You'll need to make a copy of the Job manifest
 (call it `./job.yaml`),
 and edit the name of the container image to match the name you used.
 
-[`application/job/rabbitmq/job.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/job/rabbitmq/job.yaml)
+[`application/job/rabbitmq/job.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/rabbitmq/job.yaml)
 
 ```yaml
 apiVersion: batch/v1

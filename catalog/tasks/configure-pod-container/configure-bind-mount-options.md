@@ -4,16 +4,16 @@ title: Set Bind Mount Options on Volume Mounts
 description: This page shows how to apply security-related bind mount options (`noexec`, `nodev`, `nosuid`) to volume mounts in a Pod.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-bind-mount-options/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/configure-bind-mount-options.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/configure-bind-mount-options.md
     title: 'Kubernetes website source: tasks/configure-pod-container/configure-bind-mount-options.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-bind-mount-options/
     title: Set Bind Mount Options on Volume Mounts | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/configure-bind-mount-options.md
 min_kubernetes_server_version: v1.37
 ---
@@ -50,7 +50,7 @@ The allowed values are `noexec`, `nodev`, and `nosuid`.
 For example, to mount an emptyDir volume at `/tmp` with `noexec` and `nosuid`
 so that binaries cannot be executed and set-user-ID bits are ignored:
 
-[`pods/bind-mount-options.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/bind-mount-options.yaml)
+[`pods/bind-mount-options.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/bind-mount-options.yaml)
 
 ```yaml
 apiVersion: v1

@@ -4,16 +4,16 @@ title: Configure Minimum and Maximum Memory Constraints for a Namespace
 description: Define a range of valid memory resource limits for a namespace, so that every new Pod in that namespace falls within the range you configure.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace.md
     title: 'Kubernetes website source: tasks/administer-cluster/manage-resources/memory-constraint-namespace.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/
     title: Configure Minimum and Maximum Memory Constraints for a Namespace | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace.md
 ---
 
@@ -55,7 +55,7 @@ kubectl create namespace constraints-mem-example
 
 Here's an example manifest for a LimitRange:
 
-[`admin/resource/memory-constraints.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/memory-constraints.yaml)
+[`admin/resource/memory-constraints.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/memory-constraints.yaml)
 
 ```yaml
 apiVersion: v1
@@ -115,7 +115,7 @@ Here's a manifest for a Pod that has one container. Within the Pod spec, the sol
 container specifies a memory request of 600 MiB and a memory limit of 800 MiB. These satisfy the
 minimum and maximum memory constraints imposed by the LimitRange.
 
-[`admin/resource/memory-constraints-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/memory-constraints-pod.yaml)
+[`admin/resource/memory-constraints-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/memory-constraints-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -174,7 +174,7 @@ kubectl delete pod constraints-mem-demo --namespace=constraints-mem-example
 Here's a manifest for a Pod that has one container. The container specifies a
 memory request of 800 MiB and a memory limit of 1.5 GiB.
 
-[`admin/resource/memory-constraints-pod-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/memory-constraints-pod-2.yaml)
+[`admin/resource/memory-constraints-pod-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/memory-constraints-pod-2.yaml)
 
 ```yaml
 apiVersion: v1
@@ -211,7 +211,7 @@ pods "constraints-mem-demo-2" is forbidden: maximum memory usage per Container i
 Here's a manifest for a Pod that has one container. That container specifies a
 memory request of 100 MiB and a memory limit of 800 MiB.
 
-[`admin/resource/memory-constraints-pod-3.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/memory-constraints-pod-3.yaml)
+[`admin/resource/memory-constraints-pod-3.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/memory-constraints-pod-3.yaml)
 
 ```yaml
 apiVersion: v1
@@ -248,7 +248,7 @@ pods "constraints-mem-demo-3" is forbidden: minimum memory usage per Container i
 Here's a manifest for a Pod that has one container. The container does not
 specify a memory request, and it does not specify a memory limit.
 
-[`admin/resource/memory-constraints-pod-4.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/memory-constraints-pod-4.yaml)
+[`admin/resource/memory-constraints-pod-4.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/memory-constraints-pod-4.yaml)
 
 ```yaml
 apiVersion: v1

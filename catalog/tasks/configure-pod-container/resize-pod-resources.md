@@ -4,16 +4,16 @@ title: Resize CPU and Memory Resources assigned to Pods
 description: This page explains how to change the CPU and memory resources set at the Pod level without recreating the Pod.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/resize-pod-resources/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/resize-pod-resources.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/resize-pod-resources.md
     title: 'Kubernetes website source: tasks/configure-pod-container/resize-pod-resources.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/resize-pod-resources/
     title: Resize CPU and Memory Resources assigned to Pods | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/resize-pod-resources.md
 min_kubernetes_server_version: "1.35"
 ---
@@ -96,7 +96,7 @@ Additionally, the following constraint is specific to Pod-level resource resize:
 
 First, create a Pod designed for in-place CPU resize and restart-required memory resize.
 
-[`pods/resource/pod-level-resize.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/pod-level-resize.yaml)
+[`pods/resource/pod-level-resize.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/pod-level-resize.yaml)
 
 ```yaml
 apiVersion: v1

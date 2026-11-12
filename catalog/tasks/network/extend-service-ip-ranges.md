@@ -4,16 +4,16 @@ title: Extend Service IP Ranges
 description: This document shares how to extend the existing Service IP range assigned to a cluster.
 resource: https://kubernetes.io/docs/tasks/network/extend-service-ip-ranges/
 tags: [kubernetes, tasks, network]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/network/extend-service-ip-ranges.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/network/extend-service-ip-ranges.md
     title: 'Kubernetes website source: tasks/network/extend-service-ip-ranges.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/network/extend-service-ip-ranges/
     title: Extend Service IP Ranges | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/network/extend-service-ip-ranges.md
 min_kubernetes_server_version: v1.29
 ---
@@ -252,7 +252,7 @@ or `cidrs: ['2001:db8:0:0:ffff::/80', '10.96.0.0/20']` but would not allow a
 ServiceCIDR with `cidrs: ['172.20.0.0/16']`.) You can copy this policy and change
 the value of `allowed` to something appropriate for you cluster.
 
-[`service/networking/vap-servicecidr-default.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/vap-servicecidr-default.yaml)
+[`service/networking/vap-servicecidr-default.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/vap-servicecidr-default.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -296,7 +296,7 @@ to learn more about CEL if you want to write your own validation `expression`.
 The following example demonstrates how to use a `ValidatingAdmissionPolicy` and
 its binding to restrict the creation of any new Service CIDR ranges, excluding the default "kubernetes" ServiceCIDR:
 
-[`service/networking/vap-servicecidr-deny.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/vap-servicecidr-deny.yaml)
+[`service/networking/vap-servicecidr-deny.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/vap-servicecidr-deny.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1

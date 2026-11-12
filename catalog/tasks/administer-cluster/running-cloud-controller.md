@@ -4,16 +4,16 @@ title: Cloud Controller Manager Administration
 description: Since cloud providers develop and release at a different pace compared to the Kubernetes project, abstracting the provider-specific code to the `cloud-controller-manager` binary allows cloud vendors to evolve independently from the core Kubernetes code.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/running-cloud-controller.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/running-cloud-controller.md
     title: 'Kubernetes website source: tasks/administer-cluster/running-cloud-controller.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/
     title: Cloud Controller Manager Administration | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/running-cloud-controller.md
 ---
 
@@ -97,7 +97,7 @@ projects in repositories maintained by cloud vendors or by SIGs.
 For providers already in Kubernetes core, you can run the in-tree cloud controller
 manager as a DaemonSet in your cluster, use the following as a guideline:
 
-[`admin/cloud/ccm-example.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/cloud/ccm-example.yaml)
+[`admin/cloud/ccm-example.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/cloud/ccm-example.yaml)
 
 ```yaml
 # This is an example of how to set up cloud-controller-manager as a Daemonset in your cluster.

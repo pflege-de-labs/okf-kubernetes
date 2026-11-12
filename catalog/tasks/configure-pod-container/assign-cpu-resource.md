@@ -4,16 +4,16 @@ title: Assign CPU Resources to Containers and Pods
 description: This page shows how to assign a CPU *request* and a CPU *limit* to a container.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/assign-cpu-resource.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/assign-cpu-resource.md
     title: 'Kubernetes website source: tasks/configure-pod-container/assign-cpu-resource.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/
     title: Assign CPU Resources to Containers and Pods | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/assign-cpu-resource.md
 ---
 
@@ -82,7 +82,7 @@ in the container’s resource manifest. To specify a CPU limit, include `resourc
 In this exercise, you create a Pod that has one container. The container has a request
 of 0.5 CPU and a limit of 1 CPU. Here is the configuration file for the Pod:
 
-[`pods/resource/cpu-request-limit.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/cpu-request-limit.yaml)
+[`pods/resource/cpu-request-limit.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/cpu-request-limit.yaml)
 
 ```yaml
 apiVersion: v1
@@ -193,7 +193,7 @@ the capacity of any Node in your cluster. Here is the configuration file for a P
 that has one Container. The Container requests 100 CPU, which is likely to exceed the
 capacity of any Node in your cluster.
 
-[`pods/resource/cpu-request-limit-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/cpu-request-limit-2.yaml)
+[`pods/resource/cpu-request-limit-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/cpu-request-limit-2.yaml)
 
 ```yaml
 apiVersion: v1

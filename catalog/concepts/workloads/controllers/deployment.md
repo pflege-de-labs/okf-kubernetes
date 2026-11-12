@@ -4,16 +4,16 @@ title: Deployments
 description: A Deployment manages a set of Pods to run an application workload, usually one that doesn't maintain state.
 resource: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/deployment.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/deployment.md
     title: 'Kubernetes website source: concepts/workloads/controllers/deployment.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
     title: Deployments | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/controllers/deployment.md
 ---
 
@@ -43,7 +43,7 @@ The following are typical use cases for Deployments:
 
 The following is an example of a Deployment. It creates a ReplicaSet to bring up three `nginx` Pods:
 
-[`controllers/nginx-deployment.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/controllers/nginx-deployment.yaml)
+[`controllers/nginx-deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/controllers/nginx-deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1

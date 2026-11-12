@@ -4,16 +4,16 @@ title: Set Up DRA in a Cluster
 description: This page shows you how to configure _dynamic resource allocation (DRA)_ in a Kubernetes cluster by enabling API groups and configuring classes of devices.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-resources/set-up-dra-cluster/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/assign-resources/set-up-dra-cluster.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/assign-resources/set-up-dra-cluster.md
     title: 'Kubernetes website source: tasks/configure-pod-container/assign-resources/set-up-dra-cluster.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-resources/set-up-dra-cluster/
     title: Set Up DRA in a Cluster | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/assign-resources/set-up-dra-cluster.md
 min_kubernetes_server_version: v1.34
 ---
@@ -195,7 +195,7 @@ operators.
 1.  Review the following example DeviceClass manifest, which selects any device
     that's managed by the `driver.example.com` device driver:
 
-    [`dra/deviceclass.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/dra/deviceclass.yaml)
+    [`dra/deviceclass.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/dra/deviceclass.yaml)
 
 ```yaml
 apiVersion: resource.k8s.io/v1

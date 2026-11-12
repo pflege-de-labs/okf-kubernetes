@@ -4,16 +4,16 @@ title: API Priority and Fairness
 description: Controlling the behavior of the Kubernetes API server in an overload situation is a key task for cluster administrators.
 resource: https://kubernetes.io/docs/concepts/cluster-administration/flow-control/
 tags: [kubernetes, concepts, cluster-administration]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/cluster-administration/flow-control.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/cluster-administration/flow-control.md
     title: 'Kubernetes website source: concepts/cluster-administration/flow-control.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/cluster-administration/flow-control/
     title: API Priority and Fairness | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/cluster-administration/flow-control.md
 min_kubernetes_server_version: v1.18
 ---
@@ -498,7 +498,7 @@ mechanism to protect your cluster's API server from general internet
 traffic, you can configure rules to block any health check requests
 that originate from outside your cluster.
 
-[`priority-and-fairness/health-for-strangers.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/priority-and-fairness/health-for-strangers.yaml)
+[`priority-and-fairness/health-for-strangers.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/priority-and-fairness/health-for-strangers.yaml)
 
 ```yaml
 apiVersion: flowcontrol.apiserver.k8s.io/v1
@@ -831,7 +831,7 @@ from other requests.
 
 Example FlowSchema object to isolate list event requests:
 
-[`priority-and-fairness/list-events-default-service-account.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/priority-and-fairness/list-events-default-service-account.yaml)
+[`priority-and-fairness/list-events-default-service-account.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/priority-and-fairness/list-events-default-service-account.yaml)
 
 ```yaml
 apiVersion: flowcontrol.apiserver.k8s.io/v1

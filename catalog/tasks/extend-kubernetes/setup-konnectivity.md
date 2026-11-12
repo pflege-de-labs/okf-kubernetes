@@ -4,16 +4,16 @@ title: Set up Konnectivity service
 description: The Konnectivity service provides a TCP level proxy for the control plane to cluster communication.
 resource: https://kubernetes.io/docs/tasks/extend-kubernetes/setup-konnectivity/
 tags: [kubernetes, tasks, extend-kubernetes]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/extend-kubernetes/setup-konnectivity.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/extend-kubernetes/setup-konnectivity.md
     title: 'Kubernetes website source: tasks/extend-kubernetes/setup-konnectivity.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/extend-kubernetes/setup-konnectivity/
     title: Set up Konnectivity service | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/extend-kubernetes/setup-konnectivity.md
 ---
 
@@ -34,7 +34,7 @@ plane hosts. If you do not already have a cluster, you can create one by using
 
 The following steps require an egress configuration, for example:
 
-[`admin/konnectivity/egress-selector-configuration.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/konnectivity/egress-selector-configuration.yaml)
+[`admin/konnectivity/egress-selector-configuration.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/konnectivity/egress-selector-configuration.yaml)
 
 ```yaml
 apiVersion: apiserver.k8s.io/v1beta1
@@ -108,7 +108,7 @@ Deploy the Konnectivity server on your control plane node. The provided
 that the Kubernetes components are deployed as a [static Pod](/reference/glossary/static-pod.md) in your cluster. If not, you can deploy the Konnectivity
 server as a DaemonSet.
 
-[`admin/konnectivity/konnectivity-server.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/konnectivity/konnectivity-server.yaml)
+[`admin/konnectivity/konnectivity-server.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/konnectivity/konnectivity-server.yaml)
 
 ```yaml
 apiVersion: v1
@@ -188,7 +188,7 @@ spec:
 
 Then deploy the Konnectivity agents in your cluster:
 
-[`admin/konnectivity/konnectivity-agent.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/konnectivity/konnectivity-agent.yaml)
+[`admin/konnectivity/konnectivity-agent.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/konnectivity/konnectivity-agent.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -250,7 +250,7 @@ spec:
 
 Last, if RBAC is enabled in your cluster, create the relevant RBAC rules:
 
-[`admin/konnectivity/konnectivity-rbac.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/konnectivity/konnectivity-rbac.yaml)
+[`admin/konnectivity/konnectivity-rbac.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/konnectivity/konnectivity-rbac.yaml)
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1

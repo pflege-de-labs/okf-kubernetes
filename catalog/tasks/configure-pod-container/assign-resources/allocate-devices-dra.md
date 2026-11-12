@@ -4,16 +4,16 @@ title: Allocate Devices to Workloads with DRA
 description: This page shows you how to allocate devices to your Pods by using _dynamic resource allocation (DRA)_.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-resources/allocate-devices-dra/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/assign-resources/allocate-devices-dra.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/assign-resources/allocate-devices-dra.md
     title: 'Kubernetes website source: tasks/configure-pod-container/assign-resources/allocate-devices-dra.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-resources/allocate-devices-dra/
     title: Allocate Devices to Workloads with DRA | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/assign-resources/allocate-devices-dra.md
 min_kubernetes_server_version: v1.34
 ---
@@ -106,7 +106,7 @@ To create a workload that claims resources, select one of the following options:
 
 Review the following example manifest: 
 
-[`dra/resourceclaimtemplate.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/dra/resourceclaimtemplate.yaml)
+[`dra/resourceclaimtemplate.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/dra/resourceclaimtemplate.yaml)
 
 ```yaml
 apiVersion: resource.k8s.io/v1
@@ -144,7 +144,7 @@ kubectl apply -f https://k8s.io/examples/dra/resourceclaimtemplate.yaml
 
 Review the following example manifest:
 
-[`dra/resourceclaim.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/dra/resourceclaim.yaml)
+[`dra/resourceclaim.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/dra/resourceclaim.yaml)
 
 ```yaml
 apiVersion: resource.k8s.io/v1
@@ -188,7 +188,7 @@ claims in different containers.
 
 1. Review the following example Job:
 
-   [`dra/dra-example-job.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/dra/dra-example-job.yaml)
+   [`dra/dra-example-job.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/dra/dra-example-job.yaml)
 
 ```yaml
 apiVersion: batch/v1

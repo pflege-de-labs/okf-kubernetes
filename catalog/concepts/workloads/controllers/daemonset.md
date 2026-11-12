@@ -4,16 +4,16 @@ title: DaemonSet
 description: A DaemonSet defines Pods that provide node-local facilities. These might be fundamental to the operation of your cluster, such as a networking helper tool, or be part of an add-on.
 resource: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/daemonset.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/daemonset.md
     title: 'Kubernetes website source: concepts/workloads/controllers/daemonset.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
     title: DaemonSet | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/controllers/daemonset.md
 ---
 
@@ -40,7 +40,7 @@ different flags and/or different memory and cpu requests for different hardware 
 You can describe a DaemonSet in a YAML file. For example, the `daemonset.yaml` file below
 describes a DaemonSet that runs the fluentd-elasticsearch Docker image:
 
-[`controllers/daemonset.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/controllers/daemonset.yaml)
+[`controllers/daemonset.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/controllers/daemonset.yaml)
 
 ```yaml
 apiVersion: apps/v1

@@ -4,16 +4,16 @@ title: Feature Gates
 description: This page contains an overview of the various feature gates an administrator can specify on different Kubernetes components.
 resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/
 tags: [kubernetes, reference, command-line-tools-reference]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/command-line-tools-reference/feature-gates/index.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/command-line-tools-reference/feature-gates/index.md
     title: 'Kubernetes website source: reference/command-line-tools-reference/feature-gates/index.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/
     title: Feature Gates | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/command-line-tools-reference/feature-gates/index.md
 ---
 
@@ -737,7 +737,7 @@ Each feature gate is designed for enabling/disabling a specific feature.
 * **`GRPCContainerProbeTLS`**: Enables TLS support for gRPC container probes. When enabled, you can add the `mode` field to the `grpc` field in gRPC probes. Setting `mode: TLS` on a liveness, readiness, or startup probe causes the kubelet to connect over TLS (with `InsecureSkipVerify`). See [Configure Liveness, Readiness and Startup Probes](/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.md#grpc-probe-tls).
 * **`GenericWorkload`**: Enables support for the [Workload API](/concepts/workloads/workload-api.md) and [PodGroup API](/concepts/workloads/podgroup-api.md) to express scheduling requirements at the workload level. When enabled, Pods can reference a specific PodGroup to influence the way that they are scheduled. Starting in Kubernetes v1.37, this feature gate also encompasses [gang scheduling](/concepts/scheduling-eviction/gang-scheduling.md), and [workload-aware preemption](/concepts/scheduling-eviction/workload-aware-preemption.md).
 * **`GitRepoVolumeDriver`**: This controls if the `gitRepo` volume plugin is supported or not. The `gitRepo` volume plugin is disabled by default starting v1.33 release. This provides a way for users to enable it.
-* **`GracefulNodeShutdown`**: Enables support for graceful shutdown in kubelet. During a system shutdown, kubelet will attempt to detect the shutdown event and gracefully terminate pods running on the node. See [Graceful Node Shutdown](/concepts/architecture/nodes.md#graceful-node-shutdown) for more details.
+* **`GracefulNodeShutdown`**: Enables support for graceful shutdown in kubelet. During a system shutdown, kubelet will attempt to detect the shutdown event and gracefully terminate pods running on the node. See [Graceful Node Shutdown](/concepts/cluster-administration/node-shutdown.md#graceful-node-shutdown) for more details.
 * **`GracefulNodeShutdownBasedOnPodPriority`**: Enables the kubelet to check Pod priorities when shutting down a node gracefully.
 * **`H2CContainerProbe`**: Enables HTTP/2 cleartext (h2c) support for HTTP container probes. When enabled, you can add the `protocol` field to the `httpGet` field in HTTP probes. Setting `protocol: HTTP2` on a liveness, readiness, or startup probe causes the `kubelet` to probe over h2c instead of HTTP/1.1. See [Configure Liveness, Readiness and Startup Probes](/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.md#use-h2c-with-http-probes).
 * **`HPAConfigurableTolerance`**: Enables setting a [tolerance threshold](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale#tolerance) for HorizontalPodAutoscaler metrics.
@@ -901,7 +901,7 @@ Each feature gate is designed for enabling/disabling a specific feature.
 * **`WinDSR`**: Allows kube-proxy to create DSR loadbalancers for Windows.
 * **`WinOverlay`**: Allows kube-proxy to run in overlay mode for Windows.
 * **`WindowsCPUAndMemoryAffinity`**: Add CPU and Memory Affinity support to Windows nodes with [CPUManager](/tasks/administer-cluster/cpu-management-policies.md#windows-support), [MemoryManager](/tasks/administer-cluster/memory-manager.md#windows-support) and topology manager.
-* **`WindowsGracefulNodeShutdown`**: Enables support for windows node graceful shutdown in kubelet. During a system shutdown, kubelet will attempt to detect the shutdown event and gracefully terminate pods running on the node. See [Graceful Node Shutdown](/concepts/architecture/nodes.md#graceful-node-shutdown) for more details.
+* **`WindowsGracefulNodeShutdown`**: Enables support for windows node graceful shutdown in kubelet. During a system shutdown, kubelet will attempt to detect the shutdown event and gracefully terminate pods running on the node. See [Graceful Node Shutdown](/concepts/cluster-administration/node-shutdown.md#graceful-node-shutdown) for more details.
 * **`WindowsHostNetwork`**: Enables support for joining Windows containers to a hosts' network namespace.
 * **`WorkloadWithJob`**: Enables the Job controller to compile a Job's `.spec.scheduling` configuration into [Workload](/concepts/workloads/workload-api.md) and [PodGroup](/concepts/workloads/podgroup-api.md) objects before it creates any Pods. When `.spec.scheduling` is omitted, the Job defaults to the `Basic` scheduling policy. See [Integrate with Workload APIs](/concepts/workloads/controllers/job.md#integrate-with-workload-apis) for details.
 

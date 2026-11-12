@@ -4,16 +4,16 @@ title: Limit Ranges
 description: By default, containers run with unbounded compute resources on a Kubernetes cluster.
 resource: https://kubernetes.io/docs/concepts/policy/limit-range/
 tags: [kubernetes, concepts, policy]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/policy/limit-range.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/policy/limit-range.md
     title: 'Kubernetes website source: concepts/policy/limit-range.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/policy/limit-range/
     title: Limit Ranges | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/policy/limit-range.md
 ---
 
@@ -83,7 +83,7 @@ This implies that any references or operations within these examples will intera
 with elements within the default namespace of your cluster. You can override the
 operating namespace by configuring namespace in the `metadata.namespace` field.
 
-[`concepts/policy/limit-range/problematic-limit-range.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/concepts/policy/limit-range/problematic-limit-range.yaml)
+[`concepts/policy/limit-range/problematic-limit-range.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/concepts/policy/limit-range/problematic-limit-range.yaml)
 
 ```yaml
 apiVersion: v1
@@ -105,7 +105,7 @@ spec:
 
 along with a Pod that declares a CPU resource request of `700m`, but not a limit:
 
-[`concepts/policy/limit-range/example-conflict-with-limitrange-cpu.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/concepts/policy/limit-range/example-conflict-with-limitrange-cpu.yaml)
+[`concepts/policy/limit-range/example-conflict-with-limitrange-cpu.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/concepts/policy/limit-range/example-conflict-with-limitrange-cpu.yaml)
 
 ```yaml
 apiVersion: v1
@@ -129,7 +129,7 @@ Pod "example-conflict-with-limitrange-cpu" is invalid: spec.containers[0].resour
 If you set both `request` and `limit`, then that new Pod will be scheduled successfully
 even with the same LimitRange in place:
 
-[`concepts/policy/limit-range/example-no-conflict-with-limitrange-cpu.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/concepts/policy/limit-range/example-no-conflict-with-limitrange-cpu.yaml)
+[`concepts/policy/limit-range/example-no-conflict-with-limitrange-cpu.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/concepts/policy/limit-range/example-no-conflict-with-limitrange-cpu.yaml)
 
 ```yaml
 apiVersion: v1

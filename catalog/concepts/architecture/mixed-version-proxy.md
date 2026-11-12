@@ -4,16 +4,16 @@ title: Mixed Version Proxy
 description: Kubernetes 1.37 includes a beta feature that lets an API Server proxy resource requests to other _peer_ API servers.
 resource: https://kubernetes.io/docs/concepts/architecture/mixed-version-proxy/
 tags: [kubernetes, concepts, architecture]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/architecture/mixed-version-proxy.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/architecture/mixed-version-proxy.md
     title: 'Kubernetes website source: concepts/architecture/mixed-version-proxy.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/architecture/mixed-version-proxy/
     title: Mixed Version Proxy | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/architecture/mixed-version-proxy.md
 ---
 

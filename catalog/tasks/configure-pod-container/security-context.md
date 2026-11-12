@@ -4,16 +4,16 @@ title: Configure a Security Context for a Pod or Container
 description: A security context defines privilege and access control settings for a Pod or Container.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/security-context.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/security-context.md
     title: 'Kubernetes website source: tasks/configure-pod-container/security-context.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
     title: Configure a Security Context for a Pod or Container | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/security-context.md
 ---
 
@@ -79,7 +79,7 @@ in the Pod specification. The `securityContext` field is a
 The security settings that you specify for a Pod apply to all Containers in the Pod.
 Here is a configuration file for a Pod that has a `securityContext` and an `emptyDir` volume:
 
-[`pods/security/security-context.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/security/security-context.yaml)
+[`pods/security/security-context.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/security/security-context.yaml)
 
 ```yaml
 apiVersion: v1
@@ -210,7 +210,7 @@ exit
 
 By default, kubernetes merges group information from the Pod with information defined in `/etc/group` in the container image.
 
-[`pods/security/security-context-5.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/security/security-context-5.yaml)
+[`pods/security/security-context-5.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/security/security-context-5.yaml)
 
 ```yaml
 apiVersion: v1
@@ -316,7 +316,7 @@ When the feature is enabled, it also exposes the process identity attached to th
 in `.status.containerStatuses[].user.linux` field. It would be useful for detecting if
 implicit group ID's are attached.
 
-[`pods/security/security-context-6.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/security/security-context-6.yaml)
+[`pods/security/security-context-6.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/security/security-context-6.yaml)
 
 ```yaml
 apiVersion: v1
@@ -499,7 +499,7 @@ there is overlap. Container settings do not affect the Pod's Volumes.
 Here is the configuration file for a Pod that has one Container. Both the Pod
 and the Container have a `securityContext` field:
 
-[`pods/security/security-context-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/security/security-context-2.yaml)
+[`pods/security/security-context-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/security/security-context-2.yaml)
 
 ```yaml
 apiVersion: v1
@@ -568,7 +568,7 @@ of the root user. To add or drop Linux capabilities for a Container, include the
 First, see what happens when you don't include a `capabilities` field.
 Here is configuration file that does not add or drop any Container capabilities:
 
-[`pods/security/security-context-3.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/security/security-context-3.yaml)
+[`pods/security/security-context-3.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/security/security-context-3.yaml)
 
 ```yaml
 apiVersion: v1
@@ -641,7 +641,7 @@ that it has additional capabilities set.
 Here is the configuration file for a Pod that runs one Container. The configuration
 adds the `CAP_NET_ADMIN` and `CAP_SYS_TIME` capabilities:
 
-[`pods/security/security-context-4.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/security/security-context-4.yaml)
+[`pods/security/security-context-4.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/security/security-context-4.yaml)
 
 ```yaml
 apiVersion: v1

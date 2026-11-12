@@ -4,16 +4,16 @@ title: Monitor Node Health
 description: You can run Node Problem Detector as a `DaemonSet` or as a standalone daemon.
 resource: https://kubernetes.io/docs/tasks/debug/debug-cluster/monitor-node-health/
 tags: [kubernetes, tasks, debug]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/debug/debug-cluster/monitor-node-health.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/debug/debug-cluster/monitor-node-health.md
     title: 'Kubernetes website source: tasks/debug/debug-cluster/monitor-node-health.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/debug/debug-cluster/monitor-node-health/
     title: Monitor Node Health | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/debug/debug-cluster/monitor-node-health.md
 ---
 
@@ -58,7 +58,7 @@ to detect customized node problems. For example:
 
 1. Create a Node Problem Detector configuration similar to `node-problem-detector.yaml`:
 
-   [`debug/node-problem-detector.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/debug/node-problem-detector.yaml)
+   [`debug/node-problem-detector.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/debug/node-problem-detector.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -142,7 +142,7 @@ to overwrite the configuration:
 
 1. Change the `node-problem-detector.yaml` to use the `ConfigMap`:
 
-   [`debug/node-problem-detector-configmap.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/debug/node-problem-detector-configmap.yaml)
+   [`debug/node-problem-detector-configmap.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/debug/node-problem-detector-configmap.yaml)
 
 ```yaml
 apiVersion: apps/v1

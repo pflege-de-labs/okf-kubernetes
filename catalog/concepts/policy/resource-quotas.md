@@ -4,16 +4,16 @@ title: Resource Quotas
 description: When several users or teams share a cluster with a fixed number of nodes, there is a concern that one team could use more than its fair share of resources.
 resource: https://kubernetes.io/docs/concepts/policy/resource-quotas/
 tags: [kubernetes, concepts, policy]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/policy/resource-quotas.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/policy/resource-quotas.md
     title: 'Kubernetes website source: concepts/policy/resource-quotas.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/policy/resource-quotas/
     title: Resource Quotas | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/policy/resource-quotas.md
 ---
 
@@ -614,7 +614,7 @@ works as follows:
 
 Inspect this set of ResourceQuotas:
 
-[`policy/quota.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/policy/quota.yaml)
+[`policy/quota.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/policy/quota.yaml)
 
 ```yaml
 apiVersion: v1
@@ -709,7 +709,7 @@ pods        0     10
 
 Create a pod with priority "high".
 
-[`policy/high-priority-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/policy/high-priority-pod.yaml)
+[`policy/high-priority-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/policy/high-priority-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -802,7 +802,7 @@ plugins:
 
 Then, create a resource quota object in the `kube-system` namespace:
 
-[`policy/priority-class-resourcequota.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/policy/priority-class-resourcequota.yaml)
+[`policy/priority-class-resourcequota.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/policy/priority-class-resourcequota.yaml)
 
 ```yaml
 apiVersion: v1

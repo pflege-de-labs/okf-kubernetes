@@ -4,16 +4,16 @@ title: Connect a Frontend to a Backend Using Services
 description: This task shows how to create a _frontend_ and a _backend_ microservice.
 resource: https://kubernetes.io/docs/tasks/access-application-cluster/connecting-frontend-backend/
 tags: [kubernetes, tasks, access-application-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/access-application-cluster/connecting-frontend-backend.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/access-application-cluster/connecting-frontend-backend.md
     title: 'Kubernetes website source: tasks/access-application-cluster/connecting-frontend-backend.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/access-application-cluster/connecting-frontend-backend/
     title: Connect a Frontend to a Backend Using Services | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/access-application-cluster/connecting-frontend-backend.md
 ---
 
@@ -55,7 +55,7 @@ require a supported environment. If your environment does not support this, you 
 The backend is a simple hello greeter microservice. Here is the configuration
 file for the backend Deployment:
 
-[`service/access/backend-deployment.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/access/backend-deployment.yaml)
+[`service/access/backend-deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/access/backend-deployment.yaml)
 
 ```yaml
 ---
@@ -145,7 +145,7 @@ the Pods that it routes traffic to.
 
 First, explore the Service configuration file:
 
-[`service/access/backend-service.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/access/backend-service.yaml)
+[`service/access/backend-service.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/access/backend-service.yaml)
 
 ```yaml
 ---
@@ -190,7 +190,7 @@ configuration file.
 The Pods in the frontend Deployment run a nginx image that is configured
 to proxy requests to the `hello` backend Service. Here is the nginx configuration file:
 
-[`service/access/frontend-nginx.conf`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/access/frontend-nginx.conf)
+[`service/access/frontend-nginx.conf`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/access/frontend-nginx.conf)
 
 ```conf
 # The identifier Backend is internal to nginx, and used to name this specific upstream
@@ -215,7 +215,7 @@ configuration for the frontend Service has `type: LoadBalancer`, which means tha
 the Service uses a load balancer provisioned by your cloud provider and will be
 accessible from outside the cluster.
 
-[`service/access/frontend-service.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/access/frontend-service.yaml)
+[`service/access/frontend-service.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/access/frontend-service.yaml)
 
 ```yaml
 ---
@@ -235,7 +235,7 @@ spec:
 ...
 ```
 
-[`service/access/frontend-deployment.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/access/frontend-deployment.yaml)
+[`service/access/frontend-deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/access/frontend-deployment.yaml)
 
 ```yaml
 ---

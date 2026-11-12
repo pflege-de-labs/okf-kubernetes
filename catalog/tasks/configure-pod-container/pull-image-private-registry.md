@@ -4,16 +4,16 @@ title: Pull an Image from a Private Registry
 description: This page shows how to create a Pod that uses a Secret to pull an image from a private container image registry or repository.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/pull-image-private-registry.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/pull-image-private-registry.md
     title: 'Kubernetes website source: tasks/configure-pod-container/pull-image-private-registry.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
     title: Pull an Image from a Private Registry | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/pull-image-private-registry.md
 ---
 
@@ -204,7 +204,7 @@ You have successfully set your Docker credentials as a Secret called `regcred` i
 
 Here is a manifest for an example Pod that needs access to your Docker credentials in `regcred`:
 
-[`pods/private-reg-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/private-reg-pod.yaml)
+[`pods/private-reg-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/private-reg-pod.yaml)
 
 ```yaml
 apiVersion: v1

@@ -4,16 +4,16 @@ title: Configure Minimum and Maximum CPU Constraints for a Namespace
 description: Define a range of valid CPU resource limits for a namespace, so that every new Pod in that namespace falls within the range you configure.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace.md
     title: 'Kubernetes website source: tasks/administer-cluster/manage-resources/cpu-constraint-namespace.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/
     title: Configure Minimum and Maximum CPU Constraints for a Namespace | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace.md
 ---
 
@@ -57,7 +57,7 @@ kubectl create namespace constraints-cpu-example
 
 Here's a manifest for an example [LimitRange](/reference/glossary/limitrange.md):
 
-[`admin/resource/cpu-constraints.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-constraints.yaml)
+[`admin/resource/cpu-constraints.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/cpu-constraints.yaml)
 
 ```yaml
 apiVersion: v1
@@ -121,7 +121,7 @@ Here's a manifest for a Pod that has one container. The container manifest
 specifies a CPU request of 500 millicpu and a CPU limit of 800 millicpu. These satisfy the
 minimum and maximum CPU constraints imposed by the LimitRange for this namespace.
 
-[`admin/resource/cpu-constraints-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-constraints-pod.yaml)
+[`admin/resource/cpu-constraints-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/cpu-constraints-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -179,7 +179,7 @@ kubectl delete pod constraints-cpu-demo --namespace=constraints-cpu-example
 Here's a manifest for a Pod that has one container. The container specifies a
 CPU request of 500 millicpu and a cpu limit of 1.5 cpu.
 
-[`admin/resource/cpu-constraints-pod-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-constraints-pod-2.yaml)
+[`admin/resource/cpu-constraints-pod-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/cpu-constraints-pod-2.yaml)
 
 ```yaml
 apiVersion: v1
@@ -216,7 +216,7 @@ pods "constraints-cpu-demo-2" is forbidden: maximum cpu usage per Container is 8
 Here's a manifest for a Pod that has one container. The container specifies a
 CPU request of 100 millicpu and a CPU limit of 800 millicpu.
 
-[`admin/resource/cpu-constraints-pod-3.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-constraints-pod-3.yaml)
+[`admin/resource/cpu-constraints-pod-3.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/cpu-constraints-pod-3.yaml)
 
 ```yaml
 apiVersion: v1
@@ -254,7 +254,7 @@ pods "constraints-cpu-demo-3" is forbidden: minimum cpu usage per Container is 2
 Here's a manifest for a Pod that has one container. The container does not
 specify a CPU request, nor does it specify a CPU limit.
 
-[`admin/resource/cpu-constraints-pod-4.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/cpu-constraints-pod-4.yaml)
+[`admin/resource/cpu-constraints-pod-4.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/cpu-constraints-pod-4.yaml)
 
 ```yaml
 apiVersion: v1

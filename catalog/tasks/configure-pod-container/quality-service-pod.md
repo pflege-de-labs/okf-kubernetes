@@ -4,16 +4,16 @@ title: Configure Quality of Service for Pods
 description: This page shows how to configure Pods so that they will be assigned particular Quality of Service (QoS) classes.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/quality-service-pod.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/quality-service-pod.md
     title: 'Kubernetes website source: tasks/configure-pod-container/quality-service-pod.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/
     title: Configure Quality of Service for Pods | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/quality-service-pod.md
 ---
 
@@ -74,7 +74,7 @@ cannot define resources so these restrictions do not apply.
 Here is a manifest for a Pod that has one Container. The Container has a memory limit and a
 memory request, both equal to 200 MiB. The Container has a CPU limit and a CPU request, both equal to 700 milliCPU:
 
-[`pods/qos/qos-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/qos/qos-pod.yaml)
+[`pods/qos/qos-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/qos/qos-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -151,7 +151,7 @@ A Pod is given a QoS class of `Burstable` if:
 Here is a manifest for a Pod that has one Container. The Container has a memory limit of 200 MiB
 and a memory request of 100 MiB.
 
-[`pods/qos/qos-pod-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/qos/qos-pod-2.yaml)
+[`pods/qos/qos-pod-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/qos/qos-pod-2.yaml)
 
 ```yaml
 apiVersion: v1
@@ -216,7 +216,7 @@ have any memory or CPU limits or requests.
 Here is a manifest for a Pod that has one Container. The Container has no memory or CPU
 limits or requests:
 
-[`pods/qos/qos-pod-3.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/qos/qos-pod-3.yaml)
+[`pods/qos/qos-pod-3.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/qos/qos-pod-3.yaml)
 
 ```yaml
 apiVersion: v1
@@ -267,7 +267,7 @@ kubectl delete pod qos-demo-3 --namespace=qos-example
 Here is a manifest for a Pod that has two Containers. One container specifies a memory
 request of 200 MiB. The other Container does not specify any requests or limits.
 
-[`pods/qos/qos-pod-4.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/qos/qos-pod-4.yaml)
+[`pods/qos/qos-pod-4.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/qos/qos-pod-4.yaml)
 
 ```yaml
 apiVersion: v1

@@ -6,115 +6,115 @@ resource: https://kubernetes.io/docs/concepts/overview/working-with-objects/name
 tags: [kubernetes, requirements, names, validation, limits, dns]
 generated: { by: "claude-code/claude-opus-5-5", at: "2026-11-05T00:00:00Z" }
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 sources:
   - id: names-unique
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/names.md#L23-L35
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/names.md#L23-L35
     title: Object Names and IDs - uniqueness
   - id: names-generate
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/names.md#L41-L45
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/names.md#L41-L45
     title: Object Names and IDs - generateName
   - id: names-subdomain
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/names.md#L49-L58
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/names.md#L49-L58
     title: Object Names and IDs - DNS subdomain names
   - id: names-rfc1123
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/names.md#L60-L75
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/names.md#L60-L75
     title: Object Names and IDs - RFC 1123 label names
   - id: names-rfc1035
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/names.md#L76-L92
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/names.md#L76-L92
     title: Object Names and IDs - RFC 1035 label names
   - id: names-path
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/names.md#L94-L98
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/names.md#L94-L98
     title: Object Names and IDs - path segment names
   - id: names-extra
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/names.md#L116-L118
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/names.md#L116-L118
     title: Object Names and IDs - additional per-type restrictions
   - id: names-uid
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/names.md#L120-L125
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/names.md#L120-L125
     title: Object Names and IDs - UIDs
   - id: pod
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/pods/_index.md#L119-L123
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/_index.md#L119-L123
     title: Pods - Pod name
   - id: deployment
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/deployment.md#L1117-L1122
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/deployment.md#L1117-L1122
     title: Deployments - Deployment name
   - id: replicaset
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/replicaset.md#L236-L241
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/replicaset.md#L236-L241
     title: ReplicaSet - ReplicaSet name
   - id: replicationcontroller
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/replicationcontroller.md#L125-L130
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/replicationcontroller.md#L125-L130
     title: ReplicationController - name
   - id: job
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/job.md#L194-L199
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/job.md#L194-L199
     title: Jobs - Job name
   - id: cronjob
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/cron-jobs.md#L31-L40
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/cron-jobs.md#L31-L40
     title: CronJob - CronJob name and 52-character limit
   - id: statefulset
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/statefulset.md#L85-L86
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/statefulset.md#L85-L86
     title: StatefulSets - StatefulSet name
   - id: daemonset
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/daemonset.md#L59-L60
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/daemonset.md#L59-L60
     title: DaemonSet - DaemonSet name
   - id: service
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/services-networking/service.md#L125-L126
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/service.md#L125-L126
     title: Service - Service name
   - id: namespace
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/namespaces.md#L115-L116
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/namespaces.md#L115-L116
     title: Namespaces - namespace name
   - id: configmap
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/configuration/configmap.md#L52-L53
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/configuration/configmap.md#L52-L53
     title: ConfigMaps - ConfigMap name
   - id: secret
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/configuration/secret.md#L450-L451
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/configuration/secret.md#L450-L451
     title: Secrets - Secret name
   - id: ingress
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/services-networking/ingress.md#L97-L98
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/ingress.md#L97-L98
     title: Ingress - Ingress name
   - id: endpointslice
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/services-networking/endpoint-slices.md#L34-L35
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/endpoint-slices.md#L34-L35
     title: EndpointSlices - EndpointSlice name
   - id: networkpolicy
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/declare-network-policy.md#L90-L91
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/declare-network-policy.md#L90-L91
     title: Declare Network Policy - NetworkPolicy name
   - id: pv
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/persistent-volumes.md#L554-L555
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/persistent-volumes.md#L554-L555
     title: Persistent Volumes - PersistentVolume name
   - id: pvc
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/persistent-volumes.md#L795-L796
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/persistent-volumes.md#L795-L796
     title: Persistent Volumes - PersistentVolumeClaim name
   - id: storageclass
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/dynamic-provisioning.md#L46-L47
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/dynamic-provisioning.md#L46-L47
     title: Dynamic Volume Provisioning - StorageClass name
   - id: node
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/architecture/nodes.md#L72-L73
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/architecture/nodes.md#L72-L73
     title: Nodes - Node name
   - id: serviceaccount
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/configure-service-account.md#L131-L132
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/configure-service-account.md#L131-L132
     title: Configure Service Accounts - ServiceAccount name
   - id: hpa
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale.md#L266-L267
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale.md#L266-L267
     title: Horizontal Pod Autoscaling - HorizontalPodAutoscaler name
   - id: limitrange
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/policy/limit-range.md#L41-L42
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/policy/limit-range.md#L41-L42
     title: Limit Ranges - LimitRange name
   - id: resourcequota
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/policy/resource-quotas.md#L83-L84
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/policy/resource-quotas.md#L83-L84
     title: Resource Quotas - ResourceQuota name
   - id: priorityclass
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/scheduling-eviction/pod-priority-preemption.md#L52-L53
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/scheduling-eviction/pod-priority-preemption.md#L52-L53
     title: Pod Priority and Preemption - PriorityClass name
   - id: runtimeclass
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/containers/runtime-class.md#L50-L75
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/containers/runtime-class.md#L50-L75
     title: Runtime Class - handler and RuntimeClass name
   - id: crd
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/extend-kubernetes/api-extension/custom-resources.md#L164-L166
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/extend-kubernetes/api-extension/custom-resources.md#L164-L166
     title: Custom Resources - CRD and custom object names
   - id: apiservice
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/extend-kubernetes/configure-aggregation-layer.md#L339-L340
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/extend-kubernetes/configure-aggregation-layer.md#L339-L340
     title: Configure the Aggregation Layer - APIService name
   - id: container-name
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/core/pod-v1.md#L757-L758
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/core/pod-v1.md#L757-L758
     title: Pod API reference - container name
 ---
 

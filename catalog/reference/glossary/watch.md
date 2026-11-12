@@ -4,16 +4,16 @@ title: Watch
 description: A verb that is used to track changes to an object in Kubernetes as a stream.
 resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-watch
 tags: [kubernetes, reference, glossary, API verb, fundamental]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/glossary/watch.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/glossary/watch.md
     title: 'Kubernetes website source: reference/glossary/watch.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-watch
     title: Watch | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/glossary/watch.md
 ---
 

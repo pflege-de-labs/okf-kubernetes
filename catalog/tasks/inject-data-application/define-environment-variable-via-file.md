@@ -4,16 +4,16 @@ title: Define Environment Variable Values Using An Init Container
 description: This page show how to configure environment variables for containers in a Pod via file.
 resource: https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-via-file/
 tags: [kubernetes, tasks, inject-data-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/inject-data-application/define-environment-variable-via-file.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/inject-data-application/define-environment-variable-via-file.md
     title: 'Kubernetes website source: tasks/inject-data-application/define-environment-variable-via-file.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-via-file/
     title: Define Environment Variable Values Using An Init Container | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/inject-data-application/define-environment-variable-via-file.md
 min_kubernetes_server_version: v1.34
 ---
@@ -43,7 +43,7 @@ Your Kubernetes server must be at or later than version v1.34. To check the vers
 In this exercise, you will create a Pod that sources environment variables from files, 
 projecting these values into the running container.
 
-[`pods/inject/envars-file-container.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/inject/envars-file-container.yaml)
+[`pods/inject/envars-file-container.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/envars-file-container.yaml)
 
 ```yaml
 apiVersion: v1

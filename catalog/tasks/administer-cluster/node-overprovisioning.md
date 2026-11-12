@@ -4,16 +4,16 @@ title: Overprovision Node Capacity For A Cluster
 description: This page guides you through configuring Node overprovisioning in your Kubernetes cluster.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/node-overprovisioning/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/node-overprovisioning.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/node-overprovisioning.md
     title: 'Kubernetes website source: tasks/administer-cluster/node-overprovisioning.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/node-overprovisioning/
     title: Overprovision Node Capacity For A Cluster | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/node-overprovisioning.md
 ---
 
@@ -45,7 +45,7 @@ Begin by defining a PriorityClass for the placeholder Pods. First, create a Prio
 negative priority value, that you will shortly assign to the placeholder pods.
 Later, you will set up a Deployment that uses this PriorityClass
 
-[`priorityclass/low-priority-class.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/priorityclass/low-priority-class.yaml)
+[`priorityclass/low-priority-class.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/priorityclass/low-priority-class.yaml)
 
 ```yaml
 apiVersion: scheduling.k8s.io/v1
@@ -72,7 +72,7 @@ is a capacity shortage, the control plane will pick one these placeholder pods a
 
 Review the sample manifest:
 
-[`deployments/deployment-with-capacity-reservation.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/deployments/deployment-with-capacity-reservation.yaml)
+[`deployments/deployment-with-capacity-reservation.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/deployments/deployment-with-capacity-reservation.yaml)
 
 ```yaml
 apiVersion: apps/v1

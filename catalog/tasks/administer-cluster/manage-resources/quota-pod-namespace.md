@@ -4,16 +4,16 @@ title: Configure a Pod Quota for a Namespace
 description: Restrict how many Pods you can create within a namespace.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace.md
     title: 'Kubernetes website source: tasks/administer-cluster/manage-resources/quota-pod-namespace.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace/
     title: Configure a Pod Quota for a Namespace | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace.md
 ---
 
@@ -51,7 +51,7 @@ kubectl create namespace quota-pod-example
 
 Here is an example manifest for a ResourceQuota:
 
-[`admin/resource/quota-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/quota-pod.yaml)
+[`admin/resource/quota-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/quota-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -91,7 +91,7 @@ status:
 
 Here is an example manifest for a [Deployment](/reference/glossary/deployment.md):
 
-[`admin/resource/quota-pod-deployment.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/quota-pod-deployment.yaml)
+[`admin/resource/quota-pod-deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/quota-pod-deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1

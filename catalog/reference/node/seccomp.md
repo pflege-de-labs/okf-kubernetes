@@ -4,16 +4,16 @@ title: Seccomp and Kubernetes
 description: Seccomp stands for secure computing mode and has been a feature of the Linux kernel since version 2.6.12.
 resource: https://kubernetes.io/docs/reference/node/seccomp/
 tags: [kubernetes, reference, node]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/node/seccomp.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/node/seccomp.md
     title: 'Kubernetes website source: reference/node/seccomp.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/node/seccomp/
     title: Seccomp and Kubernetes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/node/seccomp.md
 ---
 
@@ -37,7 +37,7 @@ There are four ways to specify a seccomp profile for a
 - for an (restartable / sidecar) init container using [`spec.initContainers[*].securityContext.seccompProfile`](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#security-context-1)
 - for an [ephemeral container](/concepts/workloads/pods/ephemeral-containers.md) using [`spec.ephemeralContainers[*].securityContext.seccompProfile`](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#security-context-2)
 
-[`pods/security/seccomp/fields.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/security/seccomp/fields.yaml)
+[`pods/security/seccomp/fields.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/security/seccomp/fields.yaml)
 
 ```yaml
 apiVersion: v1

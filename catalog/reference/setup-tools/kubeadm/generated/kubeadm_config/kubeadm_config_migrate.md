@@ -4,16 +4,16 @@ title: kubeadm_config_migrate
 description: Read an older version of the kubeadm configuration API types from a file, and output the similar config object for the newer version
 resource: https://kubernetes.io/docs/reference/setup-tools/kubeadm/generated/kubeadm_config/kubeadm_config_migrate/
 tags: [kubernetes, reference, setup-tools]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/setup-tools/kubeadm/generated/kubeadm_config/kubeadm_config_migrate.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/setup-tools/kubeadm/generated/kubeadm_config/kubeadm_config_migrate.md
     title: 'Kubernetes website source: reference/setup-tools/kubeadm/generated/kubeadm_config/kubeadm_config_migrate.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/setup-tools/kubeadm/generated/kubeadm_config/kubeadm_config_migrate/
     title: kubeadm_config_migrate | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/setup-tools/kubeadm/generated/kubeadm_config/kubeadm_config_migrate.md
 ---
 

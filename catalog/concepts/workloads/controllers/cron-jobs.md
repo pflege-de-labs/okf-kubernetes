@@ -4,16 +4,16 @@ title: CronJob
 description: A CronJob starts one-time Jobs on a repeating schedule.
 resource: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/controllers/cron-jobs.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/cron-jobs.md
     title: 'Kubernetes website source: concepts/workloads/controllers/cron-jobs.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
     title: CronJob | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/controllers/cron-jobs.md
 ---
 
@@ -46,7 +46,7 @@ length of a Job name is no more than 63 characters.
 
 This example CronJob manifest prints the current time and a hello message every minute:
 
-[`application/job/cronjob.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/job/cronjob.yaml)
+[`application/job/cronjob.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/cronjob.yaml)
 
 ```yaml
 apiVersion: batch/v1

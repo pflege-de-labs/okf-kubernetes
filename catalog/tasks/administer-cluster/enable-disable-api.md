@@ -4,16 +4,16 @@ title: Enable Or Disable A Kubernetes API
 description: This page shows how to enable or disable an API version from your cluster's control plane.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/enable-disable-api/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/enable-disable-api.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/enable-disable-api.md
     title: 'Kubernetes website source: tasks/administer-cluster/enable-disable-api.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/enable-disable-api/
     title: Enable Or Disable A Kubernetes API | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/enable-disable-api.md
 ---
 

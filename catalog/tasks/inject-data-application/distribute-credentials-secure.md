@@ -4,16 +4,16 @@ title: Distribute Credentials Securely Using Secrets
 description: This page shows how to securely inject sensitive data, such as passwords and encryption keys, into Pods.
 resource: https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/
 tags: [kubernetes, tasks, inject-data-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/inject-data-application/distribute-credentials-secure.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/inject-data-application/distribute-credentials-secure.md
     title: 'Kubernetes website source: tasks/inject-data-application/distribute-credentials-secure.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/
     title: Distribute Credentials Securely Using Secrets | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/inject-data-application/distribute-credentials-secure.md
 min_kubernetes_server_version: v1.6
 ---
@@ -56,7 +56,7 @@ Use a local tool trusted by your OS to decrease the security risks of external t
 Here is a configuration file you can use to create a Secret that holds your
 username and password:
 
-[`pods/inject/secret.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/inject/secret.yaml)
+[`pods/inject/secret.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/secret.yaml)
 
 ```yaml
 apiVersion: v1
@@ -125,7 +125,7 @@ through each step explicitly to demonstrate what is happening.
 
 Here is a configuration file you can use to create a Pod:
 
-[`pods/inject/secret-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/inject/secret-pod.yaml)
+[`pods/inject/secret-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/secret-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -308,7 +308,7 @@ secrets change.
 
 - Assign the `backend-username` value defined in the Secret to the `SECRET_USERNAME` environment variable in the Pod specification.
 
-  [`pods/inject/pod-single-secret-env-variable.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/inject/pod-single-secret-env-variable.yaml)
+  [`pods/inject/pod-single-secret-env-variable.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/pod-single-secret-env-variable.yaml)
 
 ```yaml
 apiVersion: v1
@@ -356,7 +356,7 @@ spec:
 
 - Define the environment variables in the Pod specification.
 
-  [`pods/inject/pod-multiple-secret-env-variable.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/inject/pod-multiple-secret-env-variable.yaml)
+  [`pods/inject/pod-multiple-secret-env-variable.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/pod-multiple-secret-env-variable.yaml)
 
 ```yaml
 apiVersion: v1
@@ -413,7 +413,7 @@ This functionality is available in Kubernetes v1.6 and later.
 - Use envFrom to define all of the Secret's data as container environment variables.
   The key from the Secret becomes the environment variable name in the Pod.
 
-  [`pods/inject/pod-secret-envFrom.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/inject/pod-secret-envFrom.yaml)
+  [`pods/inject/pod-secret-envFrom.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/pod-secret-envFrom.yaml)
 
 ```yaml
 apiVersion: v1

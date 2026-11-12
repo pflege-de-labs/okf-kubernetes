@@ -4,16 +4,16 @@ title: Disruptions
 description: This guide is for application owners who want to build highly available applications, and thus need to understand what types of disruptions can happen to Pods.
 resource: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/workloads/pods/disruptions.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/disruptions.md
     title: 'Kubernetes website source: concepts/workloads/pods/disruptions.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
     title: Disruptions | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/workloads/pods/disruptions.md
 ---
 
@@ -261,7 +261,7 @@ indicates one of the following reasons for the Pod termination:
 
 `TerminationByKubelet`
 : Pod has been terminated by the kubelet, because of either [node pressure eviction](/reference/glossary/node-pressure-eviction.md),
-  the [graceful node shutdown](/concepts/architecture/nodes.md#graceful-node-shutdown),
+  the [graceful node shutdown](/concepts/cluster-administration/node-shutdown.md#graceful-node-shutdown),
   or preemption for [system critical pods](/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods.md).
 
 In all other disruption scenarios, like eviction due to exceeding

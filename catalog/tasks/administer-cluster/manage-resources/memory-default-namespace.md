@@ -4,16 +4,16 @@ title: Configure Default Memory Requests and Limits for a Namespace
 description: Define a default memory resource limit for a namespace, so that every new Pod in that namespace has a memory resource limit configured.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/manage-resources/memory-default-namespace.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/manage-resources/memory-default-namespace.md
     title: 'Kubernetes website source: tasks/administer-cluster/manage-resources/memory-default-namespace.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/
     title: Configure Default Memory Requests and Limits for a Namespace | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/manage-resources/memory-default-namespace.md
 ---
 
@@ -63,7 +63,7 @@ Here's a manifest for an example [LimitRange](/reference/glossary/limitrange.md)
 The manifest specifies a default memory
 request and a default memory limit.
 
-[`admin/resource/memory-defaults.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/memory-defaults.yaml)
+[`admin/resource/memory-defaults.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/memory-defaults.yaml)
 
 ```yaml
 apiVersion: v1
@@ -93,7 +93,7 @@ applies default values: a memory request of 256MiB and a memory limit of 512MiB.
 Here's an example manifest for a Pod that has one container. The container
 does not specify a memory request and limit.
 
-[`admin/resource/memory-defaults-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/memory-defaults-pod.yaml)
+[`admin/resource/memory-defaults-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/memory-defaults-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -144,7 +144,7 @@ kubectl delete pod default-mem-demo --namespace=default-mem-example
 Here's a manifest for a Pod that has one container. The container
 specifies a memory limit, but not a request:
 
-[`admin/resource/memory-defaults-pod-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/memory-defaults-pod-2.yaml)
+[`admin/resource/memory-defaults-pod-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/memory-defaults-pod-2.yaml)
 
 ```yaml
 apiVersion: v1
@@ -188,7 +188,7 @@ resources:
 Here's a manifest for a Pod that has one container. The container
 specifies a memory request, but not a limit:
 
-[`admin/resource/memory-defaults-pod-3.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/resource/memory-defaults-pod-3.yaml)
+[`admin/resource/memory-defaults-pod-3.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/resource/memory-defaults-pod-3.yaml)
 
 ```yaml
 apiVersion: v1

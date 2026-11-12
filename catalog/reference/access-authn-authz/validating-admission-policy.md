@@ -4,16 +4,16 @@ title: Validating Admission Policy
 description: This page provides an overview of Validating Admission Policy.
 resource: https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/
 tags: [kubernetes, reference, access-authn-authz]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/access-authn-authz/validating-admission-policy.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/access-authn-authz/validating-admission-policy.md
     title: 'Kubernetes website source: reference/access-authn-authz/validating-admission-policy.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/
     title: Validating Admission Policy | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/access-authn-authz/validating-admission-policy.md
 ---
 
@@ -70,7 +70,7 @@ with great caution. The following describes how to quickly experiment with Valid
 
 The following is an example of a ValidatingAdmissionPolicy.
 
-[`validatingadmissionpolicy/basic-example-policy.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/basic-example-policy.yaml)
+[`validatingadmissionpolicy/basic-example-policy.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/basic-example-policy.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -99,7 +99,7 @@ You can quickly test CEL expressions in [CEL Playground](https://playcel.undistr
 To configure a validating admission policy for use in a cluster, a binding is required.
 The following is an example of a ValidatingAdmissionPolicyBinding.:
 
-[`validatingadmissionpolicy/basic-example-binding.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/basic-example-binding.yaml)
+[`validatingadmissionpolicy/basic-example-binding.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/basic-example-binding.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -164,7 +164,7 @@ and then a policy binding ties a policy by name (via policyName) to a particular
 If parameter configuration is needed, the following is an example of a ValidatingAdmissionPolicy
 with parameter configuration.
 
-[`validatingadmissionpolicy/policy-with-param.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/policy-with-param.yaml)
+[`validatingadmissionpolicy/policy-with-param.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/policy-with-param.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -204,7 +204,7 @@ are created. The following is an example of a ValidatingAdmissionPolicyBinding
 that uses a **cluster-wide** param - the same param will be used to validate
 every resource request that matches the binding:
 
-[`validatingadmissionpolicy/binding-with-param.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/binding-with-param.yaml)
+[`validatingadmissionpolicy/binding-with-param.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/binding-with-param.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -229,7 +229,7 @@ are in the `test` environment.
 
 The parameter resource could be as following:
 
-[`validatingadmissionpolicy/replicalimit-param.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/replicalimit-param.yaml)
+[`validatingadmissionpolicy/replicalimit-param.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/replicalimit-param.yaml)
 
 ```yaml
 apiVersion: rules.example.com/v1
@@ -245,7 +245,7 @@ This policy parameter resource limits deployments to a max of 3 replicas.
 An admission policy may have multiple bindings. To bind all other environments
 to have a maxReplicas limit of 100, create another ValidatingAdmissionPolicyBinding:
 
-[`validatingadmissionpolicy/binding-with-param-prod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/binding-with-param-prod.yaml)
+[`validatingadmissionpolicy/binding-with-param-prod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/binding-with-param-prod.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -273,7 +273,7 @@ are not in the `test` environment.
 
 And have a parameter resource:
 
-[`validatingadmissionpolicy/replicalimit-param-prod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/replicalimit-param-prod.yaml)
+[`validatingadmissionpolicy/replicalimit-param-prod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/replicalimit-param-prod.yaml)
 
 ```yaml
 apiVersion: rules.example.com/v1
@@ -434,7 +434,7 @@ admission policy are handled. Allowed values are `Ignore` or `Fail`.
 
 Note that the `failurePolicy` is defined inside `ValidatingAdmissionPolicy`:
 
-[`validatingadmissionpolicy/failure-policy-ignore.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/failure-policy-ignore.yaml)
+[`validatingadmissionpolicy/failure-policy-ignore.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/failure-policy-ignore.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -520,7 +520,7 @@ resource to be evaluated.
 
 Here is an example illustrating a few different uses for match conditions:
 
-[`access/validating-admission-policy-match-conditions.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/validating-admission-policy-match-conditions.yaml)
+[`access/validating-admission-policy-match-conditions.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/validating-admission-policy-match-conditions.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -570,7 +570,7 @@ the request is determined as follows:
 
 For example, here is an admission policy with an audit annotation:
 
-[`access/validating-admission-policy-audit-annotation.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/validating-admission-policy-audit-annotation.yaml)
+[`access/validating-admission-policy-audit-annotation.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/validating-admission-policy-audit-annotation.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -628,7 +628,7 @@ Unlike validations, message expression must evaluate to a string.
 For example, to better inform the user of the reason of denial when the policy refers to a parameter,
 we can have the following validation:
 
-[`access/deployment-replicas-policy.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/deployment-replicas-policy.yaml)
+[`access/deployment-replicas-policy.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/deployment-replicas-policy.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -679,7 +679,7 @@ and an empty `status.typeChecking` means that no errors were detected.
 
 For example, given the following policy definition:
 
-[`validatingadmissionpolicy/typechecking.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/typechecking.yaml)
+[`validatingadmissionpolicy/typechecking.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/typechecking.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -715,7 +715,7 @@ status:
 If multiple resources are matched in `spec.matchConstraints`, all of matched resources will be checked against.
 For example, the following policy definition 
 
-[`validatingadmissionpolicy/typechecking-multiple-match.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/validatingadmissionpolicy/typechecking-multiple-match.yaml)
+[`validatingadmissionpolicy/typechecking-multiple-match.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/validatingadmissionpolicy/typechecking-multiple-match.yaml)
 
 ```yaml
 apiVersion: admissionregistration.k8s.io/v1
@@ -785,7 +785,7 @@ This ordering prevents circular references.
 
 The following is a more complex example of enforcing that image repo names match the environment defined in its namespace.
 
-[`access/image-matches-namespace-environment.policy.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/image-matches-namespace-environment.policy.yaml)
+[`access/image-matches-namespace-environment.policy.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/image-matches-namespace-environment.policy.yaml)
 
 ```yaml
 # This policy enforces that all containers of a deployment has the image repo match the environment label of its namespace.

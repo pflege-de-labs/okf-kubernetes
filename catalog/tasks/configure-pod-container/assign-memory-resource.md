@@ -4,16 +4,16 @@ title: Assign Memory Resources to Containers and Pods
 description: This page shows how to assign a memory *request* and a memory *limit* to a Container.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/assign-memory-resource.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/assign-memory-resource.md
     title: 'Kubernetes website source: tasks/configure-pod-container/assign-memory-resource.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/
     title: Assign Memory Resources to Containers and Pods | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/assign-memory-resource.md
 ---
 
@@ -82,7 +82,7 @@ In this exercise, you create a Pod that has one Container. The Container has a m
 request of 100 MiB and a memory limit of 200 MiB. Here's the configuration file
 for the Pod:
 
-[`pods/resource/memory-request-limit.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/memory-request-limit.yaml)
+[`pods/resource/memory-request-limit.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/memory-request-limit.yaml)
 
 ```yaml
 apiVersion: v1
@@ -170,7 +170,7 @@ In this exercise, you create a Pod that attempts to allocate more memory than it
 Here is the configuration file for a Pod that has one Container with a
 memory request of 50 MiB and a memory limit of 100 MiB:
 
-[`pods/resource/memory-request-limit-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/memory-request-limit-2.yaml)
+[`pods/resource/memory-request-limit-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/memory-request-limit-2.yaml)
 
 ```yaml
 apiVersion: v1
@@ -298,7 +298,7 @@ capacity of any Node in your cluster. Here is the configuration file for a Pod t
 Container with a request for 1000 GiB of memory, which likely exceeds the capacity
 of any Node in your cluster.
 
-[`pods/resource/memory-request-limit-3.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/memory-request-limit-3.yaml)
+[`pods/resource/memory-request-limit-3.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/memory-request-limit-3.yaml)
 
 ```yaml
 apiVersion: v1

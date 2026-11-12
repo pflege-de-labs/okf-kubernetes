@@ -4,16 +4,16 @@ title: Logging Architecture
 description: Application logs can help you understand what is happening inside your application.
 resource: https://kubernetes.io/docs/concepts/cluster-administration/logging/
 tags: [kubernetes, concepts, cluster-administration]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/cluster-administration/logging.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/cluster-administration/logging.md
     title: 'Kubernetes website source: concepts/cluster-administration/logging.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/cluster-administration/logging/
     title: Logging Architecture | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/cluster-administration/logging.md
 ---
 
@@ -47,7 +47,7 @@ Kubernetes captures logs from each container in a running Pod.
 This example uses a manifest for a `Pod` with a container
 that writes text to the standard output stream, once per second.
 
-[`debug/counter-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/debug/counter-pod.yaml)
+[`debug/counter-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/debug/counter-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -111,7 +111,7 @@ using the `stream` query string. You must have access to read the `log` subresou
 
 To demonstrate this feature, you can create a Pod that periodically writes text to both the standard output and error stream.
 
-[`debug/counter-pod-err.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/debug/counter-pod-err.yaml)
+[`debug/counter-pod-err.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/debug/counter-pod-err.yaml)
 
 ```yaml
 apiVersion: v1
@@ -332,7 +332,7 @@ For example, a pod runs a single container, and the container
 writes to two different log files using two different formats. Here's a
 manifest for the Pod:
 
-[`admin/logging/two-files-counter-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/logging/two-files-counter-pod.yaml)
+[`admin/logging/two-files-counter-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/logging/two-files-counter-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -371,7 +371,7 @@ the logs to its own `stdout` stream.
 
 Here's a manifest for a pod that has two sidecar containers:
 
-[`admin/logging/two-files-counter-pod-streaming-sidecar.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/logging/two-files-counter-pod-streaming-sidecar.yaml)
+[`admin/logging/two-files-counter-pod-streaming-sidecar.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/logging/two-files-counter-pod-streaming-sidecar.yaml)
 
 ```yaml
 apiVersion: v1
@@ -478,7 +478,7 @@ Here are two example manifests that you can use to implement a sidecar container
 The first manifest contains a [`ConfigMap`](/tasks/configure-pod-container/configure-pod-configmap.md)
 to configure fluentd.
 
-[`admin/logging/fluentd-sidecar-config.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/logging/fluentd-sidecar-config.yaml)
+[`admin/logging/fluentd-sidecar-config.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/logging/fluentd-sidecar-config.yaml)
 
 ```yaml
 apiVersion: v1
@@ -515,7 +515,7 @@ from any source inside an application container.
 The second manifest describes a pod that has a sidecar container running fluentd.
 The pod mounts a volume where fluentd can pick up its configuration data.
 
-[`admin/logging/two-files-counter-pod-agent-sidecar.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/logging/two-files-counter-pod-agent-sidecar.yaml)
+[`admin/logging/two-files-counter-pod-agent-sidecar.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/logging/two-files-counter-pod-agent-sidecar.yaml)
 
 ```yaml
 apiVersion: v1

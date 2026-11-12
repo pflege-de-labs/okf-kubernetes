@@ -4,16 +4,16 @@ title: Kubernetes Self-Healing
 description: Kubernetes is designed with self-healing capabilities that help maintain the health and availability of workloads.
 resource: https://kubernetes.io/docs/concepts/architecture/self-healing/
 tags: [kubernetes, concepts, architecture]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/architecture/self-healing.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/architecture/self-healing.md
     title: 'Kubernetes website source: concepts/architecture/self-healing.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/architecture/self-healing/
     title: Kubernetes Self-Healing | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/architecture/self-healing.md
 ---
 

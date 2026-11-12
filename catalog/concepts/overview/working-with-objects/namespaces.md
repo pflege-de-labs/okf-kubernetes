@@ -4,16 +4,16 @@ title: Namespaces
 description: In Kubernetes, _namespaces_ provide a mechanism for isolating groups of resources within a single cluster.
 resource: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 tags: [kubernetes, concepts, overview]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/namespaces.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/namespaces.md
     title: 'Kubernetes website source: concepts/overview/working-with-objects/namespaces.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
     title: Namespaces | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/overview/working-with-objects/namespaces.md
 ---
 

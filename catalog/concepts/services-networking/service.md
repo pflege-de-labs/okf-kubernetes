@@ -4,16 +4,16 @@ title: Service
 description: Expose an application running in your cluster behind a single outward-facing endpoint, even when the workload is split across multiple backends.
 resource: https://kubernetes.io/docs/concepts/services-networking/service/
 tags: [kubernetes, concepts, services-networking]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/services-networking/service.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/service.md
     title: 'Kubernetes website source: concepts/services-networking/service.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/services-networking/service/
     title: Service | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/services-networking/service.md
 ---
 
@@ -107,7 +107,7 @@ For example, suppose you have a set of Pods that each listen on TCP port 9376
 and are labelled as `app.kubernetes.io/name=MyApp`. You can define a Service to
 publish that TCP listener:
 
-[`service/simple-service.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/simple-service.yaml)
+[`service/simple-service.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/simple-service.yaml)
 
 ```yaml
 apiVersion: v1
@@ -274,13 +274,13 @@ For an EndpointSlice that you create yourself, or in your own code,
 you should also pick a value to use for the label
 [`endpointslice.kubernetes.io/managed-by`](/reference/labels-annotations-taints.md#endpointslicekubernetesiomanaged-by).
 If you create your own controller code to manage EndpointSlices, consider using a
-value similar to `"my-domain.example/name-of-controller"`. If you are using a third
+value similar to `my-domain.example/name-of-controller`. If you are using a third
 party tool, use the name of the tool in all-lowercase and change spaces and other
 punctuation to dashes (`-`).
 If people are directly using a tool such as `kubectl` to manage EndpointSlices,
-use a name that describes this manual management, such as `"staff"` or
-`"cluster-admins"`. You should
-avoid using the reserved value `"controller"`, which identifies EndpointSlices
+use a name that describes this manual management, such as _staff_ or
+_cluster-admins_. You should
+avoid using the reserved value _controller_, which identifies EndpointSlices
 managed by Kubernetes' own control plane.
 
 #### Accessing a Service without a selector {#service-no-selector-access}

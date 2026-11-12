@@ -4,16 +4,16 @@ title: CustomResourceDefinition
 description: CustomResourceDefinition represents a resource that should be exposed on the API server. Its name MUST be in the format &lt;.spec.name&gt;.&lt;.spec.group&gt;.
 resource: https://kubernetes.io/docs/reference/kubernetes-api/apiextensions/custom-resource-definition-v1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/apiextensions/custom-resource-definition-v1.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/apiextensions/custom-resource-definition-v1.md
     title: 'Kubernetes website source: reference/kubernetes-api/apiextensions/custom-resource-definition-v1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/apiextensions/custom-resource-definition-v1/
     title: CustomResourceDefinition | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/kubernetes-api/apiextensions/custom-resource-definition-v1.md
 api_metadata:
   apiVersion: apiextensions.k8s.io/v1

@@ -4,16 +4,16 @@ title: Good practices for Dynamic Resource Allocation as a Cluster Admin
 description: This page describes good practices when configuring a Kubernetes cluster utilizing Dynamic Resource Allocation (DRA).
 resource: https://kubernetes.io/docs/concepts/cluster-administration/dra/
 tags: [kubernetes, concepts, cluster-administration]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/cluster-administration/dra.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/cluster-administration/dra.md
     title: 'Kubernetes website source: concepts/cluster-administration/dra.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/cluster-administration/dra/
     title: Good practices for Dynamic Resource Allocation as a Cluster Admin | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/cluster-administration/dra.md
 ---
 

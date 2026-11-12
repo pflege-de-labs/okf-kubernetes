@@ -4,16 +4,16 @@ title: Pod Scheduling Readiness
 description: Pods were considered ready for scheduling once created.
 resource: https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/
 tags: [kubernetes, concepts, scheduling-eviction]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/scheduling-eviction/pod-scheduling-readiness.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/scheduling-eviction/pod-scheduling-readiness.md
     title: 'Kubernetes website source: concepts/scheduling-eviction/pod-scheduling-readiness.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/
     title: Pod Scheduling Readiness | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/scheduling-eviction/pod-scheduling-readiness.md
 ---
 
@@ -44,7 +44,7 @@ each schedulingGate can be removed in arbitrary order, but addition of a new sch
 
 To mark a Pod not-ready for scheduling, you can create it with one or more scheduling gates like this:
 
-[`pods/pod-with-scheduling-gates.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-with-scheduling-gates.yaml)
+[`pods/pod-with-scheduling-gates.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-with-scheduling-gates.yaml)
 
 ```yaml
 apiVersion: v1
@@ -88,7 +88,7 @@ The output is:
 To inform scheduler this Pod is ready for scheduling, you can remove its `schedulingGates` entirely
 by reapplying a modified manifest:
 
-[`pods/pod-without-scheduling-gates.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/pod-without-scheduling-gates.yaml)
+[`pods/pod-without-scheduling-gates.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-without-scheduling-gates.yaml)
 
 ```yaml
 apiVersion: v1

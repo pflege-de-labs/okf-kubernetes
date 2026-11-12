@@ -4,16 +4,16 @@ title: Adding entries to Pod /etc/hosts with HostAliases
 description: Adding entries to a Pod's `/etc/hosts` file provides Pod-level override of hostname resolution when DNS and other options are not applicable.
 resource: https://kubernetes.io/docs/tasks/network/customize-hosts-file-for-pods/
 tags: [kubernetes, tasks, network]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/network/customize-hosts-file-for-pods.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/network/customize-hosts-file-for-pods.md
     title: 'Kubernetes website source: tasks/network/customize-hosts-file-for-pods.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/network/customize-hosts-file-for-pods/
     title: Adding entries to Pod /etc/hosts with HostAliases | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/network/customize-hosts-file-for-pods.md
 min_kubernetes_server_version: "1.7"
 ---
@@ -78,7 +78,7 @@ For example: to resolve `foo.local`, `bar.local` to `127.0.0.1` and `foo.remote`
 `bar.remote` to `10.1.2.3`, you can configure HostAliases for a Pod under
 `.spec.hostAliases`:
 
-[`service/networking/hostaliases-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/hostaliases-pod.yaml)
+[`service/networking/hostaliases-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/hostaliases-pod.yaml)
 
 ```yaml
 apiVersion: v1

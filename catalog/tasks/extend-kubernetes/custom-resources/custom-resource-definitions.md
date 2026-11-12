@@ -4,16 +4,16 @@ title: Extend the Kubernetes API with CustomResourceDefinitions
 description: This page shows how to install a custom resource into the Kubernetes API by creating a CustomResourceDefinition.
 resource: https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/
 tags: [kubernetes, tasks, extend-kubernetes]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions.md
     title: 'Kubernetes website source: tasks/extend-kubernetes/custom-resources/custom-resource-definitions.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/
     title: Extend the Kubernetes API with CustomResourceDefinitions | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions.md
 min_kubernetes_server_version: "1.16"
 ---
@@ -111,9 +111,10 @@ The `kind` of these objects will be `CronTab` from the spec of the
 CustomResourceDefinition object you created above.
 
 It might take a few seconds for the endpoint to be created.
-You can watch the `Established` condition of your CustomResourceDefinition
-to be true or watch the discovery information of the API server for your
-resource to show up.
+Once the `Established` condition of your CustomResourceDefinition
+becomes true and this is observed by the handling code, the endpoint serving starts.
+Watching the [discovery information of the API server](/concepts/overview/kubernetes-api.md#discovery-api) for your
+resource to show up is the reliable way to determine if it is ready for use.
 
 ## Create custom objects
 
@@ -1699,7 +1700,7 @@ selectable fields.
 
 Save the CustomResourceDefinition to `shirt-resource-definition.yaml`:
 
-[`customresourcedefinition/shirt-resource-definition.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/customresourcedefinition/shirt-resource-definition.yaml)
+[`customresourcedefinition/shirt-resource-definition.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/customresourcedefinition/shirt-resource-definition.yaml)
 
 ```yaml
 apiVersion: apiextensions.k8s.io/v1
@@ -1748,7 +1749,7 @@ kubectl apply -f https://k8s.io/examples/customresourcedefinition/shirt-resource
 
 Define some Shirts by editing `shirt-resources.yaml`; for example:
 
-[`customresourcedefinition/shirt-resources.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/customresourcedefinition/shirt-resources.yaml)
+[`customresourcedefinition/shirt-resources.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/customresourcedefinition/shirt-resources.yaml)
 
 ```yaml
 ---

@@ -4,16 +4,16 @@ title: HorizontalPodAutoscaler Walkthrough
 description: A HorizontalPodAutoscaler (HPA for short) automatically updates a workload resource (such as a Deployment or StatefulSet), with the aim of automatically scaling the workload to match demand.
 resource: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
 tags: [kubernetes, tasks, run-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough.md
     title: 'Kubernetes website source: tasks/run-application/horizontal-pod-autoscale-walkthrough.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
     title: HorizontalPodAutoscaler Walkthrough | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough.md
 min_kubernetes_server_version: "1.23"
 ---
@@ -78,7 +78,7 @@ To demonstrate a HorizontalPodAutoscaler, you will first start a Deployment that
 `hpa-example` image, and expose it as a [Service](/reference/glossary/service.md)
 using the following manifest:
 
-[`application/php-apache.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/php-apache.yaml)
+[`application/php-apache.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/php-apache.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -562,7 +562,7 @@ between `1` and `1500m`, or `1` and `1.5` when written in decimal notation.
 Instead of using `kubectl autoscale` command to create a HorizontalPodAutoscaler imperatively we
 can use the following manifest to create it declaratively:
 
-[`application/hpa/php-apache.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/application/hpa/php-apache.yaml)
+[`application/hpa/php-apache.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/hpa/php-apache.yaml)
 
 ```yaml
 apiVersion: autoscaling/v2

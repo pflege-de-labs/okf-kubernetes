@@ -4,16 +4,16 @@ title: Perform a Rollback on a DaemonSet
 description: This page shows how to perform a rollback on a DaemonSet.
 resource: https://kubernetes.io/docs/tasks/manage-daemon/rollback-daemon-set/
 tags: [kubernetes, tasks, manage-daemon]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/manage-daemon/rollback-daemon-set.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/manage-daemon/rollback-daemon-set.md
     title: 'Kubernetes website source: tasks/manage-daemon/rollback-daemon-set.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/manage-daemon/rollback-daemon-set/
     title: Perform a Rollback on a DaemonSet | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/manage-daemon/rollback-daemon-set.md
 min_kubernetes_server_version: "1.7"
 ---

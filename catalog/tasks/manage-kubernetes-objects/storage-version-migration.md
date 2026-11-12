@@ -4,16 +4,16 @@ title: Migrate Kubernetes Objects Using Storage Version Migration
 description: Kubernetes relies on API data being actively re-written, to support some maintenance activities related to at rest storage.
 resource: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/storage-version-migration/
 tags: [kubernetes, tasks, manage-kubernetes-objects]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/manage-kubernetes-objects/storage-version-migration.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/manage-kubernetes-objects/storage-version-migration.md
     title: 'Kubernetes website source: tasks/manage-kubernetes-objects/storage-version-migration.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/storage-version-migration/
     title: Migrate Kubernetes Objects Using Storage Version Migration | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/manage-kubernetes-objects/storage-version-migration.md
 min_kubernetes_server_version: v1.30
 ---

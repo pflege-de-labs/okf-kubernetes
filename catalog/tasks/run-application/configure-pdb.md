@@ -4,16 +4,16 @@ title: Specifying a Disruption Budget for your Application
 description: This page shows how to limit the number of concurrent disruptions that your application experiences, allowing for higher availability while permitting the cluster administrator to manage the clusters nodes.
 resource: https://kubernetes.io/docs/tasks/run-application/configure-pdb/
 tags: [kubernetes, tasks, run-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/run-application/configure-pdb.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/run-application/configure-pdb.md
     title: 'Kubernetes website source: tasks/run-application/configure-pdb.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/run-application/configure-pdb/
     title: Specifying a Disruption Budget for your Application | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/run-application/configure-pdb.md
 min_kubernetes_server_version: v1.21
 ---
@@ -170,7 +170,7 @@ You can find examples of pod disruption budgets defined below. They match pods w
 
 Example PDB Using minAvailable:
 
-[`policy/zookeeper-pod-disruption-budget-minavailable.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/policy/zookeeper-pod-disruption-budget-minavailable.yaml)
+[`policy/zookeeper-pod-disruption-budget-minavailable.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/policy/zookeeper-pod-disruption-budget-minavailable.yaml)
 
 ```yaml
 apiVersion: policy/v1
@@ -186,7 +186,7 @@ spec:
 
 Example PDB Using maxUnavailable:
 
-[`policy/zookeeper-pod-disruption-budget-maxunavailable.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/policy/zookeeper-pod-disruption-budget-maxunavailable.yaml)
+[`policy/zookeeper-pod-disruption-budget-maxunavailable.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/policy/zookeeper-pod-disruption-budget-maxunavailable.yaml)
 
 ```yaml
 apiVersion: policy/v1

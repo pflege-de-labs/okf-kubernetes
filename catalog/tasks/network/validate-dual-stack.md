@@ -4,16 +4,16 @@ title: Validate IPv4/IPv6 dual-stack
 description: This document shares how to validate IPv4/IPv6 dual-stack enabled Kubernetes clusters.
 resource: https://kubernetes.io/docs/tasks/network/validate-dual-stack/
 tags: [kubernetes, tasks, network]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/network/validate-dual-stack.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/network/validate-dual-stack.md
     title: 'Kubernetes website source: tasks/network/validate-dual-stack.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/network/validate-dual-stack/
     title: Validate IPv4/IPv6 dual-stack | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/network/validate-dual-stack.md
 min_kubernetes_server_version: v1.23
 ---
@@ -133,7 +133,7 @@ Create the following Service that does not explicitly define `.spec.ipFamilyPoli
 Kubernetes will assign a cluster IP for the Service from the first configured
 `service-cluster-ip-range` and set the `.spec.ipFamilyPolicy` to `SingleStack`.
 
-[`service/networking/dual-stack-default-svc.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/dual-stack-default-svc.yaml)
+[`service/networking/dual-stack-default-svc.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/dual-stack-default-svc.yaml)
 
 ```yaml
 apiVersion: v1
@@ -189,7 +189,7 @@ Create the following Service that explicitly defines `IPv6` as the first array e
 `.spec.ipFamilies`. Kubernetes will assign a cluster IP for the Service from the IPv6 range
 configured `service-cluster-ip-range` and set the `.spec.ipFamilyPolicy` to `SingleStack`.
 
-[`service/networking/dual-stack-ipfamilies-ipv6.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/dual-stack-ipfamilies-ipv6.yaml)
+[`service/networking/dual-stack-ipfamilies-ipv6.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/dual-stack-ipfamilies-ipv6.yaml)
 
 ```yaml
 apiVersion: v1
@@ -248,7 +248,7 @@ Kubernetes will assign both IPv4 and IPv6 addresses (as this cluster has dual-st
 select the `.spec.ClusterIP` from the list of `.spec.ClusterIPs` based on the address family of
 the first element in the `.spec.ipFamilies` array.
 
-[`service/networking/dual-stack-preferred-svc.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/dual-stack-preferred-svc.yaml)
+[`service/networking/dual-stack-preferred-svc.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/dual-stack-preferred-svc.yaml)
 
 ```yaml
 apiVersion: v1
@@ -309,7 +309,7 @@ If the cloud provider supports the provisioning of IPv6 enabled external load ba
 create the following Service with `PreferDualStack` in `.spec.ipFamilyPolicy`, `IPv6` as
 the first element of the `.spec.ipFamilies` array and the `type` field set to `LoadBalancer`.
 
-[`service/networking/dual-stack-prefer-ipv6-lb-svc.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/service/networking/dual-stack-prefer-ipv6-lb-svc.yaml)
+[`service/networking/dual-stack-prefer-ipv6-lb-svc.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/dual-stack-prefer-ipv6-lb-svc.yaml)
 
 ```yaml
 apiVersion: v1

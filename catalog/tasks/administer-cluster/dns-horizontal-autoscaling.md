@@ -4,16 +4,16 @@ title: Autoscale the DNS Service in a Cluster
 description: This page shows how to enable and configure autoscaling of the DNS service in your Kubernetes cluster.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/administer-cluster/dns-horizontal-autoscaling.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/dns-horizontal-autoscaling.md
     title: 'Kubernetes website source: tasks/administer-cluster/dns-horizontal-autoscaling.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/
     title: Autoscale the DNS Service in a Cluster | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/administer-cluster/dns-horizontal-autoscaling.md
 ---
 
@@ -100,7 +100,7 @@ container based on the `cluster-proportional-autoscaler-amd64` image.
 
 Create a file named `dns-horizontal-autoscaler.yaml` with this content:
 
-[`admin/dns/dns-horizontal-autoscaler.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/admin/dns/dns-horizontal-autoscaler.yaml)
+[`admin/dns/dns-horizontal-autoscaler.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/admin/dns/dns-horizontal-autoscaler.yaml)
 
 ```yaml
 kind: ServiceAccount

@@ -4,16 +4,16 @@ title: Manifest-Based Admission Control
 description: This page provides an overview of manifest-based admission control configuration.
 resource: https://kubernetes.io/docs/reference/access-authn-authz/manifest-admission-control/
 tags: [kubernetes, reference, access-authn-authz]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/access-authn-authz/manifest-admission-control.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/access-authn-authz/manifest-admission-control.md
     title: 'Kubernetes website source: reference/access-authn-authz/manifest-admission-control.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/access-authn-authz/manifest-admission-control/
     title: Manifest-Based Admission Control | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/reference/access-authn-authz/manifest-admission-control.md
 ---
 
@@ -100,7 +100,7 @@ To enable manifest-based admission control, you need:
 Add `staticManifestsDir` to the plugin configuration for each admission plugin
 that should load manifests from disk. Each plugin requires its own directory.
 
-[`access/manifest-admission-control/admission-configuration.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/manifest-admission-control/admission-configuration.yaml)
+[`access/manifest-admission-control/admission-configuration.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/manifest-admission-control/admission-configuration.yaml)
 
 ```yaml
 # This is an example AdmissionConfiguration that configures all four admission
@@ -204,7 +204,7 @@ can enforce rules on them because they do not have that circular dependency.
 The following example prevents deletion or modification of admission resources
 that carry the `platform.example.com/protected: "true"` label:
 
-[`access/manifest-admission-control/protect-admission-resources.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/manifest-admission-control/protect-admission-resources.yaml)
+[`access/manifest-admission-control/protect-admission-resources.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/manifest-admission-control/protect-admission-resources.yaml)
 
 ```yaml
 # This is an example ValidatingAdmissionPolicy that prevents deletion or
@@ -254,7 +254,7 @@ spec:
 The following example defines a policy that denies privileged containers in all
 namespaces except `kube-system`:
 
-[`access/manifest-admission-control/deny-privileged-policy.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/manifest-admission-control/deny-privileged-policy.yaml)
+[`access/manifest-admission-control/deny-privileged-policy.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/manifest-admission-control/deny-privileged-policy.yaml)
 
 ```yaml
 # This is an example ValidatingAdmissionPolicy that denies privileged containers
@@ -312,7 +312,7 @@ together atomically.
 
 The following example configures a validating webhook that calls an external URL:
 
-[`access/manifest-admission-control/validating-webhook.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/manifest-admission-control/validating-webhook.yaml)
+[`access/manifest-admission-control/validating-webhook.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/manifest-admission-control/validating-webhook.yaml)
 
 ```yaml
 # This is an example ValidatingWebhookConfiguration that calls an external
@@ -347,7 +347,7 @@ manifest-based webhook configurations.
 
 You can use `v1.List` to group related resources together in a single document:
 
-[`access/manifest-admission-control/list-format-policy.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/access/manifest-admission-control/list-format-policy.yaml)
+[`access/manifest-admission-control/list-format-policy.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/access/manifest-admission-control/list-format-policy.yaml)
 
 ```yaml
 # This is an example of using the v1.List format to group a

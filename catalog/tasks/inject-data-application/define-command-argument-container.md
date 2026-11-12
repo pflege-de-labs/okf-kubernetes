@@ -4,16 +4,16 @@ title: Define a Command and Arguments for a Container
 description: This page shows how to define commands and arguments when you run a container in a Pod.
 resource: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/
 tags: [kubernetes, tasks, inject-data-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/inject-data-application/define-command-argument-container.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/inject-data-application/define-command-argument-container.md
     title: 'Kubernetes website source: tasks/inject-data-application/define-command-argument-container.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/
     title: Define a Command and Arguments for a Container | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/inject-data-application/define-command-argument-container.md
 ---
 
@@ -53,7 +53,7 @@ The `command` field corresponds to `ENTRYPOINT`, and the `args` field correspond
 In this exercise, you create a Pod that runs one container. The configuration
 file for the Pod defines a command and two arguments:
 
-[`pods/commands.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/commands.yaml)
+[`pods/commands.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/commands.yaml)
 
 ```yaml
 apiVersion: v1

@@ -4,16 +4,16 @@ title: Handling retriable and non-retriable pod failures with Pod failure policy
 description: This document shows you how to use the Pod failure policy, in combination with the default Pod backoff failure policy, to improve the control over the handling of container- or Pod-level failure within a Job.
 resource: https://kubernetes.io/docs/tasks/job/pod-failure-policy/
 tags: [kubernetes, tasks, job]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/job/pod-failure-policy.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/job/pod-failure-policy.md
     title: 'Kubernetes website source: tasks/job/pod-failure-policy.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/job/pod-failure-policy/
     title: Handling retriable and non-retriable pod failures with Pod failure policy | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/job/pod-failure-policy.md
 min_kubernetes_server_version: v1.25
 ---
@@ -65,7 +65,7 @@ software bug.
 
 1. Examine the following manifest:
 
-   [`/controllers/job-pod-failure-policy-failjob.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples//controllers/job-pod-failure-policy-failjob.yaml)
+   [`/controllers/job-pod-failure-policy-failjob.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples//controllers/job-pod-failure-policy-failjob.yaml)
 
 ```yaml
 apiVersion: batch/v1
@@ -146,7 +146,7 @@ node while the Pod is running on it (within 90s since the Pod is scheduled).
 
 1. Examine the following manifest:
 
-   [`/controllers/job-pod-failure-policy-ignore.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples//controllers/job-pod-failure-policy-ignore.yaml)
+   [`/controllers/job-pod-failure-policy-ignore.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples//controllers/job-pod-failure-policy-ignore.yaml)
 
 ```yaml
 apiVersion: batch/v1
@@ -231,7 +231,7 @@ deleted pods, in the `Pending` phase, to a terminal phase
 
 1. Examine the following manifest:
 
-   [`/controllers/job-pod-failure-policy-config-issue.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples//controllers/job-pod-failure-policy-config-issue.yaml)
+   [`/controllers/job-pod-failure-policy-config-issue.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples//controllers/job-pod-failure-policy-config-issue.yaml)
 
 ```yaml
 apiVersion: batch/v1
@@ -355,7 +355,7 @@ together.
 
 1. Examine the following manifest:
 
-   [`/controllers/job-backoff-limit-per-index-failindex.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples//controllers/job-backoff-limit-per-index-failindex.yaml)
+   [`/controllers/job-backoff-limit-per-index-failindex.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples//controllers/job-backoff-limit-per-index-failindex.yaml)
 
 ```yaml
 apiVersion: batch/v1

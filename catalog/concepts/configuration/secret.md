@@ -4,16 +4,16 @@ title: Secrets
 description: A Secret is an object that contains a small amount of sensitive data such as a password, a token, or a key.
 resource: https://kubernetes.io/docs/concepts/configuration/secret/
 tags: [kubernetes, concepts, configuration]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/configuration/secret.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/configuration/secret.md
     title: 'Kubernetes website source: concepts/configuration/secret.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/configuration/secret/
     title: Secrets | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/configuration/secret.md
 ---
 
@@ -79,7 +79,7 @@ present at the path `/etc/secret-volume/.secret-file`.
 Files beginning with dot characters are hidden from the output of `ls -l`;
 you must use `ls -la` to see them when listing directory contents.
 
-[`secret/dotfile-secret.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/secret/dotfile-secret.yaml)
+[`secret/dotfile-secret.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/dotfile-secret.yaml)
 
 ```yaml
 apiVersion: v1
@@ -253,7 +253,7 @@ fills in some other fields such as the `kubernetes.io/service-account.uid` annot
 
 The following example configuration declares a ServiceAccount token Secret:
 
-[`secret/serviceaccount-token-secret.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/secret/serviceaccount-token-secret.yaml)
+[`secret/serviceaccount-token-secret.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/serviceaccount-token-secret.yaml)
 
 ```yaml
 apiVersion: v1
@@ -293,7 +293,7 @@ you must use one of the following `type` values for that Secret:
 
 Below is an example for a `kubernetes.io/dockercfg` type of Secret:
 
-[`secret/dockercfg-secret.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/secret/dockercfg-secret.yaml)
+[`secret/dockercfg-secret.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/dockercfg-secret.yaml)
 
 ```yaml
 apiVersion: v1
@@ -372,7 +372,7 @@ Secret manifest.
 
 The following manifest is an example of a basic authentication Secret:
 
-[`secret/basicauth-secret.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/secret/basicauth-secret.yaml)
+[`secret/basicauth-secret.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/basicauth-secret.yaml)
 
 ```yaml
 apiVersion: v1
@@ -404,7 +404,7 @@ as the SSH credential to use.
 The following manifest is an example of a Secret used for SSH public/private
 key authentication:
 
-[`secret/ssh-auth-secret.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/secret/ssh-auth-secret.yaml)
+[`secret/ssh-auth-secret.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/ssh-auth-secret.yaml)
 
 ```yaml
 apiVersion: v1
@@ -448,7 +448,7 @@ the base64 encoded certificate and private key. For details, see
 
 The following YAML contains an example config for a TLS Secret:
 
-[`secret/tls-auth-secret.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/secret/tls-auth-secret.yaml)
+[`secret/tls-auth-secret.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/tls-auth-secret.yaml)
 
 ```yaml
 apiVersion: v1
@@ -494,7 +494,7 @@ string of the token ID.
 As a Kubernetes manifest, a bootstrap token Secret might look like the
 following:
 
-[`secret/bootstrap-token-secret-base64.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/secret/bootstrap-token-secret-base64.yaml)
+[`secret/bootstrap-token-secret-base64.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/bootstrap-token-secret-base64.yaml)
 
 ```yaml
 apiVersion: v1
@@ -528,7 +528,7 @@ A bootstrap token Secret has the following keys specified under `data`:
 You can alternatively provide the values in the `stringData` field of the Secret
 without base64 encoding them:
 
-[`secret/bootstrap-token-secret-literal.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/secret/bootstrap-token-secret-literal.yaml)
+[`secret/bootstrap-token-secret-literal.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/bootstrap-token-secret-literal.yaml)
 
 ```yaml
 apiVersion: v1
@@ -628,7 +628,7 @@ When you reference a Secret in a Pod, you can mark the Secret as _optional_,
 such as in the following example. If an optional Secret doesn't exist,
 Kubernetes ignores it.
 
-[`secret/optional-secret.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/secret/optional-secret.yaml)
+[`secret/optional-secret.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/optional-secret.yaml)
 
 ```yaml
 apiVersion: v1

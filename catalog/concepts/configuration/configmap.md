@@ -4,16 +4,16 @@ title: ConfigMaps
 description: A ConfigMap is an API object used to store non-confidential data in key-value pairs.
 resource: https://kubernetes.io/docs/concepts/configuration/configmap/
 tags: [kubernetes, concepts, configuration]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/configuration/configmap.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/configuration/configmap.md
     title: 'Kubernetes website source: concepts/configuration/configmap.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/configuration/configmap/
     title: ConfigMaps | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/concepts/configuration/configmap.md
 ---
 
@@ -129,7 +129,7 @@ technique also lets you access a ConfigMap in a different namespace.
 
 Here's an example Pod that uses values from `game-demo` to configure a Pod:
 
-[`configmap/configure-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/configmap/configure-pod.yaml)
+[`configmap/configure-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/configmap/configure-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -295,7 +295,7 @@ kubectl apply -f myconfigmap.yaml
 
 The following Pod consumes the content of the ConfigMap as environment variables:
 
-[`configmap/env-configmap.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/configmap/env-configmap.yaml)
+[`configmap/env-configmap.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/configmap/env-configmap.yaml)
 
 ```yaml
 apiVersion: v1

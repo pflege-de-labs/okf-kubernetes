@@ -4,16 +4,16 @@ title: Assign Extended Resources to a Container
 description: This page shows how to assign extended resources to a Container.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/extended-resource/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/configure-pod-container/extended-resource.md
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/extended-resource.md
     title: 'Kubernetes website source: tasks/configure-pod-container/extended-resource.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/extended-resource/
     title: Assign Extended Resources to a Container | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 source_path: content/en/docs/tasks/configure-pod-container/extended-resource.md
 ---
 
@@ -49,7 +49,7 @@ descriptive resource name.
 
 Here is the configuration file for a Pod that has one Container:
 
-[`pods/resource/extended-resource-pod.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/extended-resource-pod.yaml)
+[`pods/resource/extended-resource-pod.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/extended-resource-pod.yaml)
 
 ```yaml
 apiVersion: v1
@@ -101,7 +101,7 @@ Requests:
 Here is the configuration file for a Pod that has one Container. The Container requests
 two dongles.
 
-[`pods/resource/extended-resource-pod-2.yaml`](https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/examples/pods/resource/extended-resource-pod-2.yaml)
+[`pods/resource/extended-resource-pod-2.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/extended-resource-pod-2.yaml)
 
 ```yaml
 apiVersion: v1
