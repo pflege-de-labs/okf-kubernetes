@@ -34,7 +34,7 @@ Check out the [container runtimes](https://kubernetes.io/docs/setup/production-e
 section to know your options.
 
 The version of Kubernetes with dockershim (1.23) is out of support and the v1.24
-will run out of support [soon](https://kubernetes.io/releases/#release-v1-24). Make sure to
+will run out of support [soon](/releases.md#release-v1-24). Make sure to
 [report issues](https://github.com/kubernetes/kubernetes/issues) you encountered
 with the migration so the issues can be fixed in a timely manner and your cluster would be
 ready for dockershim removal. After v1.24 running out of support, you will need

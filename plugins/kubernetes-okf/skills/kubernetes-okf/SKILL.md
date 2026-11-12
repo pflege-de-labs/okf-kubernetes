@@ -5,7 +5,7 @@ description: Use the pflege.de OKF MCP server as the primary knowledge source fo
 
 # Kubernetes OKF
 
-For every upstream Kubernetes question, use the OKF MCP tools before answering or writing manifests. The server is usually registered as `okf` (tools appear as `mcp__okf__<tool>`). The Kubernetes bundle is generated from the Kubernetes documentation (kubernetes.io/docs: Concepts, Tasks, Reference) for one release; each concept states it in `kubernetes_version`.
+For every upstream Kubernetes question, use the OKF MCP tools before answering or writing manifests. The server is usually registered as `okf` (tools appear as `mcp__okf__<tool>`). The Kubernetes bundle is generated from the Kubernetes documentation (kubernetes.io/docs: Concepts, Tasks, Reference) for one release, usually the newest; `${user_config.bundle_name}/about` names it.
 
 ## Workflow
 
@@ -35,11 +35,22 @@ Other useful starting points:
 | kubectl commands | `${user_config.bundle_name}/reference/kubectl/generated/kubectl_<command>` |
 | Glossary terms | `${user_config.bundle_name}/reference/glossary/<term>`, e.g. `pod` |
 | Deprecation policy | `${user_config.bundle_name}/reference/deprecation-policy` |
+| Bundle version and how to apply it to other versions | `${user_config.bundle_name}/about` |
+| Release, maintenance-mode and end-of-life dates | `${user_config.bundle_name}/releases/lifecycle` |
+| Support period and patch release policy | `${user_config.bundle_name}/releases/patch-releases` |
+| Allowed version differences between components, upgrade order | `${user_config.bundle_name}/releases/version-skew-policy` |
+| Removed and migrated APIs per release | `${user_config.bundle_name}/reference/using-api/deprecation-guide` |
 
 ## Versions and feature states
 
-- The bundle documents a single Kubernetes release (`kubernetes_version`). If the user's cluster runs a different version, say which version the answer is based on and point out version-dependent behavior instead of assuming it applies.
-- Preserve feature-state lines such as `**Feature state:** Kubernetes v1.37 [beta] (feature gate X, disabled by default)`. Do not present an alpha or beta feature as generally available, and mention when a feature gate must be enabled.
+Pages describe the bundle's release (`${user_config.bundle_name}/about`), which can differ from the cluster the user targets. If `about` or `releases/lifecycle` is not found, the server runs an older bundle without them: say so and continue with the feature-gate tables.
+
+1. Determine the target cluster version: from the user, the project (cluster config, IaC, CI), or `kubectl version`. If unknown, ask or state the assumption.
+2. If it differs from the bundle's release, say which version the answer is based on. Never present a feature from a newer release as available on the cluster.
+3. Check availability in the target version: the feature-gate tables list stage (alpha, beta, stable/GA, deprecated), default and since/until for every stage; `feature-gates-removed` and the deprecation guide cover removals. Alpha gates are disabled by default and must be enabled with `--feature-gates` on every affected component.
+4. If the target version lacks a feature that solves the problem, or has it only as alpha or disabled by default, name the first release where it is beta/enabled by default or GA, and suggest that upgrade. Upgrades go one minor version at a time (version skew policy).
+5. Check the support status of the target version in `releases/lifecycle` by comparing today's date with its maintenance-mode and end-of-life dates. Mention when it is in maintenance mode (security and critical fixes only) or end of life, and name the supported upgrade target.
+6. Preserve feature-state lines such as `**Feature state:** Kubernetes v1.37 [beta] (feature gate X, disabled by default)`. Do not present an alpha or beta feature as generally available, and mention when a feature gate must be enabled.
 
 ## Evidence boundaries
 

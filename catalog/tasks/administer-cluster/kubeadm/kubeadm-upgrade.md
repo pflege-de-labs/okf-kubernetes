@@ -22,7 +22,7 @@ source_path: content/en/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade.md
 This page explains how to upgrade a Kubernetes cluster created with kubeadm from version
 1.36.x to version 1.37.x, and from version
 1.37.x to 1.37.y (where `y > x`). Skipping MINOR versions
-when upgrading is unsupported. For more details, please visit [Version Skew Policy](https://kubernetes.io/releases/version-skew-policy/).
+when upgrading is unsupported. For more details, please visit [Version Skew Policy](/releases/version-skew-policy.md).
 
 To see information about upgrading clusters created using older versions of kubeadm,
 please refer to following pages instead:

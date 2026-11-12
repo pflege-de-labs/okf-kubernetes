@@ -89,7 +89,7 @@ The Kubernetes community maintains many plugins, and you can manage them with th
 The `kubectl` tool supports a version skew of plus-or-minus one minor version relative to the cluster's
 control plane. For example, `kubectl` v1.32 works with control planes at v1.31, v1.32, and v1.33.
 Using a compatible version avoids unexpected behavior. See the
-[version skew policy](https://kubernetes.io/releases/version-skew-policy/) for details.
+[version skew policy](/releases/version-skew-policy.md) for details.
 
 ## What's next
 
@@ -98,4 +98,4 @@ Using a compatible version avoids unexpected behavior. See the
 * Learn about [The Kubernetes API](/concepts/overview/kubernetes-api.md) that `kubectl` uses.
 * Review [Kubernetes Components](/concepts/overview/components.md) that make up a cluster.
 * Explore [Object Management](/concepts/overview/working-with-objects/object-management.md) and declarative configuration.
-* Check the [version skew policy](https://kubernetes.io/releases/version-skew-policy/) for supported version combinations.
+* Check the [version skew policy](/releases/version-skew-policy.md) for supported version combinations.

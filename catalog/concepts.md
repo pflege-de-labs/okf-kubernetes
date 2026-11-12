@@ -3,7 +3,7 @@ type: concept
 title: Concepts
 description: The Concepts section helps you learn about the parts of the Kubernetes system and the abstractions Kubernetes uses to represent your cluster, and helps you obtain a deeper understanding of how Kubernetes works.
 resource: https://kubernetes.io/docs/concepts/
-tags: [kubernetes, concepts.md]
+tags: [kubernetes, concepts]
 generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
 sources:
   - id: k8s-docs-source

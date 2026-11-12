@@ -1,12 +1,15 @@
 # okfgen mapping rules
 
-`cmd/okfgen` converts `content/en/docs/{concepts,tasks,reference}` of a
-`kubernetes/website` checkout into OKF concepts.
+`cmd/okfgen` converts `content/en/docs/{concepts,tasks,reference}` and selected
+`content/en/releases` pages of a `kubernetes/website` checkout into OKF concepts.
+It also generates `about.md` and `releases/lifecycle.md` from `hugo.toml` and
+`data/releases/{schedule,eol}.yaml` ([docs/versions.md](versions.md)).
 
 ## Files
 
 - `foo/bar.md` becomes `catalog/foo/bar.md`.
 - Section pages `foo/_index.md` and page bundles `foo/index.md` become `catalog/foo.md`, since `index.md` is reserved in OKF. A generated `catalog/foo/index.md` lists the directory.
+- `releases/`: only `_index.md`, `patch-releases.md`, `version-skew-policy.md`, `release.md` and `notes.md`; release-manager contacts and downloads are skipped. The release-table shortcodes link to `releases/lifecycle.md`.
 - Skipped: `headless` pages, pages with `_build.render: never|false`, and the ~490 feature-gate stubs, which are rendered into the feature-gate tables on `reference/command-line-tools-reference/feature-gates.md` and `feature-gates-removed.md`.
 
 ## Frontmatter

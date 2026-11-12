@@ -2,8 +2,8 @@
 
 [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
 bundle of the Kubernetes documentation sections
-[Concepts](https://kubernetes.io/docs/concepts/), [Tasks](https://kubernetes.io/docs/tasks/)
-and [Reference](https://kubernetes.io/docs/reference/), pinned to one
+[Concepts](https://kubernetes.io/docs/concepts/), [Tasks](https://kubernetes.io/docs/tasks/),
+[Reference](https://kubernetes.io/docs/reference/) and [Releases](https://kubernetes.io/releases/), pinned to one
 `kubernetes/website` commit (currently Kubernetes v1.37, `2fb3b0d636e8`).
 
 ## Layout
@@ -12,7 +12,8 @@ and [Reference](https://kubernetes.io/docs/reference/), pinned to one
 |------|---------|---------------|
 | `catalog/` | Bundle root (`okf_version: "0.2"` in `catalog/index.md`) | |
 | `catalog/requirements/` | Curated constraints: name formats and lengths, label/annotation rules, namespaces, size limits, ports. Every claim is footnoted to a commit-pinned source line range | hand |
-| `catalog/concepts/`, `catalog/tasks/`, `catalog/reference/` | One concept per docs page, mirroring the site structure | `cmd/okfgen` |
+| `catalog/concepts/`, `catalog/tasks/`, `catalog/reference/`, `catalog/releases/` | One concept per docs page, mirroring the site structure | `cmd/okfgen` |
+| `catalog/about.md`, `catalog/releases/lifecycle.md` | Bundle version, and release/maintenance-mode/end-of-life dates of every minor release: [docs/versions.md](docs/versions.md) | `cmd/okfgen` |
 | `catalog/log.md` | Update history | hand |
 | `.claude-plugin/`, `plugins/kubernetes-okf/` | Claude Code marketplace and skill that tells Claude when to use this bundle: [docs/claude-plugin.md](docs/claude-plugin.md) | hand |
 
@@ -36,13 +37,14 @@ The skill makes Claude use this bundle through the pflege.de OKF MCP server; det
 ```sh
 git clone --depth 1 --filter=blob:none --sparse https://github.com/kubernetes/website.git /tmp/website
 git -C /tmp/website sparse-checkout set content/en/docs/concepts content/en/docs/tasks \
-  content/en/docs/reference content/en/examples content/en/includes i18n/en data/releases
+  content/en/docs/reference content/en/examples content/en/includes content/en/releases \
+  i18n/en data/releases
 go run ./cmd/okfgen -site /tmp/website -out catalog -at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 ```
 
 `-at` sets `generated.at` in every document (default: now).
 
-The generator replaces `catalog/{concepts,tasks,reference}` and the generated
+The generator replaces `catalog/{concepts,tasks,reference,releases}`, `catalog/about.md` and the generated
 `index.md` files; `catalog/requirements/` and `catalog/log.md` are left alone.
 When the source commit changes, re-check the line ranges cited in
 `catalog/requirements/` and add a `log.md` entry. Mapping rules:

@@ -33,7 +33,8 @@ const (
 )
 
 type page struct {
-	src    string // relative to content/en/docs
+	root   string // source directory relative to the website root, e.g. content/en/docs/
+	src    string // relative to root
 	out    string // relative to the bundle root
 	url    string // published site path, e.g. /docs/concepts/
 	fm     map[string]any
@@ -41,6 +42,7 @@ type page struct {
 	weight int
 	term   bool // glossary term
 	desc   string
+	extra  []source // additional sources, e.g. for generated pages
 }
 
 type gate struct {
@@ -51,23 +53,25 @@ type gate struct {
 }
 
 type gen struct {
-	site      string // kubernetes/website checkout
-	docs      string // <site>/content/en/docs
-	out       string
-	commit    string
-	minor     int // minor of the latest release, e.g. 37 for v1.37
-	major     string
-	patch     string
-	at        string
-	pages     []*page
-	byURL     map[string]*page
-	bySrc     map[string]*page
-	terms     map[string]*page
-	gates     []gate
-	headings  map[string]string
-	unknown   map[string]int
-	warnings  []string
-	sourceRaw string // GitHub blob prefix
+	site       string // kubernetes/website checkout
+	docs       string // <site>/content/en/docs
+	out        string
+	commit     string
+	minor      int // minor of the latest release, e.g. 37 for v1.37
+	major      string
+	patch      string
+	at         string
+	pages      []*page
+	byURL      map[string]*page
+	bySrc      map[string]*page
+	terms      map[string]*page
+	gates      []gate
+	headings   map[string]string
+	unknown    map[string]int
+	warnings   []string
+	sourceRaw  string // GitHub blob prefix up to the commit
+	commitDate string // as-of date of the release data, e.g. 2026-11-04
+	releases   releaseData
 }
 
 func main() {
@@ -93,11 +97,15 @@ func (g *gen) run() error {
 		return err
 	}
 	for _, s := range sections {
-		if err := g.load(s); err != nil {
+		if err := g.load("content/en/docs/", s); err != nil {
 			return err
 		}
 	}
-	for _, s := range sections {
+	if err := g.load("content/en/", releasesSection); err != nil {
+		return err
+	}
+	g.releasePagesGenerated()
+	for _, s := range append(sections, releasesSection) {
 		if err := os.RemoveAll(filepath.Join(g.out, s)); err != nil {
 			return err
 		}
@@ -139,7 +147,12 @@ func (g *gen) loadSite() error {
 		return fmt.Errorf("resolve source commit: %w", err)
 	}
 	g.commit = strings.TrimSpace(string(out))
-	g.sourceRaw = "https://github.com/kubernetes/website/blob/" + g.commit + "/content/en/docs/"
+	g.sourceRaw = "https://github.com/kubernetes/website/blob/" + g.commit + "/"
+	out, err = exec.Command("git", "-C", g.site, "log", "-1", "--format=%cs").Output()
+	if err != nil {
+		return fmt.Errorf("resolve source commit date: %w", err)
+	}
+	g.commitDate = strings.TrimSpace(string(out))
 
 	hugo, err := os.ReadFile(filepath.Join(g.site, "hugo.toml"))
 	if err != nil {
@@ -161,34 +174,27 @@ func (g *gen) loadSite() error {
 		g.headings[string(h[1])] = string(h[2])
 	}
 
-	// Patch version is only used by the skew shortcode; missing data is not fatal.
-	var sched struct {
-		Schedules []struct {
-			Release         string
-			PreviousPatches []struct{ Release string } `yaml:"previousPatches"`
-		}
+	if err := g.loadReleaseData(); err != nil {
+		return err
 	}
-	if b, err := os.ReadFile(filepath.Join(g.site, "data/releases/schedule.yaml")); err == nil && yaml.Unmarshal(b, &sched) == nil {
-		for _, s := range sched.Schedules {
-			if s.Release == g.version() && len(s.PreviousPatches) > 0 {
-				g.patch = s.PreviousPatches[0].Release
-			}
-		}
-	}
-	if g.patch == "" {
-		g.patch = g.version() + ".0"
-	}
+	g.patch = g.latestPatch(g.version())
 	return nil
 }
 
 func (g *gen) version() string { return fmt.Sprintf("%s.%d", g.major, g.minor) }
 
-func (g *gen) load(section string) error {
-	return filepath.WalkDir(filepath.Join(g.docs, section), func(p string, d fs.DirEntry, err error) error {
+// load reads one section below root (relative to the website root); its site URLs are root without content/en.
+func (g *gen) load(root, section string) error {
+	base := filepath.Join(g.site, root)
+	urlBase := "/" + strings.TrimPrefix(root, "content/en/")
+	return filepath.WalkDir(filepath.Join(base, section), func(p string, d fs.DirEntry, err error) error {
 		if err != nil || d.IsDir() || !strings.HasSuffix(p, ".md") {
 			return err
 		}
-		rel, _ := filepath.Rel(g.docs, p)
+		if section == releasesSection && !releasePages[d.Name()] {
+			return nil
+		}
+		rel, _ := filepath.Rel(base, p)
 		rel = filepath.ToSlash(rel)
 		raw, err := os.ReadFile(p)
 		if err != nil {
@@ -208,14 +214,17 @@ func (g *gen) load(section string) error {
 		if fm["headless"] == true || neverRendered(fm) {
 			return nil
 		}
-		pg := &page{src: rel, fm: fm, body: body, weight: toInt(fm["weight"])}
+		if desc := releaseDescriptions[d.Name()]; section == releasesSection && desc != "" {
+			fm["description"] = desc
+		}
+		pg := &page{root: root, src: rel, fm: fm, body: body, weight: toInt(fm["weight"])}
 		switch {
 		case base == "_index.md" || base == "index.md":
 			pg.out = dir + ".md"
-			pg.url = "/docs/" + dir + "/"
+			pg.url = urlBase + dir + "/"
 		default:
 			pg.out = rel
-			pg.url = "/docs/" + strings.TrimSuffix(rel, ".md") + "/"
+			pg.url = urlBase + strings.TrimSuffix(rel, ".md") + "/"
 		}
 		if dir == glossaryDir && base != "index.md" {
 			pg.term = true
@@ -291,7 +300,10 @@ type frontmatter struct {
 func (g *gen) write(p *page, body string) error {
 	title := g.title(p)
 	p.desc = g.description(p, body)
-	published := "https://kubernetes.io" + p.url
+	published := ""
+	if p.url != "" {
+		published = "https://kubernetes.io" + p.url
+	}
 	if p.term {
 		published = "https://kubernetes.io/docs/reference/glossary/?all=true#term-" + termID(p)
 	}
@@ -304,16 +316,17 @@ func (g *gen) write(p *page, body string) error {
 		Generated:         actor{By: generatedBy, At: g.at},
 		KubernetesVersion: "v" + g.version(),
 		SourceCommit:      g.commit,
-		SourcePath:        "content/en/docs/" + p.src,
+		SourcePath:        p.root + p.src,
 		MinServerVersion:  str(p.fm["min-kubernetes-server-version"]),
 	}
 	if m, ok := p.fm["api_metadata"].(map[string]any); ok {
 		fm.APIMetadata = m
 	}
-	fm.Sources = []source{
-		{ID: "k8s-docs-source", Resource: g.sourceRaw + p.src, Title: "Kubernetes website source: " + p.src},
-		{ID: "k8s-docs", Resource: published, Title: title + " | Kubernetes documentation"},
+	fm.Sources = []source{{ID: "k8s-docs-source", Resource: g.sourceRaw + p.root + p.src, Title: "Kubernetes website source: " + p.src}}
+	if published != "" {
+		fm.Sources = append(fm.Sources, source{ID: "k8s-docs", Resource: published, Title: title + " | Kubernetes documentation"})
 	}
+	fm.Sources = append(fm.Sources, p.extra...)
 	var buf bytes.Buffer
 	enc := yaml.NewEncoder(&buf)
 	enc.SetIndent(2)
@@ -364,7 +377,7 @@ func conceptType(p *page) string {
 }
 
 func (g *gen) tags(p *page) []string {
-	parts := strings.Split(p.out, "/")
+	parts := strings.Split(strings.TrimSuffix(p.out, ".md"), "/")
 	tags := []string{"kubernetes", parts[0]}
 	if len(parts) > 2 {
 		tags = append(tags, parts[1])
@@ -478,8 +491,10 @@ func (g *gen) writeRootIndex() error {
 	b.WriteString("---\nokf_version: \"0.2\"\n---\n\n# Kubernetes Knowledge Catalog\n\n")
 	fmt.Fprintf(&b, "OKF bundle of the Kubernetes v%s documentation (kubernetes/website@%s).\n\n", g.version(), g.commit[:12])
 	b.WriteString("# Start here\n\n")
-	b.WriteString("* [Requirements and limits](requirements/index.md) - Curated, source-cited naming rules, size limits, reserved values, and ranges.\n\n")
-	for _, s := range sections {
+	fmt.Fprintf(&b, "* [%s](%s) - %s\n", g.title(g.bySrc[aboutOut]), aboutOut, g.bySrc[aboutOut].desc)
+	b.WriteString("* [Requirements and limits](requirements/index.md) - Curated, source-cited naming rules, size limits, reserved values, and ranges.\n")
+	fmt.Fprintf(&b, "* [%s](%s) - %s\n\n", g.title(g.bySrc[lifecycleOut]), lifecycleOut, g.bySrc[lifecycleOut].desc)
+	for _, s := range append(sections, releasesSection) {
 		p := g.bySrc[s+".md"]
 		fmt.Fprintf(&b, "# %s\n\n* [%s](%s.md) - %s ([contents](%s/index.md))\n\n", g.title(p), g.title(p), s, p.desc, s)
 	}

@@ -576,7 +576,7 @@ that your webhooks continue to function as expected after the upgrade.
 
 Additionally, use the following resources to stay informed about API changes:
 
-* [Kubernetes release notes](https://kubernetes.io/releases/)
+* [Kubernetes release notes](/releases.md)
 * [Kubernetes blog](https://kubernetes.io/blog/)
 
 ### Validate mutations before admission {#validate-mutations}

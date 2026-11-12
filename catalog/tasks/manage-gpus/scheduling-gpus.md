@@ -96,7 +96,7 @@ As an administrator, you can automatically discover and label all your GPU enabl
 by deploying Kubernetes [Node Feature Discovery](https://github.com/kubernetes-sigs/node-feature-discovery) (NFD).
 NFD detects the hardware features that are available on each node in a Kubernetes cluster.
 Typically, NFD is configured to advertise those features as node labels, but NFD can also add extended resources, annotations, and node taints.
-NFD is compatible with all [supported versions](https://kubernetes.io/releases/version-skew-policy/#supported-versions) of Kubernetes.
+NFD is compatible with all [supported versions](/releases/version-skew-policy.md#supported-versions) of Kubernetes.
 By default NFD create the [feature labels](https://kubernetes-sigs.github.io/node-feature-discovery/master/usage/features.html) for the detected features.
 Administrators can leverage NFD to also taint nodes with specific features, so that only pods that request those features can be scheduled on those nodes.
 
