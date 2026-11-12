@@ -3,7 +3,7 @@ type: concept
 title: Reference
 description: This section of the Kubernetes documentation contains references.
 resource: https://kubernetes.io/docs/reference/
-tags: [kubernetes, reference.md]
+tags: [kubernetes, reference]
 generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
 sources:
   - id: k8s-docs-source

@@ -93,7 +93,7 @@ might have to add an equivalent field or represent it as an annotation.
   and are no longer served 9 months or 3 minor releases after deprecation (whichever is longer)
 * Alpha API versions may be removed in any release without prior deprecation notice
 
-This ensures beta API support covers the [maximum supported version skew of 2 releases](https://kubernetes.io/releases/version-skew-policy/),
+This ensures beta API support covers the [maximum supported version skew of 2 releases](/releases/version-skew-policy.md),
 and that APIs don't stagnate on unstable beta versions, accumulating production usage that will be
 disrupted when support for the beta API ends.
 

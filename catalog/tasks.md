@@ -3,7 +3,7 @@ type: concept
 title: Tasks
 description: This section of the Kubernetes documentation contains pages that show how to do individual tasks.
 resource: https://kubernetes.io/docs/tasks/
-tags: [kubernetes, tasks.md]
+tags: [kubernetes, tasks]
 generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-05T00:00:00Z"}
 sources:
   - id: k8s-docs-source

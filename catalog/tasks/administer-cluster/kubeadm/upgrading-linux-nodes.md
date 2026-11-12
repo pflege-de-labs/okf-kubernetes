@@ -45,7 +45,7 @@ Upgrade kubeadm and kubectl:
 
 **Note:**
 kubectl must be within one minor version of kube-apiserver as per the
-[version skew policy](https://kubernetes.io/releases/version-skew-policy/#kubectl).
+[version skew policy](/releases/version-skew-policy.md#kubectl).
 If you are upgrading the control plane across multiple minor versions before
 upgrading worker nodes, the node-local kubectl may fall outside the allowed
 skew. Upgrading kubectl alongside kubeadm here ensures it stays within

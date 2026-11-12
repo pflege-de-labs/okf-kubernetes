@@ -8,7 +8,9 @@ OKF bundle of the Kubernetes v1.37 documentation (kubernetes/website@2fb3b0d636e
 
 # Start here
 
+* [About this bundle: Kubernetes v1.37](about.md) - This bundle documents Kubernetes v1.37 (kubernetes/website@2fb3b0d636e8); how to apply it to clusters running other versions.
 * [Requirements and limits](requirements/index.md) - Curated, source-cited naming rules, size limits, reserved values, and ranges.
+* [Release Lifecycle](releases/lifecycle.md) - Release, maintenance-mode and end-of-life dates of every Kubernetes minor release, and how to derive whether a release is supported, in maintenance mode (security fixes only), or end of life.
 
 # Concepts
 
@@ -21,4 +23,8 @@ OKF bundle of the Kubernetes v1.37 documentation (kubernetes/website@2fb3b0d636e
 # Reference
 
 * [Reference](reference.md) - This section of the Kubernetes documentation contains references. ([contents](reference/index.md))
+
+# Releases
+
+* [Releases](releases.md) - The Kubernetes project maintains release branches for the most recent three minor releases (1.37, 1.36, 1.35). ([contents](releases/index.md))
 

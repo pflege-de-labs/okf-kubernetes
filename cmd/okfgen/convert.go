@@ -205,6 +205,8 @@ func (g *gen) openTag(p *page, name string, a args, selfClosing bool, depth int)
 		return "[" + a.named["text"] + "](" + a.named["url"] + ")"
 	case "page-api-reference":
 		return g.kindLink(a.named["kind"])
+	case "release-data", "release-branches", "eol-releases", "upcoming-releases":
+		return "See the [Release Lifecycle](/" + lifecycleOut + ") for release, maintenance-mode and end-of-life dates."
 	case "pageinfo", "legacy-repos-deprecation", "toc", "cve-feed":
 		return ""
 	}

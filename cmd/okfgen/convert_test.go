@@ -3,6 +3,8 @@ package main
 import (
 	"strings"
 	"testing"
+
+	"gopkg.in/yaml.v3"
 )
 
 func testGen() (*gen, *page) {
@@ -77,5 +79,34 @@ func TestDescriptionFallback(t *testing.T) {
 	body := "**Feature state:** x\n\nEach [object](/a.md) has\na name. Second sentence.\n"
 	if got := g.description(p, body); got != "Each object has a name." {
 		t.Errorf("got %q", got)
+	}
+}
+
+func TestLifecycle(t *testing.T) {
+	g, _ := testGen()
+	g.commitDate = "2026-11-04"
+	g.commit = "2fb3b0d636e8b49d"
+	if err := yaml.Unmarshal([]byte(`
+schedules:
+- {release: "1.37", releaseDate: "2026-08-26", maintenanceModeStartDate: "2027-08-28", endOfLifeDate: "2027-10-28",
+   next: {release: 1.37.2, targetDate: "2026-10-13"}, previousPatches: [{release: 1.37.1}, {release: 1.37.0}]}
+branches:
+- {release: "1.33", finalPatchRelease: 1.33.13, endOfLifeDate: "2026-06-28", note: "late\nfix"}
+`), &g.releases); err != nil {
+		t.Fatal(err)
+	}
+	got := g.lifecycleBody()
+	for _, want := range []string{
+		"| 1.37 | 2026-08-26 | 1.37.1 | 1.37.2 (2026-10-13) | 2027-08-28 | 2027-10-28 |",
+		"| 1.33 | 1.33.13 | 2026-06-28 | late fix |",
+		"v1.37 was the newest release and v1.38 was in development",
+		"kubernetes/website@2fb3b0d636e8 as of 2026-11-04.",
+	} {
+		if !strings.Contains(got, want) {
+			t.Errorf("missing %q in:\n%s", want, got)
+		}
+	}
+	if p := g.latestPatch("1.36"); p != "1.36.0" {
+		t.Errorf("latestPatch fallback = %q", p)
 	}
 }

@@ -48,7 +48,7 @@ or you can use one of these Kubernetes playgrounds:
 
 To check that [kubectl](/reference/glossary/kubectl.md) is installed,
 run `kubectl version --client`. The kubectl version should be
-[within one minor version](https://kubernetes.io/releases/version-skew-policy/#kubectl) of your
+[within one minor version](/releases/version-skew-policy.md#kubectl) of your
 cluster's API server.
 
 ## Define clusters, users, and contexts
