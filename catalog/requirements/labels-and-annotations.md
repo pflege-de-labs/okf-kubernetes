@@ -6,19 +6,19 @@ resource: https://kubernetes.io/docs/concepts/overview/working-with-objects/labe
 tags: [kubernetes, requirements, labels, annotations, validation, limits]
 generated: { by: "claude-code/claude-opus-5-5", at: "2026-11-05T00:00:00Z" }
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 sources:
   - id: label-key
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/labels.md#L57-L75
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/labels.md#L57-L75
     title: Labels and Selectors - label key syntax
   - id: label-value
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/labels.md#L77-L81
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/labels.md#L77-L81
     title: Labels and Selectors - label value syntax
   - id: annotation-key
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/annotations.md#L72-L76
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/annotations.md#L72-L76
     title: Annotations - key syntax
   - id: annotation-value
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/annotations.md#L78-L81
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/annotations.md#L78-L81
     title: Annotations - value syntax and total size
 ---
 

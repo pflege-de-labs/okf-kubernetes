@@ -5,25 +5,25 @@ description: Container and Service port numbers are 1-65535, port names must be 
 tags: [kubernetes, requirements, ports, networking, service, nodeport]
 generated: { by: "claude-code/claude-opus-5-5", at: "2026-11-05T00:00:00Z" }
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 sources:
   - id: container-port-name
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/core/pod-v1.md#L875-L876
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/core/pod-v1.md#L875-L876
     title: Pod API reference - ContainerPort name
   - id: probe-port
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/core/pod-v1.md#L1589
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/core/pod-v1.md#L1589
     title: Pod API reference - port number or name range
   - id: target-port
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/kubernetes-api/core/service-v1.md#L324
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/core/service-v1.md#L324
     title: Service API reference - targetPort
   - id: nodeport-range
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/services-networking/service.md#L476-L477
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/service.md#L476-L477
     title: Service - NodePort range
   - id: nodeport-bands
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/services-networking/service.md#L530-L537
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/service.md#L530-L537
     title: Service - NodePort static and dynamic bands
   - id: ports
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/reference/networking/ports-and-protocols.md#L14-L32
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/networking/ports-and-protocols.md#L14-L32
     title: Ports and Protocols
 ---
 

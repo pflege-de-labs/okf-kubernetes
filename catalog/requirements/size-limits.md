@@ -5,25 +5,25 @@ description: Documented size limits - ConfigMap and Secret 1 MiB, all annotation
 tags: [kubernetes, requirements, limits, size, configmap, secret]
 generated: { by: "claude-code/claude-opus-5-5", at: "2026-11-05T00:00:00Z" }
 kubernetes_version: v1.37
-source_commit: 2fb3b0d636e8b49d100b77d554443b41571dbcd4
+source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
 sources:
   - id: configmap
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/configuration/configmap.md#L35-L40
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/configuration/configmap.md#L35-L40
     title: ConfigMaps - size limit
   - id: secret
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/configuration/secret.md#L465-L471
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/configuration/secret.md#L465-L471
     title: Secrets - size limit
   - id: annotations
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/overview/working-with-objects/annotations.md#L81
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/working-with-objects/annotations.md#L81
     title: Annotations - total size
   - id: storageclass
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/storage-classes.md#L230-L232
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/storage-classes.md#L230-L232
     title: Storage Classes - parameter limits
   - id: vac
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/concepts/storage/volume-attributes-classes.md#L127-L128
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/volume-attributes-classes.md#L127-L128
     title: Volume Attributes Classes - parameter limits
   - id: termination
-    resource: https://github.com/kubernetes/website/blob/2fb3b0d636e8b49d100b77d554443b41571dbcd4/content/en/docs/tasks/debug/debug-application/determine-reason-pod-failure.md#L94-L98
+    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/debug/debug-application/determine-reason-pod-failure.md#L94-L98
     title: Determine the Reason for Pod Failure - termination message length
 ---
 
