@@ -1,0 +1,89 @@
+name: Regenerate catalog
+
+# Rebuilds catalog/ from kubernetes/website main and keeps one PR open with the result: docs/regeneration.md
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: regenerate
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ${{ vars.AGENT_RUNNER || 'ubuntu-latest' }}
+    env:
+      BRANCH: chore/regenerate-catalog
+      BOT_NAME: pflege-de-agent[bot]
+      BOT_EMAIL: 346949488+pflege-de-agent[bot]@users.noreply.github.com
+    steps:
+      # Full history to tell the bot's earlier commits on the PR branch from human ones; no persisted token, pushes use the agent token.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: go.mod
+
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+
+      - name: Regenerate
+        id: regen
+        env:
+          OUT_DIR: ${{ runner.temp }}/regen
+        run: |
+          bash scripts/regenerate.sh
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Never force-push over fixes on the PR branch; only this job commits as BOT_EMAIL (agent-commit and web edits commit as noreply@github.com).
+      - name: Check the PR branch is ours
+        id: branch
+        if: steps.regen.outputs.changed
+        run: |
+          if git fetch -q origin "$BRANCH" 2>/dev/null &&
+            git log --format=%ce origin/main..FETCH_HEAD | grep -qvxF "$BOT_EMAIL"; then
+            echo "::warning::$BRANCH has commits by others; not overwriting it. Merge its PR or delete the branch, then rerun."
+          else
+            echo "push=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Get agent token
+        id: agent
+        if: steps.branch.outputs.push
+        env:
+          BROKER: ${{ vars.AGENT_TOKEN_BROKER_ACTIONS_URL }}
+        run: |
+          test -n "$BROKER" || { echo "::error::Actions variable AGENT_TOKEN_BROKER_ACTIONS_URL is not set"; exit 1; }
+          oidc=$(curl -fsS -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=token-broker" | jq -r .value)
+          token=$(curl -fsS "$BROKER/token/actions" -H "Authorization: Bearer $oidc" \
+            -d "{\"repo\":\"$GITHUB_REPOSITORY\"}" | jq -r .token)
+          echo "::add-mask::$token"
+          echo "token=$token" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the PR
+        if: steps.branch.outputs.push
+        env:
+          GH_TOKEN: ${{ steps.agent.outputs.token }}
+          OUT_DIR: ${{ runner.temp }}/regen
+        run: |
+          git config user.name "$BOT_NAME"
+          git config user.email "$BOT_EMAIL"
+          git switch -q -c "$BRANCH"
+          git add -A
+          git commit -q -F "$OUT_DIR/title"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:refs/heads/$BRANCH"
+          if [ "$(gh pr view "$BRANCH" --json state --jq .state 2>/dev/null)" = OPEN ]; then
+            gh pr edit "$BRANCH" --title "$(cat "$OUT_DIR/title")" --body-file "$OUT_DIR/body.md"
+          else
+            gh pr create --base main --head "$BRANCH" --title "$(cat "$OUT_DIR/title")" --body-file "$OUT_DIR/body.md"
+          fi

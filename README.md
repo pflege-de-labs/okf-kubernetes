@@ -34,6 +34,8 @@ The skill makes Claude use this bundle through the pflege.de OKF MCP server; det
 
 ## Regenerate
 
+A weekly workflow regenerates the catalog from kubernetes/website `main` and opens a PR: [docs/regeneration.md](docs/regeneration.md). By hand:
+
 ```sh
 git clone --depth 1 --filter=blob:none --sparse https://github.com/kubernetes/website.git /tmp/website
 git -C /tmp/website sparse-checkout set content/en/docs/concepts content/en/docs/tasks \
