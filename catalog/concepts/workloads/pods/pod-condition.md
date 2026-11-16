@@ -4,16 +4,16 @@ title: Pod Conditions
 description: In Kubernetes, many objects have _conditions_.
 resource: https://kubernetes.io/docs/concepts/workloads/pods/pod-condition/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/pod-condition.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/concepts/workloads/pods/pod-condition.md
     title: 'Kubernetes website source: concepts/workloads/pods/pod-condition.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/pod-condition/
     title: Pod Conditions | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/concepts/workloads/pods/pod-condition.md
 ---
 
@@ -163,7 +163,7 @@ indicates one of the following reasons for the Pod termination:
 : Pod has been marked for [eviction using the Kubernetes API](/reference/glossary/api-eviction.md) .
 
 `DeletionByPodGC`
-: Pod, that is bound to a no longer existing Node, is due to be deleted by [Pod garbage collection](/concepts/workloads/pods/pod-lifecycle.md#pod-garbage-collection).
+: Pod, that is bound to a no longer existing Node, is due to be deleted by [Pod garbage collection](/concepts/workloads/pods/pod-termination.md#pod-garbage-collection).
 
 `TerminationByKubelet`
 : Pod has been terminated by the kubelet, because of either [node pressure eviction](/reference/glossary/node-pressure-eviction.md),
@@ -183,7 +183,7 @@ deleted. In such a situation, after some time, the
 Pod disruption condition will be cleared.
 
 Along with cleaning up the pods, the Pod garbage collector (PodGC) will also mark them as failed if they are in a non-terminal
-phase (see also [Pod garbage collection](/concepts/workloads/pods/pod-lifecycle.md#pod-garbage-collection)).
+phase (see also [Pod garbage collection](/concepts/workloads/pods/pod-termination.md#pod-garbage-collection)).
 
 When using a Job (or CronJob), you may want to use these Pod disruption conditions as part of your Job's
 [Pod failure policy](/concepts/workloads/controllers/job.md#pod-failure-policy).

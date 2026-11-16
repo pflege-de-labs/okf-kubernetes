@@ -4,16 +4,16 @@ title: Standard Device Attributes for Dynamic Resource Allocation
 description: Kubernetes defines a set of standard device attributes under the `resource.kubernetes.io` domain for use with Dynamic Resource Allocation (DRA).
 resource: https://kubernetes.io/docs/reference/node/dra-standard-device-attributes/
 tags: [kubernetes, reference, node]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/node/dra-standard-device-attributes.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/reference/node/dra-standard-device-attributes.md
     title: 'Kubernetes website source: reference/node/dra-standard-device-attributes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/node/dra-standard-device-attributes/
     title: Standard Device Attributes for Dynamic Resource Allocation | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/reference/node/dra-standard-device-attributes.md
 ---
 

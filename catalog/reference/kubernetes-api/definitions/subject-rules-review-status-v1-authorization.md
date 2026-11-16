@@ -4,16 +4,16 @@ title: SubjectRulesReviewStatus
 description: SubjectRulesReviewStatus contains the result of a rules check. This check can be incomplete depending on the set of authorizers the server is configured with and any errors experienced during evaluation. Because authorization rules are additive, if a rule appears in a list it&#39;s safe to assume the subject has that permission, even if that list is incomplete.
 resource: https://kubernetes.io/docs/reference/kubernetes-api/definitions/subject-rules-review-status-v1-authorization/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/definitions/subject-rules-review-status-v1-authorization.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/reference/kubernetes-api/definitions/subject-rules-review-status-v1-authorization.md
     title: 'Kubernetes website source: reference/kubernetes-api/definitions/subject-rules-review-status-v1-authorization.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/definitions/subject-rules-review-status-v1-authorization/
     title: SubjectRulesReviewStatus | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/reference/kubernetes-api/definitions/subject-rules-review-status-v1-authorization.md
 api_metadata:
   apiVersion: authorization.k8s.io/v1

@@ -4,16 +4,16 @@ title: Feature Gates
 description: This page contains an overview of the various feature gates an administrator can specify on different Kubernetes components.
 resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/
 tags: [kubernetes, reference, command-line-tools-reference]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/command-line-tools-reference/feature-gates/index.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/reference/command-line-tools-reference/feature-gates/index.md
     title: 'Kubernetes website source: reference/command-line-tools-reference/feature-gates/index.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/
     title: Feature Gates | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/reference/command-line-tools-reference/feature-gates/index.md
 ---
 
@@ -404,6 +404,8 @@ For a reference to old feature gates that are removed, please refer to
 | `InPlacePodVerticalScaling` | `true` | stable | 1.35 |  |
 | `InPlacePodVerticalScalingAllocatedStatus` | `false` | alpha | 1.32 | 1.32 |
 | `InPlacePodVerticalScalingAllocatedStatus` | `false` | deprecated | 1.33 |  |
+| `InPlacePodVerticalScalingInitContainers` | `true` | beta | 1.36 | 1.36 |
+| `InPlacePodVerticalScalingInitContainers` | `true` | stable | 1.37 |  |
 | `InformerResourceVersion` | `false` | alpha | 1.30 | 1.34 |
 | `InformerResourceVersion` | `true` | stable | 1.35 |  |
 | `JobBackoffLimitPerIndex` | `false` | alpha | 1.28 | 1.28 |
@@ -753,6 +755,7 @@ Each feature gate is designed for enabling/disabling a specific feature.
 * **`InPlacePodVerticalScalingAllocatedStatus`**: Enables the `allocatedResources` field in the container status. This feature requires the `InPlacePodVerticalScaling` gate be enabled as well.
 * **`InPlacePodVerticalScalingExclusiveCPUs`**: Enable resource resizing for containers in Guaranteed pods with integer CPU requests. It applies only in nodes with `InPlacePodVerticalScaling` and `CPUManager` features enabled, and the CPUManager policy set to `static`.
 * **`InPlacePodVerticalScalingExclusiveMemory`**: Allow resource resize for containers in Guaranteed Pods when the memory manager policy is set to `"Static"`. Applies only to nodes with `InPlacePodVerticalScaling` and memory manager features enabled.
+* **`InPlacePodVerticalScalingInitContainers`**: Enables in-place resize of CPU and memory resources of running non-restartable (non-sidecar) init containers.
 * **`InPlacePodVerticalScalingMemoryBackedVolumes`**: Enables in-place vertical scaling for memory-backed `emptyDir` volume size limits.
 * **`InPlacePodVerticalScalingSchedulerPreemption`**: Enables scheduler preemption of lower-priority pods to fulfill deferred in-place pod resize requests.
 * **`InformerResourceVersion`**: Allow clients to use the `LastSyncResourceVersion()` call on informers, enabling them to perform actions based on the current resource version. When disabled, `LastSyncResourceVersion()` succeeds but returns an empty string. Used by kube-controller-manager for StorageVersionMigration.

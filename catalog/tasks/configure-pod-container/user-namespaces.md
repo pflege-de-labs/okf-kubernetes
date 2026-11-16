@@ -4,16 +4,16 @@ title: Use a User Namespace With a Pod
 description: This page shows how to configure a user namespace for pods.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/user-namespaces/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/user-namespaces.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/tasks/configure-pod-container/user-namespaces.md
     title: 'Kubernetes website source: tasks/configure-pod-container/user-namespaces.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/user-namespaces/
     title: Use a User Namespace With a Pod | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/tasks/configure-pod-container/user-namespaces.md
 min_kubernetes_server_version: v1.25
 ---
@@ -74,7 +74,7 @@ Pods, you also need to ensure that the user namespace Pods are
 A user namespace for a pod is enabled setting the `hostUsers` field of `.spec`
 to `false`. For example:
 
-[`pods/user-namespaces-stateless.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/user-namespaces-stateless.yaml)
+[`pods/user-namespaces-stateless.yaml`](https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/examples/pods/user-namespaces-stateless.yaml)
 
 ```yaml
 apiVersion: v1

@@ -4,16 +4,16 @@ title: Managing Kubernetes Objects Using Imperative Commands
 description: Kubernetes objects can quickly be created, updated, and deleted directly using imperative commands built into the `kubectl` command-line tool.
 resource: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/
 tags: [kubernetes, tasks, manage-kubernetes-objects]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/manage-kubernetes-objects/imperative-command.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/tasks/manage-kubernetes-objects/imperative-command.md
     title: 'Kubernetes website source: tasks/manage-kubernetes-objects/imperative-command.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/
     title: Managing Kubernetes Objects Using Imperative Commands | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/tasks/manage-kubernetes-objects/imperative-command.md
 ---
 

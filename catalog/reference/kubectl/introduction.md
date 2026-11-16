@@ -4,16 +4,16 @@ title: Introduction to kubectl
 description: kubectl is a command-line tool for interacting with Kubernetes clusters, using the Kubernetes API.
 resource: https://kubernetes.io/docs/reference/kubectl/introduction/
 tags: [kubernetes, reference, kubectl]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubectl/introduction.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/reference/kubectl/introduction.md
     title: 'Kubernetes website source: reference/kubectl/introduction.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubectl/introduction/
     title: Introduction to kubectl | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/reference/kubectl/introduction.md
 ---
 

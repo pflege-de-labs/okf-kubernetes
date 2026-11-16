@@ -4,16 +4,16 @@ title: Service
 description: Expose an application running in your cluster behind a single outward-facing endpoint, even when the workload is split across multiple backends.
 resource: https://kubernetes.io/docs/concepts/services-networking/service/
 tags: [kubernetes, concepts, services-networking]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/services-networking/service.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/concepts/services-networking/service.md
     title: 'Kubernetes website source: concepts/services-networking/service.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/services-networking/service/
     title: Service | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/concepts/services-networking/service.md
 ---
 
@@ -107,7 +107,7 @@ For example, suppose you have a set of Pods that each listen on TCP port 9376
 and are labelled as `app.kubernetes.io/name=MyApp`. You can define a Service to
 publish that TCP listener:
 
-[`service/simple-service.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/simple-service.yaml)
+[`service/simple-service.yaml`](https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/examples/service/simple-service.yaml)
 
 ```yaml
 apiVersion: v1

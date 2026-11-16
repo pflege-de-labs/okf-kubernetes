@@ -3,6 +3,7 @@
 * [Pod Lifecycle](pod-lifecycle.md) - This page describes the lifecycle of a Pod.
 * [Pod Conditions](pod-condition.md) - In Kubernetes, many objects have _conditions_.
 * [Init Containers](init-containers.md) - This page provides an overview of init containers: specialized containers that run before app containers in a Pod.
+* [Termination of Pods](pod-termination.md) - Because Pods represent processes running on nodes in the cluster, it is important to allow those processes to gracefully terminate when they are no longer needed (rather than being abruptly stopped with a `KILL` signal and having no chance to clean up).
 * [Sidecar Containers](sidecar-containers.md) - Sidecar containers are the secondary containers that run along with the main application container within the same Pod.
 * [Ephemeral Containers](ephemeral-containers.md) - This page provides an overview of ephemeral containers: a special type of container that runs temporarily in an existing Pod to accomplish user-initiated actions such as troubleshooting.
 * [Liveness, Readiness, and Startup Probes](probes.md) - Kubernetes lets you define _probes_ to continuously monitor the health of containers in a Pod.

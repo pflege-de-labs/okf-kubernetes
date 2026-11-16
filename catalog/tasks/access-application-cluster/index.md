@@ -2,6 +2,7 @@
 
 * [Deploy and Access the Kubernetes Dashboard](web-ui-dashboard.md) - Deploy the web UI (Kubernetes Dashboard) and access it.
 * [Accessing Clusters](access-cluster.md) - This topic discusses multiple ways to interact with clusters.
+* [Configure Access to a Single Cluster](configure-access-single-cluster.md) - Set up a kubeconfig file to access a single existing Kubernetes cluster with kubectl.
 * [Configure Access to Multiple Clusters](configure-access-multiple-clusters.md) - This page shows how to configure access to multiple clusters by using configuration files.
 * [Use Port Forwarding to Access Applications in a Cluster](port-forward-access-application-cluster.md) - This page shows how to use `kubectl port-forward` to connect to a MongoDB server running in a Kubernetes cluster.
 * [Use a Service to Access an Application in a Cluster](service-access-application-cluster.md) - This page shows how to create a Kubernetes Service object that external clients can use to access an application running in a cluster.

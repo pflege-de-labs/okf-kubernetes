@@ -4,16 +4,16 @@ title: API-initiated Eviction
 description: API-initiated eviction is the process by which you use the Eviction API to create an `Eviction` object that triggers graceful pod termination.
 resource: https://kubernetes.io/docs/concepts/scheduling-eviction/api-eviction/
 tags: [kubernetes, concepts, scheduling-eviction]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/scheduling-eviction/api-eviction.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/concepts/scheduling-eviction/api-eviction.md
     title: 'Kubernetes website source: concepts/scheduling-eviction/api-eviction.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/scheduling-eviction/api-eviction/
     title: API-initiated Eviction | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/concepts/scheduling-eviction/api-eviction.md
 ---
 
@@ -27,7 +27,7 @@ using a client of the [API server](/reference/glossary/kube-apiserver.md), like 
 creates an `Eviction` object, which causes the API server to terminate the Pod.
 
 API-initiated evictions respect your configured [`PodDisruptionBudgets`](/tasks/run-application/configure-pdb.md)
-and [`terminationGracePeriodSeconds`](/concepts/workloads/pods/pod-lifecycle.md#pod-termination).
+and [`terminationGracePeriodSeconds`](/concepts/workloads/pods/pod-termination.md).
 
 Using the API to create an Eviction object for a Pod is like performing a
 policy-controlled [`DELETE` operation](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#delete-delete-a-pod)

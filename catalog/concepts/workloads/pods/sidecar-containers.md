@@ -4,16 +4,16 @@ title: Sidecar Containers
 description: Sidecar containers are the secondary containers that run along with the main application container within the same Pod.
 resource: https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/sidecar-containers.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/concepts/workloads/pods/sidecar-containers.md
     title: 'Kubernetes website source: concepts/workloads/pods/sidecar-containers.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/
     title: Sidecar Containers | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/concepts/workloads/pods/sidecar-containers.md
 ---
 
@@ -62,7 +62,7 @@ In this example, the sidecar container is intentionally defined under `initConta
 with `restartPolicy: Always`. Kubernetes treats such containers as sidecars that continue
 running for the lifetime of the Pod.
 
-[`application/deployment-sidecar.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/deployment-sidecar.yaml)
+[`application/deployment-sidecar.yaml`](https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/examples/application/deployment-sidecar.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -123,7 +123,7 @@ next init container from the ordered `.spec.initContainers` list.
 That status either becomes true because there is a process running in the
 container and no startup probe defined, or as a result of its `startupProbe` succeeding.
 
-Upon Pod [termination](/concepts/workloads/pods/pod-lifecycle.md#termination-with-sidecars),
+Upon Pod [termination](/concepts/workloads/pods/pod-termination.md#termination-with-sidecars),
 the kubelet postpones terminating sidecar containers until the main application container has fully stopped.
 The sidecar containers are then shut down in the opposite order of their appearance in the Pod specification.
 This approach ensures that the sidecars remain operational, supporting other containers within the Pod,
@@ -137,7 +137,7 @@ main container has finished.
 
 Here's an example of a Job with two containers, one of which is a sidecar:
 
-[`application/job/job-sidecar.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/job-sidecar.yaml)
+[`application/job/job-sidecar.yaml`](https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/examples/application/job/job-sidecar.yaml)
 
 ```yaml
 apiVersion: batch/v1
@@ -196,7 +196,7 @@ providing additional services.
 Sidecar containers run concurrently with the main application container. They are active
 throughout the lifecycle of the pod and can be started and stopped independently of the
 main container. Unlike [init containers](/concepts/workloads/pods/init-containers.md),
-sidecar containers support [probes](/concepts/workloads/pods/pod-lifecycle.md#types-of-probe) to control their lifecycle.
+sidecar containers support [probes](/concepts/workloads/pods/probes.md#types-of-probe) to control their lifecycle.
 
 Sidecar containers can interact directly with the main application containers, because
 like init containers they always share the same network, and can optionally also share
@@ -211,17 +211,33 @@ trigger a container restart.
 
 ## Resource sharing within containers
 
-Given the order of execution for init, sidecar and app containers, the following rules
-for resource usage apply:
+Given the order of execution for init, sidecar and app containers, a Pod needs
+different amounts of resources at different times. For each resource, Kubernetes
+calculates a request/limit for two phases:
 
-* The highest of any particular resource request or limit defined on all init
-  containers is the *effective init request/limit*. If any resource has no
-  resource limit specified this is considered as the highest limit.
-* The Pod's *effective request/limit* for a resource is the sum of
-[pod overhead](/concepts/scheduling-eviction/pod-overhead.md) and the higher of:
-  * the sum of all non-init containers(app and sidecar containers) request/limit for a
-  resource
-  * the effective init request/limit for a resource
+* During initialization: init containers run one at a time, alongside any
+  sidecar containers that have already started. The request/limit for this phase
+  is the *effective init request/limit*, which is the highest amount needed at any
+  point during initialization:
+  * For each init container, take its request/limit for the resource and add the
+    requests/limits of all sidecar containers that are listed before it in the
+    `initContainers` field.
+  * The highest of these values is the effective init request/limit.
+
+  If any resource has no resource limit specified this is considered as the highest limit.
+* After initialization: all sidecar containers and app containers run at the
+  same time. The request/limit for this phase is the sum of the requests/limits of
+  all non-init containers (app and sidecar containers).
+
+The Pod's *effective request/limit* for a resource is the higher of the value during
+initialization (the effective init request/limit) and the value after initialization
+(the sum for all non-init containers), plus the
+[pod overhead](/concepts/scheduling-eviction/pod-overhead.md).
+See [Examples of effective requests](#examples-of-effective-requests) to learn how
+this calculation works for specific Pods.
+
+The following rules also apply:
+
 * Scheduling is done based on effective requests/limits, which means
   init containers can reserve resources for initialization that are not used
   during the life of the Pod.
@@ -230,6 +246,126 @@ for resource usage apply:
 
 Quota and limits are applied based on the effective Pod request and
 limit.
+
+### Examples of effective requests
+
+The following examples show how the effective CPU request of a Pod is calculated.
+None of these Pods has any pod overhead.
+
+In this Pod, the sidecar container is listed before the init container:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sidecar-before-init
+spec:
+  initContainers:
+  - name: sidecar
+    image: busybox:1.38
+    command: ["sleep", "infinity"]
+    restartPolicy: Always # make this container a sidecar
+    resources:
+      requests:
+        cpu: 100m
+  - name: init
+    image: busybox:1.38
+    command: ["sleep", "5"]
+    resources:
+      requests:
+        cpu: 200m
+  containers:
+  - name: app
+    image: busybox:1.38
+    command: ["sleep", "infinity"]
+    resources:
+      requests:
+        cpu: 50m
+```
+
+* During initialization, the `sidecar` container is already running when the `init`
+  container starts, so the effective init request is 100m + 200m = 300m.
+* After initialization, the `sidecar` and `app` containers run at the same time,
+  so the sum of their requests is 100m + 50m = 150m.
+* The effective CPU request of the Pod is the higher of the two values
+  (300m and 150m), which is 300m.
+
+This Pod has the same containers, but the init container is listed before the
+sidecar container:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: init-before-sidecar
+spec:
+  initContainers:
+  - name: init
+    image: busybox:1.38
+    command: ["sleep", "5"]
+    resources:
+      requests:
+        cpu: 200m
+  - name: sidecar
+    image: busybox:1.38
+    command: ["sleep", "infinity"]
+    restartPolicy: Always # make this container a sidecar
+    resources:
+      requests:
+        cpu: 100m
+  containers:
+  - name: app
+    image: busybox:1.38
+    command: ["sleep", "infinity"]
+    resources:
+      requests:
+        cpu: 50m
+```
+
+* During initialization, no sidecar container is running when the `init` container
+  starts, so the effective init request is 200m.
+* After initialization, the `sidecar` and `app` containers run at the same time,
+  so the sum of their requests is 100m + 50m = 150m.
+* The effective CPU request of the Pod is the higher of the two values
+  (200m and 150m), which is 200m.
+
+In this Pod, the sidecar container is again listed before the init container, but this
+time the app container requests more CPU:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: large-app
+spec:
+  initContainers:
+  - name: sidecar
+    image: busybox:1.38
+    command: ["sleep", "infinity"]
+    restartPolicy: Always # make this container a sidecar
+    resources:
+      requests:
+        cpu: 100m
+  - name: init
+    image: busybox:1.38
+    command: ["sleep", "5"]
+    resources:
+      requests:
+        cpu: 200m
+  containers:
+  - name: app
+    image: busybox:1.38
+    command: ["sleep", "infinity"]
+    resources:
+      requests:
+        cpu: 400m
+```
+
+* During initialization, the effective init request is 100m + 200m = 300m.
+* After initialization, the `sidecar` and `app` containers run at the same time,
+  so the sum of their requests is 100m + 400m = 500m.
+* The effective CPU request of the Pod is the higher of the two values
+  (300m and 500m), which is 500m.
 
 ### Sidecar containers and Linux cgroups {#cgroups}
 
@@ -241,5 +377,5 @@ request and limit, the same as the scheduler.
 * Learn how to [Adopt Sidecar Containers](https://kubernetes.io/docs/tutorials/configuration/pod-sidecar-containers/)
 * Read a blog post on [native sidecar containers](https://kubernetes.io/blog/2023/08/25/native-sidecar-containers/).
 * Read about [creating a Pod that has an init container](/tasks/configure-pod-container/configure-pod-initialization.md#create-a-pod-that-has-an-init-container).
-* Learn about the [types of probes](/concepts/workloads/pods/pod-lifecycle.md#types-of-probe): liveness, readiness, startup probe.
+* Learn about the [types of probes](/concepts/workloads/pods/probes.md#types-of-probe): liveness, readiness, startup probe.
 * Learn about [pod overhead](/concepts/scheduling-eviction/pod-overhead.md).

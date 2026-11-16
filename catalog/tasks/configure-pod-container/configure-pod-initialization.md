@@ -4,16 +4,16 @@ title: Configure Pod Initialization
 description: This page shows how to use an Init Container to initialize a Pod before an application Container runs.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/configure-pod-initialization.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/tasks/configure-pod-container/configure-pod-initialization.md
     title: 'Kubernetes website source: tasks/configure-pod-container/configure-pod-initialization.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/
     title: Configure Pod Initialization | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/tasks/configure-pod-container/configure-pod-initialization.md
 ---
 
@@ -42,7 +42,7 @@ container starts.
 
 Here is the configuration file for the Pod:
 
-[`pods/init-containers.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/init-containers.yaml)
+[`pods/init-containers.yaml`](https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/examples/pods/init-containers.yaml)
 
 ```yaml
 apiVersion: v1

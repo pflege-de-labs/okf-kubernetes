@@ -4,16 +4,16 @@ title: Feature Gates (removed)
 description: This page contains list of feature gates that have been removed.
 resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates-removed/
 tags: [kubernetes, reference, command-line-tools-reference]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/command-line-tools-reference/feature-gates-removed/index.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/reference/command-line-tools-reference/feature-gates-removed/index.md
     title: 'Kubernetes website source: reference/command-line-tools-reference/feature-gates-removed/index.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates-removed/
     title: Feature Gates (removed) | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/reference/command-line-tools-reference/feature-gates-removed/index.md
 ---
 
@@ -861,7 +861,7 @@ In the following table:
 * **`SizeMemoryBackedVolumes`**: Enable kubelets to determine the size limit for memory-backed volumes (mainly `emptyDir` volumes).
 * **`SkipReadOnlyValidationGCE`**: Skip validation that GCE PersistentDisk volumes are in read-only mode.
 * **`StableLoadBalancerNodeSet`**: Enables less load balancer re-configurations by the service controller (KCCM) as an effect of changing node state.
-* **`StartupProbe`**: Enable the [startup](/concepts/workloads/pods/pod-lifecycle.md#when-should-you-use-a-startup-probe) probe in the kubelet.
+* **`StartupProbe`**: Enable the [startup](/concepts/workloads/pods/probes.md#when-should-you-use-a-startup-probe) probe in the kubelet.
 * **`StatefulSetMinReadySeconds`**: Allows `minReadySeconds` to be respected by the StatefulSet controller.
 * **`StorageObjectInUseProtection`**: Postpone the deletion of PersistentVolume or PersistentVolumeClaim objects if they are still being used.
 * **`StreamingProxyRedirects`**: Instructs the API server to intercept (and follow) redirects from the backend (kubelet) for streaming requests. Examples of streaming requests include the `exec`, `attach` and `port-forward` requests.

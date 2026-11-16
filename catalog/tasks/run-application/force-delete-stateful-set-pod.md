@@ -4,16 +4,16 @@ title: Force Delete StatefulSet Pods
 description: This page shows how to delete Pods which are part of a stateful set, and explains the considerations to keep in mind when doing so.
 resource: https://kubernetes.io/docs/tasks/run-application/force-delete-stateful-set-pod/
 tags: [kubernetes, tasks, run-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/run-application/force-delete-stateful-set-pod.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/tasks/run-application/force-delete-stateful-set-pod.md
     title: 'Kubernetes website source: tasks/run-application/force-delete-stateful-set-pod.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/run-application/force-delete-stateful-set-pod/
     title: Force Delete StatefulSet Pods | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/tasks/run-application/force-delete-stateful-set-pod.md
 ---
 
@@ -57,7 +57,7 @@ For the above to lead to graceful termination, the Pod **must not** specify a
 `pod.Spec.TerminationGracePeriodSeconds` of 0. The practice of setting a
 `pod.Spec.TerminationGracePeriodSeconds` of 0 seconds is unsafe and strongly discouraged
 for StatefulSet Pods. Graceful deletion is safe and will ensure that the Pod
-[shuts down gracefully](/concepts/workloads/pods/pod-lifecycle.md#pod-termination)
+[shuts down gracefully](/concepts/workloads/pods/pod-termination.md)
 before the kubelet deletes the name from the apiserver.
 
 A Pod is not deleted automatically when a node is unreachable.

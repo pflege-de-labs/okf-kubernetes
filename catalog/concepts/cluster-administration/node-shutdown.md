@@ -4,16 +4,16 @@ title: Node Shutdowns
 description: In a Kubernetes cluster, a node can be shut down in a planned graceful way or unexpectedly because of reasons such as a power outage or something else external.
 resource: https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/
 tags: [kubernetes, concepts, cluster-administration]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/cluster-administration/node-shutdown.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/concepts/cluster-administration/node-shutdown.md
     title: 'Kubernetes website source: concepts/cluster-administration/node-shutdown.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/
     title: Node Shutdowns | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/concepts/cluster-administration/node-shutdown.md
 ---
 
@@ -44,7 +44,7 @@ For more details, refer to the
 The kubelet attempts to detect node system shutdown and terminates pods running on the node.
 
 Kubelet ensures that pods follow the normal
-[pod termination process](/concepts/workloads/pods/pod-lifecycle.md#pod-termination)
+[pod termination process](/concepts/workloads/pods/pod-termination.md)
 during the node shutdown. During node shutdown, the kubelet does not accept new
 Pods (even if those Pods are already bound to the node).
 
@@ -326,3 +326,5 @@ Learn more about the following:
 
 - Blog: [Non-Graceful Node Shutdown](https://kubernetes.io/blog/2023/08/16/kubernetes-1-28-non-graceful-node-shutdown-ga/).
 - Cluster Architecture: [Nodes](/concepts/architecture/nodes.md).
+
+For how to shutdown a cluster see [Shutting Down and Restarting Clusters](https://kubernetes.io/docs/task/administer-cluster/cluster-shutdown-and-restart/).

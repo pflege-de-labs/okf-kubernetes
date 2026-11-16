@@ -4,16 +4,16 @@ title: Container Lifecycle Hooks
 description: This page describes how kubelet managed Containers can use the Container lifecycle hook framework to run code triggered by events during their management lifecycle.
 resource: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/
 tags: [kubernetes, concepts, containers]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/containers/container-lifecycle-hooks.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/concepts/containers/container-lifecycle-hooks.md
     title: 'Kubernetes website source: concepts/containers/container-lifecycle-hooks.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/
     title: Container Lifecycle Hooks | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/concepts/containers/container-lifecycle-hooks.md
 ---
 
@@ -57,7 +57,7 @@ the handler, the container will eventually terminate within the Pod's terminatio
 parameters are passed to the handler.
 
 A more detailed description of the termination behavior can be found in
-[Termination of Pods](/concepts/workloads/pods/pod-lifecycle.md#pod-termination).
+[Termination of Pods](/concepts/workloads/pods/pod-termination.md).
 
 `StopSignal`
 
@@ -65,7 +65,7 @@ The StopSignal lifecycle can be used to define a stop signal which would be sent
 stopped. If you set this, it overrides any `STOPSIGNAL` instruction defined within the container image.
 
 A more detailed description of termination behaviour with custom stop signals can be found in
-[Stop Signals](/concepts/workloads/pods/pod-lifecycle.md#pod-termination-stop-signals).
+[Stop Signals](/concepts/workloads/pods/pod-termination.md#pod-termination-stop-signals).
 
 ### Hook handler implementations
 
