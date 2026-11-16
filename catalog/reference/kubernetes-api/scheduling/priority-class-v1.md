@@ -4,16 +4,16 @@ title: PriorityClass
 description: PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer.
 resource: https://kubernetes.io/docs/reference/kubernetes-api/scheduling/priority-class-v1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/scheduling/priority-class-v1.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/reference/kubernetes-api/scheduling/priority-class-v1.md
     title: 'Kubernetes website source: reference/kubernetes-api/scheduling/priority-class-v1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/scheduling/priority-class-v1/
     title: PriorityClass | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/reference/kubernetes-api/scheduling/priority-class-v1.md
 api_metadata:
   apiVersion: scheduling.k8s.io/v1

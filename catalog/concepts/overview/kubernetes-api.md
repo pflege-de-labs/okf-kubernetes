@@ -4,16 +4,16 @@ title: The Kubernetes API
 description: The Kubernetes API lets you query and manipulate the state of objects in Kubernetes. The core of Kubernetes' control plane is the API server and the HTTP API that it exposes. Users, the different parts of your cluster, and external components all communicate with one another through the API server.
 resource: https://kubernetes.io/docs/concepts/overview/kubernetes-api/
 tags: [kubernetes, concepts, overview]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/overview/kubernetes-api.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/concepts/overview/kubernetes-api.md
     title: 'Kubernetes website source: concepts/overview/kubernetes-api.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/overview/kubernetes-api/
     title: The Kubernetes API | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/concepts/overview/kubernetes-api.md
 ---
 

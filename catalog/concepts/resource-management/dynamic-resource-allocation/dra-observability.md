@@ -4,16 +4,16 @@ title: Observability of Dynamic Resources
 description: This page describes how to observe the status and health of resources that are dynamically allocated with DRA.
 resource: https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/dra-observability/
 tags: [kubernetes, concepts, resource-management]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/resource-management/dynamic-resource-allocation/dra-observability.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/concepts/resource-management/dynamic-resource-allocation/dra-observability.md
     title: 'Kubernetes website source: concepts/resource-management/dynamic-resource-allocation/dra-observability.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/dra-observability/
     title: Observability of Dynamic Resources | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/concepts/resource-management/dynamic-resource-allocation/dra-observability.md
 ---
 
@@ -120,7 +120,7 @@ For details about the `status.devices` field, see the
 Kubernetes provides a mechanism for monitoring and reporting the health of dynamically allocated infrastructure resources.
 For stateful applications running on specialized hardware, it is critical to know when a device has failed or become unhealthy. It is also helpful to find out if the device recovers.
 
-To use this functionality, the `ResourceHealthStatus` [feature gate](https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/resource-health-status/) must be enabled (beta and enabled by default since v1.36), and the DRA driver must implement the `DRAResourceHealth` gRPC service.
+To use this functionality, the `ResourceHealthStatus` [feature gate](/reference/command-line-tools-reference/feature-gates.md#ResourceHealthStatus) must be enabled (beta and enabled by default since v1.36), and the DRA driver must implement the `DRAResourceHealth` gRPC service.
 
 When a DRA driver detects that an allocated device has become unhealthy, it reports this status back to the kubelet. This health information is then exposed directly in the Pod's status. The kubelet populates the `allocatedResourcesStatus` field in the status of each container, detailing the health of each device assigned to that container. Each resource health entry can include an optional `message` field with additional human-readable context about the health status, such as error details or failure reasons.
 

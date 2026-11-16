@@ -4,16 +4,16 @@ title: Resize CPU and Memory Resources assigned to Containers
 description: This page explains how to change the CPU and memory resource requests and limits assigned to a container *without recreating the Pod*.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/resize-container-resources.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/tasks/configure-pod-container/resize-container-resources.md
     title: 'Kubernetes website source: tasks/configure-pod-container/resize-container-resources.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/
     title: Resize CPU and Memory Resources assigned to Containers | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/tasks/configure-pod-container/resize-container-resources.md
 min_kubernetes_server_version: "1.33"
 ---
@@ -196,9 +196,10 @@ to a race condition where memory usage may spike right after the check is perfor
       (as this would change it to Guaranteed).
     * *BestEffort*: Resource requirements (`requests` or `limits`) cannot be added
       (as this would change it to Burstable or Guaranteed).
-* **Container Types:** Non-restartable [init containers](/reference/glossary/init-container.md) and
-  [ephemeral containers](/reference/glossary/ephemeral-container.md) cannot be resized.
+* **Container Types:** [Ephemeral containers](/reference/glossary/ephemeral-container.md) cannot be resized.
   [Sidecar containers](/concepts/workloads/pods/sidecar-containers.md) can be resized.
+  Non-restartable [init containers](/reference/glossary/init-container.md) can be resized
+  while they are running; their `resizePolicy` cannot be set to `RestartContainer`.
 * **Resource Removal:** Resource requests and limits cannot be entirely removed once set;
   they can only be changed to different values.
 * **Operating System:** Windows pods do not support in-place resize.
@@ -222,7 +223,7 @@ kubectl create namespace qos-example
 
 First, create a Pod designed for in-place CPU resize and restart-required memory resize.
 
-[`pods/resource/pod-resize.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/resource/pod-resize.yaml)
+[`pods/resource/pod-resize.yaml`](https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/examples/pods/resource/pod-resize.yaml)
 
 ```yaml
 apiVersion: v1

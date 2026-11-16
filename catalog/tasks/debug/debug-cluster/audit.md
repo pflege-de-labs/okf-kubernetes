@@ -4,16 +4,16 @@ title: Auditing
 description: Kubernetes _auditing_ provides a security-relevant, chronological set of records documenting the sequence of actions in a cluster.
 resource: https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/
 tags: [kubernetes, tasks, debug]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/debug/debug-cluster/audit.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/tasks/debug/debug-cluster/audit.md
     title: 'Kubernetes website source: tasks/debug/debug-cluster/audit.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/
     title: Auditing | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/tasks/debug/debug-cluster/audit.md
 ---
 
@@ -88,7 +88,7 @@ A policy with no (0) rules is treated as illegal.
 
 Below is an example audit policy file:
 
-[`audit/audit-policy.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/audit/audit-policy.yaml)
+[`audit/audit-policy.yaml`](https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/examples/audit/audit-policy.yaml)
 
 ```yaml
 apiVersion: audit.k8s.io/v1 # This is required.

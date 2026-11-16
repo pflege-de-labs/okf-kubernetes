@@ -4,16 +4,16 @@ title: Well-Known Labels, Annotations and Taints
 description: Kubernetes reserves all labels, annotations and taints in the `kubernetes.io` and `k8s.io` namespaces.
 resource: https://kubernetes.io/docs/reference/labels-annotations-taints/
 tags: [kubernetes, reference]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/labels-annotations-taints/_index.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/reference/labels-annotations-taints/_index.md
     title: 'Kubernetes website source: reference/labels-annotations-taints/_index.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/labels-annotations-taints/
     title: Well-Known Labels, Annotations and Taints | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/reference/labels-annotations-taints/_index.md
 ---
 
@@ -1082,6 +1082,54 @@ Type: Label
 **Note:**
 Starting in v1.17, this label is deprecated in favor of
 [topology.kubernetes.io/zone](#topologykubernetesiozone).
+
+### pod.alpha.kubernetes.io/init-containers (deprecated) {#pod-alpha-kubernetes-io-init-containers}
+
+Type: Annotation
+
+Used on: Pod
+
+This annotation was used during early prototyping of init containers to specify
+container definitions that must run to completion before the Pod's main containers start.
+Support for this annotation was removed in Kubernetes v1.8 in favor of the
+[`initContainers`](/concepts/workloads/pods/init-containers.md) field in the Pod spec.
+The API server drops this annotation from any Pod on which it is set.
+
+### pod.alpha.kubernetes.io/init-container-statuses (deprecated) {#pod-alpha-kubernetes-io-init-container-statuses}
+
+Type: Annotation
+
+Used on: Pod
+
+This annotation was used during early prototyping of init containers to report the
+status of a Pod's init containers.
+Support for this annotation was removed in Kubernetes v1.8 in favor of the
+`initContainerStatuses` field of Pod `.status`.
+The API server drops this annotation from any Pod on which it is set.
+
+### pod.beta.kubernetes.io/init-containers (deprecated) {#pod-beta-kubernetes-io-init-containers}
+
+Type: Annotation
+
+Used on: Pod
+
+This annotation was used during the beta stage of init containers to specify
+container definitions that must run to completion before the Pod's main containers start.
+Support for this annotation was removed in Kubernetes v1.8 in favor of the
+[`initContainers`](/concepts/workloads/pods/init-containers.md) field in the Pod spec.
+The API server drops this annotation from any Pod on which it is set.
+
+### pod.beta.kubernetes.io/init-container-statuses (deprecated) {#pod-beta-kubernetes-io-init-container-statuses}
+
+Type: Annotation
+
+Used on: Pod
+
+This annotation was used during the beta stage of init containers to report the
+status of a Pod's init containers.
+Support for this annotation was removed in Kubernetes v1.8 in favor of the
+`initContainerStatuses` field of Pod `.status`.
+The API server drops this annotation from any Pod on which it is set.
 
 ### pv.kubernetes.io/bind-completed {#pv-kubernetesiobind-completed}
 

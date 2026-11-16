@@ -6,6 +6,7 @@
 * [Generate Certificates Manually](certificates.md) - When using client certificate authentication, you can generate certificates manually through `easyrsa`, `openssl` or `cfssl`.
 * [Manage Memory, CPU, and API Resources](manage-resources.md) - See the contents of this section. ([contents](manage-resources/index.md))
 * [Install a Network Policy Provider](network-policy-provider.md) - See the contents of this section. ([contents](network-policy-provider/index.md))
+* [Shutting Down and Restarting Clusters](cluster-shutdown-and-restart.md) - This page outlines the steps required to safely shut down and restart Kubernetes clusters.
 * [Access Clusters Using the Kubernetes API](access-cluster-api.md) - This page shows how to access clusters using the Kubernetes API.
 * [Enable Or Disable Feature Gates](configure-feature-gates.md) - This page shows how to enable or disable feature gates to control specific Kubernetes features in your cluster.
 * [Advertise Extended Resources for a Node](extended-resource-node.md) - This page shows how to specify extended resources for a Node.

@@ -4,16 +4,16 @@ title: kubectl plugin list
 description: List all visible plugin executables on a user's PATH
 resource: https://kubernetes.io/docs/reference/kubectl/generated/kubectl_plugin/kubectl_plugin_list/
 tags: [kubernetes, reference, kubectl]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-16T13:37:38Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubectl/generated/kubectl_plugin/kubectl_plugin_list.md
+    resource: https://github.com/kubernetes/website/blob/48a1f06596294a8ea2304fcc33047d3b639f135d/content/en/docs/reference/kubectl/generated/kubectl_plugin/kubectl_plugin_list.md
     title: 'Kubernetes website source: reference/kubectl/generated/kubectl_plugin/kubectl_plugin_list.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubectl/generated/kubectl_plugin/kubectl_plugin_list/
     title: kubectl plugin list | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: 48a1f06596294a8ea2304fcc33047d3b639f135d
 source_path: content/en/docs/reference/kubectl/generated/kubectl_plugin/kubectl_plugin_list.md
 ---
 
