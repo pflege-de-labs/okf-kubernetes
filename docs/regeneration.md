@@ -26,4 +26,4 @@ Run it locally: `SITE=<existing website checkout> OUT_DIR=/tmp/regen bash script
 - Each run rebuilds the branch from `main` and force-pushes it. If the branch has commits the job did not
   make itself (committer other than the bot, which includes `agent-commit` and web edits), for example
   fixed requirement citations, the run skips the push and warns instead.
-- After merging, bump the bundle `ref` of the MCP server deployment to the merge commit.
+- After merging, Renovate opens the PR that bumps the bundle `ref` in the MCP server deployment; review and merge it.

@@ -90,6 +90,6 @@ fi
   echo
   echo "Checks: \`go test\` passed; \`okf validate\`: $summary (same-page anchor warnings are expected)."
   echo
-  echo "After merge, bump the bundle \`ref\` of the MCP server deployment to the merge commit."
+  echo "After merge, Renovate opens the PR that bumps the bundle \`ref\` in the MCP server deployment."
 } >"$out/body.md"
 cat "$out/title"
