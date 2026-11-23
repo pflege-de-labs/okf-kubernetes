@@ -4,16 +4,16 @@ title: What Happens After A Node Restart
 description: System components on a node sometimes restart, either because of an upgrade, a crash, or an explicit operator action.
 resource: https://kubernetes.io/docs/reference/node/what-happens-on-restart/
 tags: [kubernetes, reference, node]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/node/what-happens-on-restart.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/node/what-happens-on-restart.md
     title: 'Kubernetes website source: reference/node/what-happens-on-restart.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/node/what-happens-on-restart/
     title: What Happens After A Node Restart | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/node/what-happens-on-restart.md
 ---
 
@@ -197,7 +197,7 @@ When the node comes back:
 * Local storage tied to the lifetime of a container or Pod can be lost. A
   container's writable layer is discarded when the container is recreated, so
   data written there does not survive the reboot. An
-  [`emptyDir`](/concepts/storage/volumes.md#emptydir) volume lasts as long as
+  [`emptyDir`](/reference/storage/volume-types.md#emptydir) volume lasts as long as
   the Pod stays on the node: a memory-backed `emptyDir` (`medium: Memory`) is
   always lost on reboot because it is held in RAM, while a disk-backed `emptyDir`
   survives a reboot as long as the Pod is not evicted or deleted, and is removed

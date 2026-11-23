@@ -4,16 +4,16 @@ title: Volume Health Monitoring
 description: CSI volume health monitoring lets a CSI driver report health problems with a volume or with its storage backend directly to Kubernetes.
 resource: https://kubernetes.io/docs/concepts/storage/volume-health-monitoring/
 tags: [kubernetes, concepts, storage]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/volume-health-monitoring.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/storage/volume-health-monitoring.md
     title: 'Kubernetes website source: concepts/storage/volume-health-monitoring.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/storage/volume-health-monitoring/
     title: Volume Health Monitoring | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/storage/volume-health-monitoring.md
 ---
 

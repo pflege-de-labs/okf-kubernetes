@@ -4,16 +4,16 @@ title: Container Device Interface (CDI)
 description: A CNCF specification for describing device configuration that container runtimes apply when creating containers.
 resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-cdi
 tags: [kubernetes, reference, glossary, extension]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/glossary/cdi.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/glossary/cdi.md
     title: 'Kubernetes website source: reference/glossary/cdi.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-cdi
     title: Container Device Interface (CDI) | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/glossary/cdi.md
 ---
 

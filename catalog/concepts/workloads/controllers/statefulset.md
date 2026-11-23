@@ -4,16 +4,16 @@ title: StatefulSets
 description: A StatefulSet runs a group of Pods, and maintains a sticky identity for each of those Pods. This is useful for managing applications that need persistent storage or a stable, unique network identity.
 resource: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/controllers/statefulset.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/workloads/controllers/statefulset.md
     title: 'Kubernetes website source: concepts/workloads/controllers/statefulset.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
     title: StatefulSets | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/workloads/controllers/statefulset.md
 ---
 
@@ -69,7 +69,7 @@ that provides a set of stateless replicas.
 
 The example below demonstrates the components of a StatefulSet.
 
-[`controllers/statefulset.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/controllers/statefulset.yaml)
+[`controllers/statefulset.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/controllers/statefulset.yaml)
 
 ```yaml
 apiVersion: v1

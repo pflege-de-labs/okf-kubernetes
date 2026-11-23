@@ -4,16 +4,16 @@ title: Define Dependent Environment Variables
 description: This page shows how to define dependent environment variables for a container in a Kubernetes Pod.
 resource: https://kubernetes.io/docs/tasks/inject-data-application/define-interdependent-environment-variables/
 tags: [kubernetes, tasks, inject-data-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/inject-data-application/define-interdependent-environment-variables.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/inject-data-application/define-interdependent-environment-variables.md
     title: 'Kubernetes website source: tasks/inject-data-application/define-interdependent-environment-variables.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/inject-data-application/define-interdependent-environment-variables/
     title: Define Dependent Environment Variables | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/inject-data-application/define-interdependent-environment-variables.md
 ---
 
@@ -42,7 +42,7 @@ In this exercise, you create a Pod that runs one container. The configuration
 file for the Pod defines a dependent environment variable with common usage defined. Here is the configuration manifest for the
 Pod:
 
-[`pods/inject/dependent-envars.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/dependent-envars.yaml)
+[`pods/inject/dependent-envars.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/pods/inject/dependent-envars.yaml)
 
 ```yaml
 apiVersion: v1

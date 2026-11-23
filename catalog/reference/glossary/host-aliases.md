@@ -4,16 +4,16 @@ title: HostAliases
 description: A HostAliases is a mapping between the IP address and hostname to be injected into a Pod's hosts file.
 resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-host-aliases
 tags: [kubernetes, reference, glossary, operation]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/glossary/host-aliases.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/glossary/host-aliases.md
     title: 'Kubernetes website source: reference/glossary/host-aliases.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-host-aliases
     title: HostAliases | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/glossary/host-aliases.md
 ---
 

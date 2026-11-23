@@ -10,6 +10,7 @@
 * [Kubernetes Issues and Security](issues-security.md) - See the contents of this section. ([contents](issues-security/index.md))
 * [Node Reference Information](node.md) - This section contains the following reference topics about nodes: ([contents](node/index.md))
 * [Networking Reference](networking.md) - This section of the Kubernetes documentation provides reference details of Kubernetes networking. ([contents](networking/index.md))
+* [Storage Reference](storage.md) - This section of the Kubernetes documentation provides reference details of Kubernetes storage. ([contents](storage/index.md))
 * [Setup tools](setup-tools.md) - See the contents of this section. ([contents](setup-tools/index.md))
 * [Command line tool (kubectl)](kubectl.md) - Kubernetes provides a command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API. ([contents](kubectl/index.md))
 * [Encodings](encodings.md) - See the contents of this section. ([contents](encodings/index.md))

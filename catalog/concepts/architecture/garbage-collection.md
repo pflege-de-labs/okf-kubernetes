@@ -4,16 +4,16 @@ title: Garbage Collection
 description: Garbage collection is a collective term for the various mechanisms Kubernetes uses to clean up cluster resources.
 resource: https://kubernetes.io/docs/concepts/architecture/garbage-collection/
 tags: [kubernetes, concepts, architecture]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/architecture/garbage-collection.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/architecture/garbage-collection.md
     title: 'Kubernetes website source: concepts/architecture/garbage-collection.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/architecture/garbage-collection/
     title: Garbage Collection | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/architecture/garbage-collection.md
 ---
 
@@ -23,7 +23,7 @@ Garbage collection is a collective term for the various mechanisms Kubernetes us
 cluster resources. This
 allows the clean up of resources like the following:
 
-* [Terminated pods](/concepts/workloads/pods/pod-lifecycle.md#pod-garbage-collection)
+* [Terminated pods](/concepts/workloads/pods/pod-termination.md#pod-garbage-collection)
 * [Completed Jobs](/concepts/workloads/controllers/ttlafterfinished.md)
 * [Objects without owner references](#owners-dependents)
 * [Unused containers and container images](#containers-images)

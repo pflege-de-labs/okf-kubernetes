@@ -67,7 +67,7 @@
 * [Extensions](extensions.md) - Extensions are software components that extend and deeply integrate with Kubernetes to support new types of hardware.
 * [Feature gate](feature-gates.md) - A way to control whether or not a particular Kubernetes feature is enabled.
 * [Finalizer](finalizer.md) - A namespaced key that tells Kubernetes to wait until specific conditions are met before it fully deletes an object marked for deletion.
-* [FlexVolume](flexvolume.md) - FlexVolume is a deprecated interface for creating out-of-tree volume plugins. The Container Storage Interface is a newer interface that addresses several problems with FlexVolume.
+* [FlexVolume](flexvolume.md) - FlexVolume is a deprecated interface for creating out-of-tree volume plugins. The Container Storage Interface (CSI) is a newer interface that addresses several problems with FlexVolume.
 * [Garbage Collection](garbage-collection.md) - A collective term for the various mechanisms Kubernetes uses to clean up cluster resources.
 * [Gateway API](gateway.md) - An API for modeling service networking in Kubernetes.
 * [Group Version Resource](group-version-resource.md) - The API group, API version and name of a Kubernetes API.

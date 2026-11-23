@@ -4,16 +4,16 @@ title: LabelSelector
 description: A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 resource: https://kubernetes.io/docs/reference/kubernetes-api/definitions/label-selector-v1-meta/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/definitions/label-selector-v1-meta.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/kubernetes-api/definitions/label-selector-v1-meta.md
     title: 'Kubernetes website source: reference/kubernetes-api/definitions/label-selector-v1-meta.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/definitions/label-selector-v1-meta/
     title: LabelSelector | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/kubernetes-api/definitions/label-selector-v1-meta.md
 api_metadata:
   apiVersion: meta/v1

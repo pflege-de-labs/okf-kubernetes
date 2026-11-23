@@ -4,16 +4,16 @@ title: Articles on dockershim Removal and on Using CRI-compatible Runtimes
 description: This is a list of articles and other pages that are either about the Kubernetes' deprecation and removal of _dockershim_, or about using CRI-compatible container runtimes, in connection with that removal.
 resource: https://kubernetes.io/docs/reference/node/topics-on-dockershim-and-cri-compatible-runtimes/
 tags: [kubernetes, reference, node]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/node/topics-on-dockershim-and-cri-compatible-runtimes.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/node/topics-on-dockershim-and-cri-compatible-runtimes.md
     title: 'Kubernetes website source: reference/node/topics-on-dockershim-and-cri-compatible-runtimes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/node/topics-on-dockershim-and-cri-compatible-runtimes/
     title: Articles on dockershim Removal and on Using CRI-compatible Runtimes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/node/topics-on-dockershim-and-cri-compatible-runtimes.md
 ---
 

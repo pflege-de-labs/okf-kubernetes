@@ -4,16 +4,16 @@ title: Security Checklist
 description: Baseline checklist for ensuring security in Kubernetes clusters.
 resource: https://kubernetes.io/docs/concepts/security/security-checklist/
 tags: [kubernetes, concepts, security]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/security/security-checklist.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/security/security-checklist.md
     title: 'Kubernetes website source: concepts/security/security-checklist.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/security/security-checklist/
     title: Security Checklist | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/security/security-checklist.md
 ---
 
@@ -260,7 +260,7 @@ to alternatives such as ConfigMap. Secret resources stored within etcd should
 be [encrypted at rest](/tasks/administer-cluster/encrypt-data.md).
 
 Pods needing secrets should have these automatically mounted through volumes,
-preferably stored in memory like with the [`emptyDir.medium` option](/concepts/storage/volumes.md#emptydir).
+preferably stored in memory like with the [`emptyDir.medium` option](/reference/storage/volume-types.md#emptydir).
 Mechanism can be used to also inject secrets from third-party storages as
 volume, like the [Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/).
 This should be done preferentially as compared to providing the pods service

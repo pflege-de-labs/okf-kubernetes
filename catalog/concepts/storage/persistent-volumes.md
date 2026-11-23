@@ -4,16 +4,16 @@ title: Persistent Volumes
 description: This document describes _persistent volumes_ in Kubernetes.
 resource: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 tags: [kubernetes, concepts, storage]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/persistent-volumes.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/storage/persistent-volumes.md
     title: 'Kubernetes website source: concepts/storage/persistent-volumes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
     title: Persistent Volumes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/storage/persistent-volumes.md
 ---
 
@@ -487,52 +487,53 @@ Kubernetes does not support shrinking a PVC to less than its current size.
 PersistentVolume types are implemented as plugins. Kubernetes currently supports the following plugins:
 
 * [`csi`](/concepts/storage/volumes.md#csi) - Container Storage Interface (CSI)
-* [`fc`](/concepts/storage/volumes.md#fc) - Fibre Channel (FC) storage
-* [`hostPath`](/concepts/storage/volumes.md#hostpath) - HostPath volume
+* [`fc`](/reference/storage/volume-types.md#fc) - Fibre Channel (FC) storage
+* [`hostPath`](/reference/storage/volume-types.md#hostpath) - HostPath volume
   (for single node testing only; WILL NOT WORK in a multi-node cluster;
   consider using `local` volume instead)
-* [`iscsi`](/concepts/storage/volumes.md#iscsi) - iSCSI (SCSI over IP) storage
-* [`local`](/concepts/storage/volumes.md#local) - local storage devices
+* [`iscsi`](/reference/storage/volume-types.md#iscsi) - iSCSI (SCSI over IP) storage
+* [`local`](/reference/storage/volume-types.md#local) - local storage devices
   mounted on nodes.
-* [`nfs`](/concepts/storage/volumes.md#nfs) - Network File System (NFS) storage
+* [`nfs`](/reference/storage/volume-types.md#nfs) - Network File System (NFS) storage
 
-The following types of PersistentVolume are deprecated but still available.
-If you are using these volume types except for `flexVolume`, `cephfs` and `rbd`,
-please install corresponding CSI drivers.
+The in-tree drivers for the following PersistentVolume types have been **removed** as of the versions listed below.  Kubernetes now redirects their operations to the matching CSI driver.  Please install the corresponding [CSI driver](/concepts/storage/volumes.md#migrating-to-csi-drivers-from-in-tree-plugins).
 
-* [`awsElasticBlockStore`](/concepts/storage/volumes.md#awselasticblockstore) - AWS Elastic Block Store (EBS)
-  (**migration on by default** starting v1.23)
-* [`azureDisk`](/concepts/storage/volumes.md#azuredisk) - Azure Disk
-  (**migration on by default** starting v1.23)
-* [`azureFile`](/concepts/storage/volumes.md#azurefile) - Azure File
-  (**migration on by default** starting v1.24)
-* [`cinder`](/concepts/storage/volumes.md#cinder) - Cinder (OpenStack block storage)
-  (**migration on by default** starting v1.21)
+* [`awsElasticBlockStore`](/reference/storage/volume-types.md#awselasticblockstore) - AWS Elastic Block Store (EBS)
+  (**removed** in v1.27)
+* [`azureDisk`](/reference/storage/volume-types.md#azuredisk) - Azure Disk
+  (**removed** in v1.27)
+* [`azureFile`](/reference/storage/volume-types.md#azurefile) - Azure File
+  (**removed** in v1.30)
+* [`cinder`](/reference/storage/volume-types.md#cinder) - Cinder (OpenStack block storage)
+  (**removed** in v1.26)
+* [`gcePersistentDisk`](/reference/storage/volume-types.md#gcepersistentdisk) - GCE Persistent Disk
+  (**removed** in v1.28)
+* [`portworxVolume`](/reference/storage/volume-types.md#portworxvolume) - Portworx volume
+  (**removed** in v1.36)
+* [`vsphereVolume`](/reference/storage/volume-types.md#vspherevolume) - vSphere VMDK volume
+  (**removed** in v1.30)
+
+The `flexVolume` PersistentVolume type is deprecated, but remains supported without CSI migration.
+
 * [`flexVolume`](/concepts/storage/volumes.md#flexvolume) - FlexVolume
   (**deprecated** starting v1.23, no migration plan and no plan to remove support)
-* [`gcePersistentDisk`](/concepts/storage/volumes.md#gcePersistentDisk) - GCE Persistent Disk
-  (**migration on by default** starting v1.23)
-* [`portworxVolume`](/concepts/storage/volumes.md#portworxvolume) - Portworx volume
-  (**migration on by default** starting v1.31)
-* [`vsphereVolume`](/concepts/storage/volumes.md#vspherevolume) - vSphere VMDK volume
-  (**migration on by default** starting v1.25)
 
 Older versions of Kubernetes also supported the following in-tree PersistentVolume types:
 
-* [`cephfs`](/concepts/storage/volumes.md#cephfs)
+* [`cephfs`](/reference/storage/volume-types.md#cephfs)
   (**not available** starting v1.31)
 * `flocker` - Flocker storage.
   (**not available** starting v1.25)
 * `glusterfs` - GlusterFS storage.
   (**not available** starting v1.26)
 * `photonPersistentDisk` - Photon controller persistent disk.
-  (**not available** starting v1.15)
+  (**not available** starting v1.16)
 * `quobyte` - Quobyte volume.
   (**not available** starting v1.25)
-* [`rbd`](/concepts/storage/volumes.md#rbd) - Rados Block Device (RBD) volume 
+* [`rbd`](/reference/storage/volume-types.md#rbd) - Rados Block Device (RBD) volume 
   (**not available** starting v1.31)
 * `scaleIO` - ScaleIO volume.
-  (**not available** starting v1.21)
+  (**not available** starting v1.22)
 * `storageos` - StorageOS volume.
   (**not available** starting v1.25)
 
@@ -717,7 +718,7 @@ it will become fully deprecated in a future Kubernetes release.
 
 **Note:**
 For most volume types, you do not need to set this field.
-You need to explicitly set this for [local](/concepts/storage/volumes.md#local) volumes.
+You need to explicitly set this for [local](/reference/storage/volume-types.md#local) volumes.
 
 A PV can specify node affinity to define constraints that limit what nodes this
 volume can be accessed from. Pods that use a PV will only be scheduled to nodes

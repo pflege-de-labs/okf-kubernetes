@@ -4,16 +4,16 @@ title: kubectl apply set-last-applied
 description: Set the last-applied-configuration annotation on a live object to match the contents of a file
 resource: https://kubernetes.io/docs/reference/kubectl/generated/kubectl_apply/kubectl_apply_set-last-applied/
 tags: [kubernetes, reference, kubectl]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubectl/generated/kubectl_apply/kubectl_apply_set-last-applied.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/kubectl/generated/kubectl_apply/kubectl_apply_set-last-applied.md
     title: 'Kubernetes website source: reference/kubectl/generated/kubectl_apply/kubectl_apply_set-last-applied.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubectl/generated/kubectl_apply/kubectl_apply_set-last-applied/
     title: kubectl apply set-last-applied | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/kubectl/generated/kubectl_apply/kubectl_apply_set-last-applied.md
 ---
 

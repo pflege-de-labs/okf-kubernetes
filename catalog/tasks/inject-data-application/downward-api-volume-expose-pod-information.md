@@ -4,23 +4,23 @@ title: Expose Pod Information to Containers Through Files
 description: This page shows how a Pod can use a `downwardAPI` volume, to expose information about itself to containers running in the Pod.
 resource: https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/
 tags: [kubernetes, tasks, inject-data-application]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information.md
     title: 'Kubernetes website source: tasks/inject-data-application/downward-api-volume-expose-pod-information.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/
     title: Expose Pod Information to Containers Through Files | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information.md
 ---
 
 # Expose Pod Information to Containers Through Files
 
 This page shows how a Pod can use a
-[`downwardAPI` volume](/concepts/storage/volumes.md#downwardapi),
+[`downwardAPI` volume](/reference/storage/volume-types.md#downwardapi),
 to expose information about itself to containers running in the Pod.
 A `downwardAPI` volume can expose Pod fields and container fields.
 
@@ -50,7 +50,7 @@ In this part of exercise, you create a Pod that has one container, and you
 project Pod-level fields into the running container as files.
 Here is the manifest for the Pod:
 
-[`pods/inject/dapi-volume.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/dapi-volume.yaml)
+[`pods/inject/dapi-volume.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/pods/inject/dapi-volume.yaml)
 
 ```yaml
 apiVersion: v1
@@ -211,7 +211,7 @@ definition, but taken from the specific
 rather than from the Pod overall. Here is a manifest for a Pod that again has
 just one container:
 
-[`pods/inject/dapi-volume-resources.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/inject/dapi-volume-resources.yaml)
+[`pods/inject/dapi-volume-resources.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/pods/inject/dapi-volume-resources.yaml)
 
 ```yaml
 apiVersion: v1
@@ -273,7 +273,7 @@ spec:
 ```
 
 In the manifest, you can see that the Pod has a
-[`downwardAPI` volume](/concepts/storage/volumes.md#downwardapi),
+[`downwardAPI` volume](/reference/storage/volume-types.md#downwardapi),
 and that the single container in that Pod mounts the volume at `/etc/podinfo`.
 
 Look at the `items` array under `downwardAPI`. Each element of the array

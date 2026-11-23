@@ -4,16 +4,16 @@ title: kube-scheduler
 description: Control plane component that watches for newly created pods with no assigned node, and selects a node for them to run on.
 resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-kube-scheduler
 tags: [kubernetes, reference, glossary, architecture]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/glossary/kube-scheduler.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/glossary/kube-scheduler.md
     title: 'Kubernetes website source: reference/glossary/kube-scheduler.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-kube-scheduler
     title: kube-scheduler | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/glossary/kube-scheduler.md
 ---
 

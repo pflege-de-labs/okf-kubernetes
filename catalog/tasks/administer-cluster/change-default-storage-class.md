@@ -4,16 +4,16 @@ title: Change the default StorageClass
 description: This page shows how to change the default Storage Class that is used to provision volumes for PersistentVolumeClaims that have no special requirements.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/change-default-storage-class.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/administer-cluster/change-default-storage-class.md
     title: 'Kubernetes website source: tasks/administer-cluster/change-default-storage-class.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/
     title: Change the default StorageClass | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/administer-cluster/change-default-storage-class.md
 ---
 

@@ -4,22 +4,22 @@ title: Configure a Pod to Use a Projected Volume for Storage
 description: This page shows how to use a `projected` Volume to mount several existing volume sources into the same directory.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-projected-volume-storage/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/configure-projected-volume-storage.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/configure-pod-container/configure-projected-volume-storage.md
     title: 'Kubernetes website source: tasks/configure-pod-container/configure-projected-volume-storage.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-projected-volume-storage/
     title: Configure a Pod to Use a Projected Volume for Storage | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/configure-pod-container/configure-projected-volume-storage.md
 ---
 
 # Configure a Pod to Use a Projected Volume for Storage
 
-This page shows how to use a [`projected`](/concepts/storage/volumes.md#projected) Volume to mount
+This page shows how to use a [`projected`](/reference/storage/volume-types.md#projected) Volume to mount
 several existing volume sources into the same directory. Currently, `secret`, `configMap`, `downwardAPI`,
 and `serviceAccountToken` volumes can be projected.
 
@@ -40,11 +40,11 @@ or you can use one of these Kubernetes playgrounds:
 
 ## Configure a projected volume for a pod
 
-In this exercise, you create username and password [Secrets](/reference/glossary/secret.md) from local files. You then create a Pod that runs one container, using a [`projected`](/concepts/storage/volumes.md#projected) Volume to mount the Secrets into the same shared directory.
+In this exercise, you create username and password [Secrets](/reference/glossary/secret.md) from local files. You then create a Pod that runs one container, using a [`projected`](/reference/storage/volume-types.md#projected) Volume to mount the Secrets into the same shared directory.
 
 Here is the configuration file for the Pod:
 
-[`pods/storage/projected.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/storage/projected.yaml)
+[`pods/storage/projected.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/pods/storage/projected.yaml)
 
 ```yaml
 apiVersion: v1
@@ -121,5 +121,5 @@ kubectl delete secret user pass
 
 ## What's next
 
-* Learn more about [`projected`](/concepts/storage/volumes.md#projected) volumes.
+* Learn more about [`projected`](/reference/storage/volume-types.md#projected) volumes.
 * Read the [all-in-one volume](https://git.k8s.io/design-proposals-archive/node/all-in-one-volume.md) design document.

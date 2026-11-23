@@ -4,16 +4,16 @@ title: Swap memory management
 description: Kubernetes can be configured to use swap memory on a node, allowing the kernel to free up physical memory by swapping out pages to backing storage.
 resource: https://kubernetes.io/docs/concepts/cluster-administration/swap-memory-management/
 tags: [kubernetes, concepts, cluster-administration]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/cluster-administration/swap-memory-management.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/cluster-administration/swap-memory-management.md
     title: 'Kubernetes website source: concepts/cluster-administration/swap-memory-management.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/cluster-administration/swap-memory-management/
     title: Swap memory management | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/cluster-administration/swap-memory-management.md
 ---
 
@@ -214,7 +214,7 @@ priority to system critical daemons. See the relevant section in the
 ### Memory-backed volumes
 
 On Linux nodes, memory-backed volumes (such as [`secret`](/concepts/configuration/secret.md)
-volume mounts, or [`emptyDir`](/concepts/storage/volumes.md#emptydir) with `medium: Memory`)
+volume mounts, or [`emptyDir`](/reference/storage/volume-types.md#emptydir) with `medium: Memory`)
 are implemented with a `tmpfs` filesystem.
 The contents of such volumes should remain in memory at all times, hence should
 not be swapped to disk.

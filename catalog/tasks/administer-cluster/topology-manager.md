@@ -4,16 +4,16 @@ title: Control Topology Management Policies on a node
 description: An increasing number of systems leverage a combination of CPUs and hardware accelerators to support latency-critical execution and high-throughput parallel computation.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/topology-manager.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/administer-cluster/topology-manager.md
     title: 'Kubernetes website source: tasks/administer-cluster/topology-manager.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/
     title: Control Topology Management Policies on a node | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/administer-cluster/topology-manager.md
 min_kubernetes_server_version: v1.18
 ---
@@ -147,14 +147,9 @@ alignments produced by the Topology Manager on different occasions:
 * all containers can be and are allocated to a single NUMA node;
 * all containers can be and are allocated to a shared set of NUMA nodes.
 
-The total amount of particular resource demanded for the entire pod is calculated according to
-[effective requests/limits](/concepts/workloads/pods/init-containers.md#resource-sharing-within-containers)
-formula, and thus, this total value is equal to the maximum of:
-
-* the sum of all app container requests,
-* the maximum of init container requests,
-
-for a resource.
+The total amount of particular resource demanded for the entire pod is calculated according to the
+[effective requests/limits](/concepts/resource-management/effective-pod-requests-limits.md)
+formula.
 
 Using the `pod` scope in tandem with `single-numa-node` Topology Manager policy is specifically
 valuable for workloads that are latency sensitive or for high-throughput applications that perform

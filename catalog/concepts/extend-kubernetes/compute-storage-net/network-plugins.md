@@ -4,16 +4,16 @@ title: Network Plugins
 description: Kubernetes (version 1.3 through to the latest 1.37, and likely onwards) lets you use Container Network Interface (CNI) plugins for cluster networking.
 resource: https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/
 tags: [kubernetes, concepts, extend-kubernetes]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins.md
     title: 'Kubernetes website source: concepts/extend-kubernetes/compute-storage-net/network-plugins.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/
     title: Network Plugins | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins.md
 ---
 

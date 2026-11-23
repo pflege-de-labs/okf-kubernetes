@@ -4,16 +4,16 @@ title: Feature Gates (removed)
 description: This page contains list of feature gates that have been removed.
 resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates-removed/
 tags: [kubernetes, reference, command-line-tools-reference]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/command-line-tools-reference/feature-gates-removed/index.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/command-line-tools-reference/feature-gates-removed/index.md
     title: 'Kubernetes website source: reference/command-line-tools-reference/feature-gates-removed/index.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates-removed/
     title: Feature Gates (removed) | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/command-line-tools-reference/feature-gates-removed/index.md
 ---
 
@@ -794,7 +794,7 @@ In the following table:
 * **`LegacyServiceAccountTokenNoAutoGeneration`**: Stop auto-generation of Secret-based [service account tokens](/concepts/security/service-accounts.md#get-a-token).
 * **`LegacyServiceAccountTokenTracking`**: Track usage of Secret-based [service account tokens](/concepts/security/service-accounts.md#get-a-token).
 * **`LoadBalancerIPMode`**: Allows setting `ipMode` for Services where `type` is set to `LoadBalancer`. See [Specifying IPMode of load balancer status](/concepts/services-networking/service.md#load-balancer-ip-mode) for more information.
-* **`LocalStorageCapacityIsolation`**: Enable the consumption of [local ephemeral storage](/concepts/configuration/manage-resources-containers.md) and also the `sizeLimit` property of an [emptyDir volume](/concepts/storage/volumes.md#emptydir).
+* **`LocalStorageCapacityIsolation`**: Enable the consumption of [local ephemeral storage](/concepts/configuration/manage-resources-containers.md) and also the `sizeLimit` property of an [emptyDir volume](/reference/storage/volume-types.md#emptydir).
 * **`MinDomainsInPodTopologySpread`**: Enable `minDomains` in [Pod topology spread constraints](/concepts/scheduling-eviction/topology-spread-constraints.md).
 * **`MinimizeIPTablesRestore`**: Enables new performance improvement logics in the kube-proxy iptables mode.
 * **`MixedProtocolLBService`**: Enable using different protocols in the same `LoadBalancer` type Service instance.
@@ -827,7 +827,7 @@ In the following table:
 * **`PreferNominatedNode`**: This flag tells the scheduler whether the nominated nodes will be checked first before looping through all the other nodes in the cluster.
 * **`ProbeTerminationGracePeriod`**: Enable [setting probe-level `terminationGracePeriodSeconds`](/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.md#probe-level-terminationgraceperiodseconds) on pods. See the [enhancement proposal](https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/2238-liveness-probe-grace-period) for more details.
 * **`ProxyTerminatingEndpoints`**: Enable the kube-proxy to handle terminating endpoints when `ExternalTrafficPolicy=Local`.
-* **`ReadOnlyAPIDataVolumes`**: Set [`configMap`](/concepts/storage/volumes.md#configmap), [`secret`](/concepts/storage/volumes.md#secret), [`downwardAPI`](/concepts/storage/volumes.md#downwardapi) and [`projected`](/concepts/storage/volumes.md#projected) [volumes](/reference/glossary/volume.md) to be mounted read-only. Since Kubernetes v1.10, these volume types are always read-only and you cannot opt out.
+* **`ReadOnlyAPIDataVolumes`**: Set [`configMap`](/reference/storage/volume-types.md#configmap), [`secret`](/reference/storage/volume-types.md#secret), [`downwardAPI`](/reference/storage/volume-types.md#downwardapi) and [`projected`](/reference/storage/volume-types.md#projected) [volumes](/reference/glossary/volume.md) to be mounted read-only. Since Kubernetes v1.10, these volume types are always read-only and you cannot opt out.
 * **`ReadWriteOncePod`**: Enables the usage of `ReadWriteOncePod` PersistentVolume access mode.
 * **`RelaxedDNSSearchValidation`**: Relax the server side validation for the DNS search string (`.spec.dnsConfig.searches`) for containers. For example, with this gate enabled, it is okay to include the `_` character in the DNS name search string.
 * **`RemainingItemCount`**: Allow the API servers to show a count of remaining items in the response to a [chunking list request](/reference/using-api/api-concepts.md#retrieving-large-results-sets-in-chunks).
@@ -861,7 +861,7 @@ In the following table:
 * **`SizeMemoryBackedVolumes`**: Enable kubelets to determine the size limit for memory-backed volumes (mainly `emptyDir` volumes).
 * **`SkipReadOnlyValidationGCE`**: Skip validation that GCE PersistentDisk volumes are in read-only mode.
 * **`StableLoadBalancerNodeSet`**: Enables less load balancer re-configurations by the service controller (KCCM) as an effect of changing node state.
-* **`StartupProbe`**: Enable the [startup](/concepts/workloads/pods/pod-lifecycle.md#when-should-you-use-a-startup-probe) probe in the kubelet.
+* **`StartupProbe`**: Enable the [startup](/concepts/workloads/pods/probes.md#when-should-you-use-a-startup-probe) probe in the kubelet.
 * **`StatefulSetMinReadySeconds`**: Allows `minReadySeconds` to be respected by the StatefulSet controller.
 * **`StorageObjectInUseProtection`**: Postpone the deletion of PersistentVolume or PersistentVolumeClaim objects if they are still being used.
 * **`StreamingProxyRedirects`**: Instructs the API server to intercept (and follow) redirects from the backend (kubelet) for streaming requests. Examples of streaming requests include the `exec`, `attach` and `port-forward` requests.
@@ -874,7 +874,7 @@ In the following table:
 * **`TaintBasedEvictions`**: Enable evicting pods from nodes based on taints on Nodes and tolerations on Pods. See [taints and tolerations](/concepts/scheduling-eviction/taint-and-toleration.md) for more details.
 * **`TaintNodesByCondition`**: Enable automatic tainting nodes based on [node conditions](/concepts/architecture/nodes.md#condition).
 * **`TokenRequest`**: Enable the `TokenRequest` endpoint on service account resources.
-* **`TokenRequestProjection`**: Enable the injection of service account tokens into a Pod through a [`projected` volume](/concepts/storage/volumes.md#projected).
+* **`TokenRequestProjection`**: Enable the injection of service account tokens into a Pod through a [`projected` volume](/reference/storage/volume-types.md#projected).
 * **`TopologyAwareHints`**: Enables topology aware routing based on topology hints in EndpointSlices. See [Topology Aware Hints](/concepts/services-networking/topology-aware-routing.md) for more details.
 * **`TopologyManager`**: Enable a mechanism to coordinate fine-grained hardware resource assignments for different components in Kubernetes. See [Control Topology Management Policies on a node](/tasks/administer-cluster/topology-manager.md).
 * **`UserNamespacesPodSecurityStandards`**: Enable Pod Security Standards policies relaxation for pods that run with namespaces. You must set the value of this feature gate consistently across all nodes in your cluster, and you must also enable `UserNamespacesSupport` to use this feature. This feature gate is not part of Kubernetes v1.35 (and onwards) because, for those versions of Kubernetes, all supported kubelet versions will fail to create a pod if it requests a user namespace, but the node does not.
@@ -883,7 +883,7 @@ In the following table:
 * **`ValidatingAdmissionPolicy`**: Enable [ValidatingAdmissionPolicy](/reference/access-authn-authz/validating-admission-policy.md) support for CEL validations be used in Admission Control.
 * **`VolumeCapacityPriority`**: Enable support for prioritizing nodes in different topologies based on available PV capacity. This feature is renamed to `StorageCapacityScoring` in v1.33.
 * **`VolumePVCDataSource`**: Enable support for specifying an existing PVC as a DataSource.
-* **`VolumeScheduling`**: Enable volume topology aware scheduling and make the PersistentVolumeClaim (PVC) binding aware of scheduling decisions. It also enables the usage of [`local`](/concepts/storage/volumes.md#local) volume type when used together with the `PersistentLocalVolumes` feature gate.
+* **`VolumeScheduling`**: Enable volume topology aware scheduling and make the PersistentVolumeClaim (PVC) binding aware of scheduling decisions. It also enables the usage of [`local`](/reference/storage/volume-types.md#local) volume type when used together with the `PersistentLocalVolumes` feature gate.
 * **`VolumeSnapshotDataSource`**: Enable volume snapshot data source support.
 * **`VolumeSubpath`**: Allow mounting a subpath of a volume in a container.
 * **`VolumeSubpathEnvExpansion`**: Enable `subPathExpr` field for expanding environment variables into a `subPath`.

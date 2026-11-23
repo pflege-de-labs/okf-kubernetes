@@ -4,16 +4,16 @@ title: Guide for Running Windows Containers in Kubernetes
 description: This page provides a walkthrough for some steps you can follow to run Windows containers using Kubernetes.
 resource: https://kubernetes.io/docs/concepts/windows/user-guide/
 tags: [kubernetes, concepts, windows]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/windows/user-guide.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/windows/user-guide.md
     title: 'Kubernetes website source: concepts/windows/user-guide.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/windows/user-guide/
     title: Guide for Running Windows Containers in Kubernetes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/windows/user-guide.md
 ---
 

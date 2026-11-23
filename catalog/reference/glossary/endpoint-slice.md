@@ -4,16 +4,16 @@ title: EndpointSlice
 description: EndpointSlices track the IP addresses of Pods for Services.
 resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-endpoint-slice
 tags: [kubernetes, reference, glossary, networking]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/glossary/endpoint-slice.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/glossary/endpoint-slice.md
     title: 'Kubernetes website source: reference/glossary/endpoint-slice.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/glossary/?all=true#term-endpoint-slice
     title: EndpointSlice | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/glossary/endpoint-slice.md
 ---
 

@@ -4,16 +4,16 @@ title: kuberc (v1beta1)
 description: This is especially useful, when user doesn't want to explicitly set options each time.</p> </td> </tr> <tr><td><code>aliases</code> <B>[Required]</B><br/> <a href="#kubectl-config-k8s-io-v1beta1-AliasOverride"><code>[]AliasOverride</code></a> </td> <td> <p>aliases allow defining command aliases f...
 resource: https://kubernetes.io/docs/reference/config-api/kuberc.v1beta1/
 tags: [kubernetes, reference, config-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/config-api/kuberc.v1beta1.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/config-api/kuberc.v1beta1.md
     title: 'Kubernetes website source: reference/config-api/kuberc.v1beta1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/config-api/kuberc.v1beta1/
     title: kuberc (v1beta1) | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/config-api/kuberc.v1beta1.md
 ---
 
