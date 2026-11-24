@@ -4,16 +4,16 @@ title: Set up an Extension API Server
 description: Setting up an extension API server to work with the aggregation layer allows the Kubernetes apiserver to be extended with additional APIs, which are not part of the core Kubernetes APIs.
 resource: https://kubernetes.io/docs/tasks/extend-kubernetes/setup-extension-api-server/
 tags: [kubernetes, tasks, extend-kubernetes]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/extend-kubernetes/setup-extension-api-server.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/extend-kubernetes/setup-extension-api-server.md
     title: 'Kubernetes website source: tasks/extend-kubernetes/setup-extension-api-server.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/extend-kubernetes/setup-extension-api-server/
     title: Set up an Extension API Server | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/extend-kubernetes/setup-extension-api-server.md
 ---
 

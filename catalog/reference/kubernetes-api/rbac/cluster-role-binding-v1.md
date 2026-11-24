@@ -4,16 +4,16 @@ title: ClusterRoleBinding
 description: ClusterRoleBinding references a ClusterRole, but not contain it. It can reference a ClusterRole in the global namespace, and adds who information via Subject.
 resource: https://kubernetes.io/docs/reference/kubernetes-api/rbac/cluster-role-binding-v1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/rbac/cluster-role-binding-v1.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/kubernetes-api/rbac/cluster-role-binding-v1.md
     title: 'Kubernetes website source: reference/kubernetes-api/rbac/cluster-role-binding-v1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/rbac/cluster-role-binding-v1/
     title: ClusterRoleBinding | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/kubernetes-api/rbac/cluster-role-binding-v1.md
 api_metadata:
   apiVersion: rbac.authorization.k8s.io/v1

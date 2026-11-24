@@ -4,16 +4,16 @@ title: kube-apiserver
 description: The Kubernetes API server validates and configures data for the api objects which include pods, services, replicationcontrollers, and others.
 resource: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/
 tags: [kubernetes, reference, command-line-tools-reference]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/command-line-tools-reference/kube-apiserver.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/command-line-tools-reference/kube-apiserver.md
     title: 'Kubernetes website source: reference/command-line-tools-reference/kube-apiserver.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/
     title: kube-apiserver | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/command-line-tools-reference/kube-apiserver.md
 ---
 

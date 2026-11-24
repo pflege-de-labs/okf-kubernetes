@@ -4,16 +4,16 @@ title: Pod Group Disruption and Priority
 description: PodGroup can declare a disruption mode.
 resource: https://kubernetes.io/docs/concepts/workloads/workload-api/disruption-and-priority/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/workload-api/disruption-and-priority.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/workloads/workload-api/disruption-and-priority.md
     title: 'Kubernetes website source: concepts/workloads/workload-api/disruption-and-priority.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/workload-api/disruption-and-priority/
     title: Pod Group Disruption and Priority | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/workloads/workload-api/disruption-and-priority.md
 ---
 
@@ -87,7 +87,7 @@ This value is also used for the ordering of PodGroups in the scheduling queue.
 When the priorities of individual pods forming this PodGroup differ from PodGroup priority
 the PodGroup will not be scheduled with `all pods in a single pod group should have the same priority as the pod group` error.
 
-When the [PodGroupPreemptionPolicy](https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/podgroup-preemption-policy/)
+When the [PodGroupPreemptionPolicy](/reference/command-line-tools-reference/feature-gates.md#PodGroupPreemptionPolicy/)
 feature gate is enabled, PodGroup has also `preemptionPolicy` field. This field is also taken from the PriorityClass.
 It is an authoritative field for all pods in the group and it decides whether the PodGroup can perform a preemption of
 lower priority pods and pod groups to accommodate a place for itself.  When the feature gate is enabled all pods in the PodGroup

@@ -4,16 +4,16 @@ title: Configure Service Accounts for Pods
 description: Kubernetes offers two distinct ways for clients that run within your cluster, or that otherwise have a relationship to your cluster's control plane to authenticate to the API server.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/configure-service-account.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/configure-pod-container/configure-service-account.md
     title: 'Kubernetes website source: tasks/configure-pod-container/configure-service-account.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
     title: Configure Service Accounts for Pods | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/configure-pod-container/configure-service-account.md
 ---
 
@@ -433,7 +433,7 @@ token. The token will also become invalid against the API when either the Pod
 or the ServiceAccount is deleted.
 
 You can configure this behavior for the `spec` of a Pod using a
-[projected volume](/concepts/storage/volumes.md#projected) type called
+[projected volume](/reference/storage/volume-types.md#projected) type called
 `ServiceAccountToken`.
 
 The token from this projected volume is a [JSON Web Token](/reference/glossary/jwt.md)  (JWT).
@@ -474,7 +474,7 @@ The JSON payload of this token follows a well defined schema - an example payloa
 To provide a Pod with a token with an audience of `vault` and a validity duration
 of two hours, you could define a Pod manifest that is similar to:
 
-[`pods/pod-projected-svc-token.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/pod-projected-svc-token.yaml)
+[`pods/pod-projected-svc-token.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/pods/pod-projected-svc-token.yaml)
 
 ```yaml
 apiVersion: v1

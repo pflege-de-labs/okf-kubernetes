@@ -4,16 +4,16 @@ title: Pod Priority and Preemption
 description: importance of a Pod relative to other Pods.
 resource: https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/
 tags: [kubernetes, concepts, scheduling-eviction]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/scheduling-eviction/pod-priority-preemption.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/scheduling-eviction/pod-priority-preemption.md
     title: 'Kubernetes website source: concepts/scheduling-eviction/pod-priority-preemption.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/
     title: Pod Priority and Preemption | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/scheduling-eviction/pod-priority-preemption.md
 ---
 
@@ -264,7 +264,7 @@ makes Pod P eligible to preempt Pods on another Node.
 #### Graceful termination of preemption victims
 
 When Pods are preempted, the victims get their
-[graceful termination period](/concepts/workloads/pods/pod-lifecycle.md#pod-termination).
+[graceful termination period](/concepts/workloads/pods/pod-termination.md).
 They have that much time to finish their work and exit. If they don't, they are
 killed. This graceful termination period creates a time gap between the point
 that the scheduler preempts Pods and the time when the pending Pod (P) can be

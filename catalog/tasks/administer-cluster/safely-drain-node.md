@@ -4,16 +4,16 @@ title: Safely Drain a Node
 description: This page shows how to safely drain a node, optionally respecting the PodDisruptionBudget you have defined.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/safely-drain-node.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/administer-cluster/safely-drain-node.md
     title: 'Kubernetes website source: tasks/administer-cluster/safely-drain-node.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/
     title: Safely Drain a Node | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/administer-cluster/safely-drain-node.md
 ---
 
@@ -50,7 +50,7 @@ before the drain can proceed.
 You can use `kubectl drain` to safely evict all of your pods from a
 node before you perform maintenance on the node (e.g. kernel upgrade,
 hardware maintenance, etc.). Safe evictions allow the pod's containers
-to [gracefully terminate](/concepts/workloads/pods/pod-lifecycle.md#pod-termination)
+to [gracefully terminate](/concepts/workloads/pods/pod-termination.md)
 and will respect the PodDisruptionBudgets you have specified.
 
 **Note:**

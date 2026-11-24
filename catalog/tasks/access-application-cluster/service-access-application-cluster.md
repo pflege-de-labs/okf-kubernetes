@@ -4,16 +4,16 @@ title: Use a Service to Access an Application in a Cluster
 description: This page shows how to create a Kubernetes Service object that external clients can use to access an application running in a cluster.
 resource: https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/
 tags: [kubernetes, tasks, access-application-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/access-application-cluster/service-access-application-cluster.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/access-application-cluster/service-access-application-cluster.md
     title: 'Kubernetes website source: tasks/access-application-cluster/service-access-application-cluster.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/
     title: Use a Service to Access an Application in a Cluster | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/access-application-cluster/service-access-application-cluster.md
 ---
 
@@ -45,7 +45,7 @@ or you can use one of these Kubernetes playgrounds:
 
 Here is the configuration file for the application Deployment:
 
-[`service/access/hello-application.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/access/hello-application.yaml)
+[`service/access/hello-application.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/service/access/hello-application.yaml)
 
 ```yaml
 apiVersion: apps/v1

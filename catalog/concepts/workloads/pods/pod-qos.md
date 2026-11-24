@@ -4,16 +4,16 @@ title: Pod Quality of Service Classes
 description: This page introduces _Quality of Service (QoS) classes_ in Kubernetes, and explains how Kubernetes assigns a QoS class to each Pod as a consequence of the resource constraints that you specify for the containers in that Pod.
 resource: https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/pod-qos.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/workloads/pods/pod-qos.md
     title: 'Kubernetes website source: concepts/workloads/pods/pod-qos.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/
     title: Pod Quality of Service Classes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/workloads/pods/pod-qos.md
 ---
 

@@ -4,16 +4,16 @@ title: Image Policy API (v1alpha1)
 description: 'More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</p> Refer to the Kubernetes API documentation for the fields of the <code>metadata</code> field.</td> </tr> <tr><td><code>spec</code><br/> <a href="#imagepolicy-k8s-io-v1alpha1-ImageReviewSpec"...'
 resource: https://kubernetes.io/docs/reference/config-api/imagepolicy.v1alpha1/
 tags: [kubernetes, reference, config-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/config-api/imagepolicy.v1alpha1.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/config-api/imagepolicy.v1alpha1.md
     title: 'Kubernetes website source: reference/config-api/imagepolicy.v1alpha1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/config-api/imagepolicy.v1alpha1/
     title: Image Policy API (v1alpha1) | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/config-api/imagepolicy.v1alpha1.md
 ---
 

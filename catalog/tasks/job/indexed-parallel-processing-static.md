@@ -4,16 +4,16 @@ title: Indexed Job for Parallel Processing with Static Work Assignment
 description: In this example, you will run a Kubernetes Job that uses multiple parallel worker processes.
 resource: https://kubernetes.io/docs/tasks/job/indexed-parallel-processing-static/
 tags: [kubernetes, tasks, job]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/job/indexed-parallel-processing-static.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/job/indexed-parallel-processing-static.md
     title: 'Kubernetes website source: tasks/job/indexed-parallel-processing-static.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/job/indexed-parallel-processing-static/
     title: Indexed Job for Parallel Processing with Static Work Assignment | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/job/indexed-parallel-processing-static.md
 min_kubernetes_server_version: v1.21
 ---
@@ -95,7 +95,7 @@ the start of the clip.
 
 Here is a sample Job manifest that uses `Indexed` completion mode:
 
-[`application/job/indexed-job.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/indexed-job.yaml)
+[`application/job/indexed-job.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/application/job/indexed-job.yaml)
 
 ```yaml
 apiVersion: batch/v1
@@ -138,7 +138,7 @@ spec:
 In the example above, you use the builtin `JOB_COMPLETION_INDEX` environment
 variable set by the Job controller for all containers. An [init container](/concepts/workloads/pods/init-containers.md)
 maps the index to a static value and writes it to a file that is shared with the
-container running the worker through an [emptyDir volume](/concepts/storage/volumes.md#emptydir).
+container running the worker through an [emptyDir volume](/reference/storage/volume-types.md#emptydir).
 Optionally, you can [define your own environment variable through the downward
 API](/tasks/inject-data-application/environment-variable-expose-pod-information.md)
 to publish the index to containers. You can also choose to load a list of values
@@ -148,7 +148,7 @@ Alternatively, you can directly [use the downward API to pass the annotation
 value as a volume file](/tasks/inject-data-application/downward-api-volume-expose-pod-information.md#store-pod-fields),
 like shown in the following example:
 
-[`application/job/indexed-job-vol.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/indexed-job-vol.yaml)
+[`application/job/indexed-job-vol.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/application/job/indexed-job-vol.yaml)
 
 ```yaml
 apiVersion: batch/v1

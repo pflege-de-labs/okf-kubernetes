@@ -4,16 +4,16 @@ title: Kubernetes Custom Metrics (v1beta2)
 description: Defaults to everything.</p> </td> </tr> <tr><td><code>metricLabelSelector</code><br/> <code>string</code> </td> <td> <p>A selector to restrict the list of returned metrics by their labels</p> </td> </tr> </tbody> </table>
 resource: https://kubernetes.io/docs/reference/external-api/custom-metrics.v1beta2/
 tags: [kubernetes, reference, external-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/external-api/custom-metrics.v1beta2.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/external-api/custom-metrics.v1beta2.md
     title: 'Kubernetes website source: reference/external-api/custom-metrics.v1beta2.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/external-api/custom-metrics.v1beta2/
     title: Kubernetes Custom Metrics (v1beta2) | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/external-api/custom-metrics.v1beta2.md
 ---
 

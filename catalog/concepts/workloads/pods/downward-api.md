@@ -4,16 +4,16 @@ title: Downward API
 description: 'There are two ways to expose Pod and container fields to a running container: environment variables, and as files that are populated by a special volume type. Together, these two ways of exposing Pod and container fields are called the downward API.'
 resource: https://kubernetes.io/docs/concepts/workloads/pods/downward-api/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/downward-api.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/workloads/pods/downward-api.md
     title: 'Kubernetes website source: concepts/workloads/pods/downward-api.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/downward-api/
     title: Downward API | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/workloads/pods/downward-api.md
 ---
 
@@ -100,6 +100,9 @@ The following information is available through a `downwardAPI` volume
 `metadata.annotations`
 : all of the pod's annotations, formatted as `annotation-key="escaped-annotation-value"` with one annotation per line  
 
+Within the volume, you can find the exposed data as read-only files in the
+plain text format.
+
 ### Information available via `resourceFieldRef` {#downwardapi-resourceFieldRef}
 
 These container-level fields allow you to provide information about
@@ -147,8 +150,6 @@ based on the [node allocatable](/tasks/administer-cluster/reserve-compute-resour
 calculation.
 
 ## What's next
-
-You can read about [`downwardAPI` volumes](/concepts/storage/volumes.md#downwardapi).
 
 You can try using the downward API to expose container- or Pod-level information:
 * as [environment variables](/tasks/inject-data-application/environment-variable-expose-pod-information.md)

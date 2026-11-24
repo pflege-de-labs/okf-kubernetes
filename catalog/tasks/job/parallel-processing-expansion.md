@@ -4,16 +4,16 @@ title: Parallel Processing using Expansions
 description: This task demonstrates running multiple Jobs based on a common template.
 resource: https://kubernetes.io/docs/tasks/job/parallel-processing-expansion/
 tags: [kubernetes, tasks, job]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/job/parallel-processing-expansion.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/job/parallel-processing-expansion.md
     title: 'Kubernetes website source: tasks/job/parallel-processing-expansion.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/job/parallel-processing-expansion/
     title: Parallel Processing using Expansions | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/job/parallel-processing-expansion.md
 min_kubernetes_server_version: v1.8
 ---
@@ -62,7 +62,7 @@ pip install --user jinja2
 First, download the following template of a Job to a file called `job-tmpl.yaml`.
 Here's what you'll download:
 
-[`application/job/job-tmpl.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/job/job-tmpl.yaml)
+[`application/job/job-tmpl.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/application/job/job-tmpl.yaml)
 
 ```yaml
 apiVersion: batch/v1

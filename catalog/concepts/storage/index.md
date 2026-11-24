@@ -1,6 +1,6 @@
 # Storage
 
-* [Volumes](volumes.md) - Kubernetes _volumes_ provide a way for containers in a Pod to access and share data via the filesystem.
+* [Volumes](volumes.md) - Kubernetes volumes provide a way for containers in a Pod to access and share data via the filesystem.
 * [Persistent Volumes](persistent-volumes.md) - This document describes _persistent volumes_ in Kubernetes.
 * [Projected Volumes](projected-volumes.md) - This document describes _projected volumes_ in Kubernetes.
 * [Ephemeral Volumes](ephemeral-volumes.md) - This document describes _ephemeral volumes_ in Kubernetes.

@@ -1,5 +1,8 @@
 # Catalog Update Log
 
+## 2026-11-23
+* **Update**: Regenerated concepts, tasks, reference and releases from kubernetes/website@a81f5383d579 (Kubernetes v1.37) with `cmd/okfgen`.
+
 ## 2026-11-12
 * **Update**: Regenerated concepts, tasks, reference and releases from kubernetes/website@2674d5095a50 (Kubernetes v1.37) with `cmd/okfgen`.
 * **Creation**: Added [about](/about.md) (bundle version) and [Release Lifecycle](/releases/lifecycle.md) (release, maintenance-mode and end-of-life dates), generated from kubernetes/website@2fb3b0d636e8 `data/releases`.

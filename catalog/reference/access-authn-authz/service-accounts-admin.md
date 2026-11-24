@@ -4,16 +4,16 @@ title: Managing Service Accounts
 description: A _ServiceAccount_ provides an identity for processes that run in a Pod.
 resource: https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/
 tags: [kubernetes, reference, access-authn-authz]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/access-authn-authz/service-accounts-admin.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/access-authn-authz/service-accounts-admin.md
     title: 'Kubernetes website source: reference/access-authn-authz/service-accounts-admin.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/
     title: Managing Service Accounts | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/access-authn-authz/service-accounts-admin.md
 ---
 
@@ -552,7 +552,7 @@ updates that Secret with that generated token data.
 
 Here is a sample manifest for such a Secret:
 
-[`secret/serviceaccount/mysecretname.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/secret/serviceaccount/mysecretname.yaml)
+[`secret/serviceaccount/mysecretname.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/secret/serviceaccount/mysecretname.yaml)
 
 ```yaml
 apiVersion: v1

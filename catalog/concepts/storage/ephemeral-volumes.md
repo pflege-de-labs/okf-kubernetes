@@ -4,16 +4,16 @@ title: Ephemeral Volumes
 description: This document describes _ephemeral volumes_ in Kubernetes.
 resource: https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/
 tags: [kubernetes, concepts, storage]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/storage/ephemeral-volumes.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/storage/ephemeral-volumes.md
     title: 'Kubernetes website source: concepts/storage/ephemeral-volumes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/
     title: Ephemeral Volumes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/storage/ephemeral-volumes.md
 ---
 
@@ -44,14 +44,14 @@ simplifies application deployment and management.
 
 Kubernetes supports several different kinds of ephemeral volumes for
 different purposes:
-- [emptyDir](/concepts/storage/volumes.md#emptydir): empty at Pod startup,
+- [emptyDir](/reference/storage/volume-types.md#emptydir): empty at Pod startup,
   with storage coming locally from the kubelet base directory (usually
   the root disk) or RAM
-- [configMap](/concepts/storage/volumes.md#configmap),
-  [downwardAPI](/concepts/storage/volumes.md#downwardapi),
-  [secret](/concepts/storage/volumes.md#secret): inject different
+- [configMap](/reference/storage/volume-types.md#configmap),
+  [downwardAPI](/reference/storage/volume-types.md#downwardapi),
+  [secret](/reference/storage/volume-types.md#secret): inject different
   kinds of Kubernetes data into a Pod
-- [image](/concepts/storage/volumes.md#image): allows mounting container image files or artifacts,
+- [image](/reference/storage/volume-types.md#image): allows mounting container image files or artifacts,
   directly to a Pod.
 - [CSI ephemeral volumes](#csi-ephemeral-volumes):
   similar to the previous volume kinds, but provided by special [CSI](/reference/glossary/csi.md) drivers

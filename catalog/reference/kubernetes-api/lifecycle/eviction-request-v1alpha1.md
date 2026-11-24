@@ -4,16 +4,16 @@ title: EvictionRequest
 description: EvictionRequest defines a request that should ideally result in a graceful eviction of a .spec.target (e.g. termination of a pod). The evictionrequest-controller observes intents of all EvictionRequests and transforms them into Evictions. - .spec.requester is set as a label on the Eviction for easier lookup. - Each target can have a set of responders assigned to it. Eviction objects are observed by these responders, who implement the eviction logic and update the Eviction&#39;s status with progress. There is many-to-many relationship between EvictionRequests and Evictions in general. And many-to-one if the target is a pod. If all requesters withdraw their eviction intent for a common target, the eviction will be canceled. Deleting an EvictionRequest also counts as a withdrawal. Once all EvictionRequest of a target are removed, the corresponding Evictions are eventually garbage collected.
 resource: https://kubernetes.io/docs/reference/kubernetes-api/lifecycle/eviction-request-v1alpha1/
 tags: [kubernetes, reference, kubernetes-api]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/kubernetes-api/lifecycle/eviction-request-v1alpha1.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/kubernetes-api/lifecycle/eviction-request-v1alpha1.md
     title: 'Kubernetes website source: reference/kubernetes-api/lifecycle/eviction-request-v1alpha1.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/kubernetes-api/lifecycle/eviction-request-v1alpha1/
     title: EvictionRequest | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/kubernetes-api/lifecycle/eviction-request-v1alpha1.md
 api_metadata:
   apiVersion: lifecycle.k8s.io/v1alpha1

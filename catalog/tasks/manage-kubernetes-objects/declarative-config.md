@@ -4,16 +4,16 @@ title: Declarative Management of Kubernetes Objects Using Configuration Files
 description: Kubernetes objects can be created, updated, and deleted by storing multiple object configuration files in a directory and using `kubectl apply` to recursively create and update those objects as needed.
 resource: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/
 tags: [kubernetes, tasks, manage-kubernetes-objects]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/manage-kubernetes-objects/declarative-config.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/manage-kubernetes-objects/declarative-config.md
     title: 'Kubernetes website source: tasks/manage-kubernetes-objects/declarative-config.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/
     title: Declarative Management of Kubernetes Objects Using Configuration Files | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/manage-kubernetes-objects/declarative-config.md
 ---
 
@@ -90,7 +90,7 @@ Add the `-R` flag to recursively process directories.
 
 Here's an example of an object configuration file:
 
-[`application/simple_deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/simple_deployment.yaml)
+[`application/simple_deployment.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/application/simple_deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -201,7 +201,7 @@ Add the `-R` flag to recursively process directories.
 
 Here's an example configuration file:
 
-[`application/simple_deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/simple_deployment.yaml)
+[`application/simple_deployment.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/application/simple_deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -340,7 +340,7 @@ spec:
 Update the `simple_deployment.yaml` configuration file to change the image from
 `nginx:1.14.2` to `nginx:1.16.1`, and delete the `minReadySeconds` field:
 
-[`application/update_deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/update_deployment.yaml)
+[`application/update_deployment.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/application/update_deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -581,7 +581,7 @@ to calculate which fields should be deleted or set:
 
 Here's an example. Suppose this is the configuration file for a Deployment object:
 
-[`application/update_deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/update_deployment.yaml)
+[`application/update_deployment.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/application/update_deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1
@@ -884,7 +884,7 @@ not specified when the object is created.
 
 Here's a configuration file for a Deployment. The file does not specify `strategy`:
 
-[`application/simple_deployment.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/simple_deployment.yaml)
+[`application/simple_deployment.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/application/simple_deployment.yaml)
 
 ```yaml
 apiVersion: apps/v1

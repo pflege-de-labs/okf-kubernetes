@@ -4,16 +4,16 @@ title: Liveness, Readiness, and Startup Probes
 description: Kubernetes lets you define _probes_ to continuously monitor the health of containers in a Pod.
 resource: https://kubernetes.io/docs/concepts/workloads/pods/probes/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/probes.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/workloads/pods/probes.md
     title: 'Kubernetes website source: concepts/workloads/pods/probes.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/probes/
     title: Liveness, Readiness, and Startup Probes | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/workloads/pods/probes.md
 ---
 
@@ -95,7 +95,7 @@ If you want to be able to drain requests when the Pod is deleted, you do not
 necessarily need a readiness probe; when the Pod is deleted, the corresponding
 endpoint in the EndpointSlice will update its [conditions](/concepts/services-networking/endpoint-slices.md#conditions): the endpoint ready
 condition will be set to false, so load balancers will not use the Pod for
-regular traffic. See [Pod termination](/concepts/workloads/pods/pod-lifecycle.md#pod-termination)
+regular traffic. See [Pod termination](/concepts/workloads/pods/pod-termination.md)
 for more information about how the kubelet handles Pod deletion.
 
 ## When to use each probe {#when-to-use-each-probe}
@@ -454,7 +454,7 @@ you can configure Kubernetes to use it for application startup, liveness or read
 
 Here is an example manifest:
 
-[`pods/probe/grpc-liveness.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/probe/grpc-liveness.yaml)
+[`pods/probe/grpc-liveness.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/pods/probe/grpc-liveness.yaml)
 
 ```yaml
 apiVersion: v1

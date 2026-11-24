@@ -4,16 +4,16 @@ title: Feature Gates
 description: This page contains an overview of the various feature gates an administrator can specify on different Kubernetes components.
 resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/
 tags: [kubernetes, reference, command-line-tools-reference]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/reference/command-line-tools-reference/feature-gates/index.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/reference/command-line-tools-reference/feature-gates/index.md
     title: 'Kubernetes website source: reference/command-line-tools-reference/feature-gates/index.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/
     title: Feature Gates | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/reference/command-line-tools-reference/feature-gates/index.md
 ---
 
@@ -404,6 +404,8 @@ For a reference to old feature gates that are removed, please refer to
 | `InPlacePodVerticalScaling` | `true` | stable | 1.35 |  |
 | `InPlacePodVerticalScalingAllocatedStatus` | `false` | alpha | 1.32 | 1.32 |
 | `InPlacePodVerticalScalingAllocatedStatus` | `false` | deprecated | 1.33 |  |
+| `InPlacePodVerticalScalingInitContainers` | `true` | beta | 1.36 | 1.36 |
+| `InPlacePodVerticalScalingInitContainers` | `true` | stable | 1.37 |  |
 | `InformerResourceVersion` | `false` | alpha | 1.30 | 1.34 |
 | `InformerResourceVersion` | `true` | stable | 1.35 |  |
 | `JobBackoffLimitPerIndex` | `false` | alpha | 1.28 | 1.28 |
@@ -422,7 +424,7 @@ For a reference to old feature gates that are removed, please refer to
 | `KMSv1` | `false` | deprecated | 1.29 |  |
 | `KubeProxyIPVS` | `true` | deprecated | 1.37 |  |
 | `KubeletCgroupDriverFromCRI` | `false` | alpha | 1.28 | 1.30 |
-| `KubeletCgroupDriverFromCRI` | `true` | beta | 1.31 |  |
+| `KubeletCgroupDriverFromCRI` | `true` | beta | 1.31 | 1.33 |
 | `KubeletCgroupDriverFromCRI` | `true` | stable | 1.34 |  |
 | `KubeletFineGrainedAuthz` | `false` | alpha | 1.32 | 1.32 |
 | `KubeletFineGrainedAuthz` | `true` | beta | 1.33 | 1.35 |
@@ -746,13 +748,14 @@ Each feature gate is designed for enabling/disabling a specific feature.
 * **`HugepageAwareEviction`**: Subtracts hugepage capacity from `memory.available` so the kubelet's eviction signal reflects actual regular-memory availability. Without this gate, hugepage reservations inflate `AvailableBytes`, delaying eviction and causing OOM kills on nodes with hugepages configured.
 * **`ImageMaximumGCAge`**: Enables the kubelet configuration field `imageMaximumGCAge`, allowing an administrator to specify the age after which an image will be garbage collected.
 * **`ImageVolume`**: Allow using the [`image`](/concepts/storage/volumes.md) volume source in a Pod. This volume source lets you mount a container image as a read-only volume.
-* **`ImageVolumeWithDigest`**: For each [`image` volume](/concepts/storage/volumes.md#image) in a Pod, image digest as part of the pod's status.
+* **`ImageVolumeWithDigest`**: For each [`image` volume](/reference/storage/volume-types.md#image) in a Pod, image digest as part of the pod's status.
 * **`InOrderInformers`**: Force the informers to deliver watch stream events in order instead of out of order.
 * **`InPlacePodLevelResourcesVerticalScaling`**: Enables the in-place vertical scaling of resources for a Pod (For example, changing a running Pod's pod-level CPU or memory requests/limits without needing to restart it). For details, see the documentation on [In-place Pod-level Resources Vertical Scaling](/tasks/configure-pod-container/resize-pod-resources.md).
 * **`InPlacePodVerticalScaling`**: Enables in-place Pod vertical scaling.
 * **`InPlacePodVerticalScalingAllocatedStatus`**: Enables the `allocatedResources` field in the container status. This feature requires the `InPlacePodVerticalScaling` gate be enabled as well.
 * **`InPlacePodVerticalScalingExclusiveCPUs`**: Enable resource resizing for containers in Guaranteed pods with integer CPU requests. It applies only in nodes with `InPlacePodVerticalScaling` and `CPUManager` features enabled, and the CPUManager policy set to `static`.
 * **`InPlacePodVerticalScalingExclusiveMemory`**: Allow resource resize for containers in Guaranteed Pods when the memory manager policy is set to `"Static"`. Applies only to nodes with `InPlacePodVerticalScaling` and memory manager features enabled.
+* **`InPlacePodVerticalScalingInitContainers`**: Enables in-place resize of CPU and memory resources of running non-restartable (non-sidecar) init containers.
 * **`InPlacePodVerticalScalingMemoryBackedVolumes`**: Enables in-place vertical scaling for memory-backed `emptyDir` volume size limits.
 * **`InPlacePodVerticalScalingSchedulerPreemption`**: Enables scheduler preemption of lower-priority pods to fulfill deferred in-place pod resize requests.
 * **`InformerResourceVersion`**: Allow clients to use the `LastSyncResourceVersion()` call on informers, enabling them to perform actions based on the current resource version. When disabled, `LastSyncResourceVersion()` succeeds but returns an empty string. Used by kube-controller-manager for StorageVersionMigration.
@@ -763,7 +766,7 @@ Each feature gate is designed for enabling/disabling a specific feature.
 * **`KMSv1`**: Enables KMS v1 API for encryption at rest. See [Using a KMS Provider for data encryption](/tasks/administer-cluster/kms-provider.md) for more details.
 * **`KubeProxyIPVS`**: Enable support for the deprecated [`ipvs` proxy mode](/reference/networking/virtual-ips.md#proxy-mode-ipvs) in kube-proxy.
 * **`KubeProxyNFTablesLocalhostNodePorts`**: Enables localhost NodePort Service proxying with the nftables mode of kube-proxy.
-* **`KubeletCgroupDriverFromCRI`**: Enable detection of the kubelet cgroup driver configuration option from the [CRI](/reference/glossary/cri.md). This feature gate is now on for all clusters. However, it only works on nodes where there is a CRI container runtime that supports the `RuntimeConfig` CRI call. If the CRI supports this feature, the kubelet ignores the `cgroupDriver` configuration setting (or deprecated `--cgroup-driver` command line argument). If the container runtime doesn't support it, the kubelet falls back to using the driver configured using the `cgroupDriver` configuration setting. The kubelet will stop falling back to this configuration in Kubernetes 1.36. Thus, users must upgrade their CRI container runtime to a version that supports the `RuntimeConfig` CRI call by then. Admins can use the metric `kubelet_cri_losing_support` to see if there are any nodes in their cluster that will lose support in 1.36. The following CRI versions support this CRI call: * containerd: Support was added in v2.0.0 * CRI-O: Support was added in v1.28.0
+* **`KubeletCgroupDriverFromCRI`**: Enable detection of the kubelet cgroup driver configuration option from the [CRI](/reference/glossary/cri.md). The detection only works on nodes where there is a CRI container runtime that supports the `RuntimeConfig` CRI call. If the CRI supports this feature, the kubelet ignores the `cgroupDriver` configuration setting (or deprecated `--cgroup-driver` command line argument). If the container runtime doesn't support that RPC, the kubelet uses a legacy mechanism based on checking the `cgroupDriver` configuration setting. The kubelet will stop falling back to this configuration in a future release of Kubernetes. Thus, users must upgrade their CRI container runtime to a version that supports the `RuntimeConfig` CRI call. Admins can use the metric `kubelet_cri_losing_support` to see if there are any nodes in their cluster that rely on the legacy behavior.
 * **`KubeletCrashLoopBackOffMax`**: Enables support for configurable per-node backoff maximums for restarting containers in the `CrashLoopBackOff` state. For more details, check the `crashLoopBackOff.maxContainerRestartPeriod` field in the [kubelet config file](/reference/config-api/kubelet-config.v1beta1.md).
 * **`KubeletEnsureSecretPulledImages`**: Ensure that pods requesting an image are authorized to access the image with the provided credentials when the image is already present on the node. See [Ensure Image Pull Credential Verification](/concepts/containers/images.md#ensureimagepullcredentialverification).
 * **`KubeletFineGrainedAuthz`**: Enable [fine-grained authorization](/reference/access-authn-authz/kubelet-authn-authz.md#fine-grained-authorization) for the kubelet's HTTP(s) API.
@@ -775,7 +778,7 @@ Each feature gate is designed for enabling/disabling a specific feature.
 * **`KubeletServiceAccountTokenForCredentialProviders`**: Enable kubelet to send the service account token bound to the pod for which the image is being pulled to the credential provider plugin.
 * **`KubeletTracing`**: Add support for distributed tracing in the kubelet. When enabled, kubelet CRI interface and authenticated http servers are instrumented to generate OpenTelemetry trace spans. See [Traces for Kubernetes System Components](/concepts/cluster-administration/system-traces.md) for more details.
 * **`ListFromCacheSnapshot`**: Enables the API server to generate snapshots for the watch cache store and using them to serve LIST requests.
-* **`LocalStorageCapacityIsolationFSQuotaMonitoring`**: When `LocalStorageCapacityIsolation` is enabled for [local ephemeral storage](/concepts/configuration/manage-resources-containers.md), the backing filesystem for [emptyDir volumes](/concepts/storage/volumes.md#emptydir) supports project quotas, and `UserNamespacesSupport` is enabled, project quotas are used to monitor `emptyDir` volume storage consumption rather than using filesystem walk, ensuring better performance and accuracy.
+* **`LocalStorageCapacityIsolationFSQuotaMonitoring`**: When `LocalStorageCapacityIsolation` is enabled for [local ephemeral storage](/concepts/configuration/manage-resources-containers.md), the backing filesystem for [emptyDir volumes](/reference/storage/volume-types.md#emptydir) supports project quotas, and `UserNamespacesSupport` is enabled, project quotas are used to monitor `emptyDir` volume storage consumption rather than using filesystem walk, ensuring better performance and accuracy.
 * **`LogarithmicScaleDown`**: Enable semi-random selection of pods to evict on controller scaledown based on logarithmic bucketing of pod timestamps.
 * **`LoggingAlphaOptions`**: Allow fine-tuning of experimental, alpha-quality logging options.
 * **`LoggingBetaOptions`**: Allow fine-tuning of experimental, beta-quality logging options.

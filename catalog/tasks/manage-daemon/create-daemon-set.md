@@ -4,16 +4,16 @@ title: Building a Basic DaemonSet
 description: This page demonstrates how to build a basic DaemonSet that runs a Pod on every node in a Kubernetes cluster.
 resource: https://kubernetes.io/docs/tasks/manage-daemon/create-daemon-set/
 tags: [kubernetes, tasks, manage-daemon]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/manage-daemon/create-daemon-set.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/manage-daemon/create-daemon-set.md
     title: 'Kubernetes website source: tasks/manage-daemon/create-daemon-set.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/manage-daemon/create-daemon-set/
     title: Building a Basic DaemonSet | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/manage-daemon/create-daemon-set.md
 ---
 
@@ -45,7 +45,7 @@ In this task, a basic DaemonSet is created which ensures that the copy of a Pod 
 The Pod will use an init container to read and log the contents of `/etc/machine-id` from the host,
 while the main container will be a `pause` container, which keeps the Pod running.
 
-[`application/basic-daemonset.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/application/basic-daemonset.yaml)
+[`application/basic-daemonset.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/application/basic-daemonset.yaml)
 
 ```yaml
 apiVersion: apps/v1

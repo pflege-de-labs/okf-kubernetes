@@ -4,16 +4,16 @@ title: Configure a Pod to Use a Volume for Storage
 description: This page shows how to configure a Pod to use a Volume for storage.
 resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/
 tags: [kubernetes, tasks, configure-pod-container]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/configure-pod-container/configure-volume-storage.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/configure-pod-container/configure-volume-storage.md
     title: 'Kubernetes website source: tasks/configure-pod-container/configure-volume-storage.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/
     title: Configure a Pod to Use a Volume for Storage | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/configure-pod-container/configure-volume-storage.md
 ---
 
@@ -43,11 +43,11 @@ or you can use one of these Kubernetes playgrounds:
 
 In this exercise, you create a Pod that runs one Container. This Pod has a
 Volume of type
-[emptyDir](/concepts/storage/volumes.md#emptydir)
+[emptyDir](/reference/storage/volume-types.md#emptydir)
 that lasts for the life of the Pod, even if the Container terminates and
 restarts. Here is the configuration file for the Pod:
 
-[`pods/storage/redis.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/pods/storage/redis.yaml)
+[`pods/storage/redis.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/pods/storage/redis.yaml)
 
 ```yaml
 apiVersion: v1

@@ -4,16 +4,16 @@ title: Declare Network Policy
 description: This document helps you get started using the Kubernetes NetworkPolicy API to declare network policies that govern how pods communicate with each other.
 resource: https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/
 tags: [kubernetes, tasks, administer-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/administer-cluster/declare-network-policy.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/administer-cluster/declare-network-policy.md
     title: 'Kubernetes website source: tasks/administer-cluster/declare-network-policy.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/
     title: Declare Network Policy | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/administer-cluster/declare-network-policy.md
 min_kubernetes_server_version: v1.8
 ---
@@ -102,7 +102,7 @@ remote file exists
 
 To limit the access to the `nginx` service so that only Pods with the label `access: true` can query it, create a NetworkPolicy object as follows:
 
-[`service/networking/nginx-policy.yaml`](https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/examples/service/networking/nginx-policy.yaml)
+[`service/networking/nginx-policy.yaml`](https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/examples/service/networking/nginx-policy.yaml)
 
 ```yaml
 apiVersion: networking.k8s.io/v1

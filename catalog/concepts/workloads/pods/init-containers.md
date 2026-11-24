@@ -4,16 +4,16 @@ title: Init Containers
 description: 'This page provides an overview of init containers: specialized containers that run before app containers in a Pod.'
 resource: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
 tags: [kubernetes, concepts, workloads]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/concepts/workloads/pods/init-containers.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/concepts/workloads/pods/init-containers.md
     title: 'Kubernetes website source: concepts/workloads/pods/init-containers.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
     title: Init Containers | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/concepts/workloads/pods/init-containers.md
 ---
 
@@ -59,7 +59,7 @@ field).
 Init containers support all the fields and features of app containers,
 including resource limits, [volumes](/concepts/storage/volumes.md), and security settings. However, the
 resource requests and limits for an init container are handled differently,
-as documented in [Resource sharing within containers](#resource-sharing-within-containers).
+as documented in [Resource requests and limits](#resource-sharing-within-containers).
 
 Regular init containers (in other words: excluding sidecar containers) do not support the
 `lifecycle`, `livenessProbe`, `readinessProbe`, or `startupProbe` fields. Init containers
@@ -82,7 +82,7 @@ Init containers run to completion sequentially, and the main container does not 
 until all the init containers have successfully completed.
 
 init containers do not support `lifecycle`, `livenessProbe`, `readinessProbe`, or
-`startupProbe` whereas sidecar containers support all these [probes](/concepts/workloads/pods/pod-lifecycle.md#types-of-probe) to control their lifecycle.
+`startupProbe` whereas sidecar containers support all these [probes](/concepts/workloads/pods/probes.md#types-of-probe) to control their lifecycle.
 
 Init containers share the same resources (CPU, memory, network) with the main application
 containers but do not interact directly with them. They can, however, use shared volumes
@@ -326,30 +326,22 @@ The Pod which is already running correctly would be killed by `activeDeadlineSec
 The name of each app and init container in a Pod must be unique; a
 validation error is thrown for any container sharing a name with another.
 
-### Resource sharing within containers
+### Resource requests and limits {#resource-sharing-within-containers}
 
-Given the order of execution for init, sidecar and app containers, the following rules
-for resource usage apply:
+The scheduler places a Pod on a node based on how much of each resource the Pod
+requests as a whole, so the requests that you set on init containers can affect
+whether and where the Pod can be scheduled.
 
-* The highest of any particular resource request or limit defined on all init
-  containers is the *effective init request/limit*. If any resource has no
-  resource limit specified this is considered as the highest limit.
-* The Pod's *effective request/limit* for a resource is the higher of:
-  * the sum of all app containers request/limit for a resource
-  * the effective init request/limit for a resource
-* Scheduling is done based on effective requests/limits, which means
-  init containers can reserve resources for initialization that are not used
-  during the life of the Pod.
-* The QoS (quality of service) tier of the Pod's *effective QoS tier* is the
-  QoS tier for init containers and app containers alike.
+Init containers run one at a time and finish before the app containers start,
+so Kubernetes does not add their requests to each other or to those of the app containers.
+Instead, the Pod requests enough resources to run its largest init container.
+If the largest init container request is more than the sum of the requests of the
+containers that run after initialization, the request of the Pod is based on that
+init container request.
+The node keeps this larger request reserved for the Pod even after initialization finishes.
 
-Quota and limits are applied based on the effective Pod request and
-limit.
-
-### Init containers and Linux cgroups {#cgroups}
-
-On Linux, resource allocations for Pod level control groups (cgroups) are based on the effective Pod
-request and limit, the same as the scheduler.
+See [Effective Pod requests and limits](/concepts/resource-management/effective-pod-requests-limits.md)
+to learn how Kubernetes calculates the requests and limits of a Pod, with examples.
 
 ### Pod restart reasons
 
@@ -373,5 +365,5 @@ Learn more about the following:
 * [Creating a Pod that has an init container](/tasks/configure-pod-container/configure-pod-initialization.md#create-a-pod-that-has-an-init-container).
 * [Debug init containers](/tasks/debug/debug-application/debug-init-containers.md).
 * Overview of [kubelet](/reference/command-line-tools-reference/kubelet.md) and [kubectl](/reference/kubectl.md).
-* [Types of probes](/concepts/workloads/pods/pod-lifecycle.md#types-of-probe): liveness, readiness, startup probe.
+* [Types of probes](/concepts/workloads/pods/probes.md#types-of-probe): liveness, readiness, startup probe.
 * [Sidecar containers](/concepts/workloads/pods/sidecar-containers.md).

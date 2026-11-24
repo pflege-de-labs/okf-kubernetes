@@ -4,16 +4,16 @@ title: Configure Access to Multiple Clusters
 description: This page shows how to configure access to multiple clusters by using configuration files.
 resource: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
 tags: [kubernetes, tasks, access-application-cluster]
-generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-12T15:41:02Z"}
+generated: {by: 'process:okf-kubernetes-okfgen', at: "2026-11-23T15:56:50Z"}
 sources:
   - id: k8s-docs-source
-    resource: https://github.com/kubernetes/website/blob/2674d5095a50d781d2f884c83973921f48c5cf28/content/en/docs/tasks/access-application-cluster/configure-access-multiple-clusters.md
+    resource: https://github.com/kubernetes/website/blob/a81f5383d57959d479d946ae3ad2c620ceb11e6a/content/en/docs/tasks/access-application-cluster/configure-access-multiple-clusters.md
     title: 'Kubernetes website source: tasks/access-application-cluster/configure-access-multiple-clusters.md'
   - id: k8s-docs
     resource: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
     title: Configure Access to Multiple Clusters | Kubernetes documentation
 kubernetes_version: v1.37
-source_commit: 2674d5095a50d781d2f884c83973921f48c5cf28
+source_commit: a81f5383d57959d479d946ae3ad2c620ceb11e6a
 source_path: content/en/docs/tasks/access-application-cluster/configure-access-multiple-clusters.md
 ---
 
